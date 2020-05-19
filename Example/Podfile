@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'TaleneCore_Example' do
+  pod 'TaleneCore', :path => '../'
+
+  target 'TaleneCore_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
