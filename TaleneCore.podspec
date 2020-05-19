@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+TaleneCore is the core library for all Talene apps. This comes with a structured framework which contains logging, analytics tracking, data handling, network handling, notification handling and so on.
                        DESC
 
   s.homepage         = 'https://bitbucket.org/frankthamel/talenecore'
@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '12.0'
 
-  s.source_files = 'TaleneCore/Classes/**/*'
+  s.source_files = 'TaleneCore/Source/**/*'
   
   # s.resource_bundles = {
   #   'TaleneCore' => ['TaleneCore/Assets/*.png']
