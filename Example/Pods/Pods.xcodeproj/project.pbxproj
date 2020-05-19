@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01B0AD922473A06200D39E70 /* TaleneCoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B0AD902473A04F00D39E70 /* TaleneCoreApp.swift */; };
 		1D0C0916001755022966006706C90F02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		3003AFBD673186DAA5B477B6118A46EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		3B6DEB25AC7603C07DF71395B6E88597 /* Pods-TaleneCore_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9469E6D8F65F733CA7C82D8081A9F373 /* Pods-TaleneCore_Example-dummy.m */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01B0AD902473A04F00D39E70 /* TaleneCoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaleneCoreApp.swift; sourceTree = "<group>"; };
 		0B221558E82588A95B6738BEAC471950 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1DA31FCE419E47CE8277C8EA36A96440 /* Pods-TaleneCore_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaleneCore_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		21F78A3F752B80FE66EECBABAFD2C8E9 /* Pods_TaleneCore_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaleneCore_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +102,7 @@
 		01B0AD8F2473950D00D39E70 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				01B0AD902473A04F00D39E70 /* TaleneCoreApp.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -320,6 +323,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					681D6BB3BB801328BF5880AAB0E9356F = {
+						LastSwiftMigration = 1130;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -387,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8064195D09EB7195427ED6B96BC70B88 /* TaleneCore-dummy.m in Sources */,
+				01B0AD922473A06200D39E70 /* TaleneCoreApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +521,7 @@
 			baseConfigurationReference = 324DEAC5DEB796976D20CD308E86A914 /* Pods-TaleneCore_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -534,6 +544,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -546,6 +557,7 @@
 			baseConfigurationReference = 7794A90BA2AF9447E33026856EAE2D98 /* Pods-TaleneCore_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -568,6 +580,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
