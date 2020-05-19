@@ -1,0 +1,770 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D0C0916001755022966006706C90F02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		3003AFBD673186DAA5B477B6118A46EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		3B6DEB25AC7603C07DF71395B6E88597 /* Pods-TaleneCore_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9469E6D8F65F733CA7C82D8081A9F373 /* Pods-TaleneCore_Example-dummy.m */; };
+		6F20DD0D2B15E648009F18FDCB23DFBC /* Pods-TaleneCore_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF56F7BBB6164FD72201BEC2FC85C36 /* Pods-TaleneCore_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7DD4832772D89425CB76135630BE958B /* Pods-TaleneCore_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 26497D8E87C1410786BB716EDD34245D /* Pods-TaleneCore_Tests-dummy.m */; };
+		8064195D09EB7195427ED6B96BC70B88 /* TaleneCore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DA8CCF14FF2452AF2FD4336F81ED19 /* TaleneCore-dummy.m */; };
+		91CC8DF867FD409532BBB22EA639E0B7 /* Pods-TaleneCore_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FDC6309D64C6F83CD39C5C95DCBD735 /* Pods-TaleneCore_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9753FBF79A2860D44443DABFAC2ABA26 /* TaleneCore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 35DEBD9EF48356EDB0AA9565858885EA /* TaleneCore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC248F10F57DB54CE68C69FF997A283C /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E2C97489D21C211AC098EF12299322 /* ReplaceMe.swift */; };
+		D6F4CB70D4E322D0C95F15F2601C5284 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1D93574A6759294664D214D0AD4F7BD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 681D6BB3BB801328BF5880AAB0E9356F;
+			remoteInfo = "Pods-TaleneCore_Example";
+		};
+		DCFF5F13480551814979E3B00734D0C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4E1C1498C8E9FBA64E5724EF39BE4FA;
+			remoteInfo = TaleneCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B221558E82588A95B6738BEAC471950 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		1DA31FCE419E47CE8277C8EA36A96440 /* Pods-TaleneCore_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaleneCore_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		21F78A3F752B80FE66EECBABAFD2C8E9 /* Pods_TaleneCore_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TaleneCore_Example.framework; path = "Pods-TaleneCore_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25E2C97489D21C211AC098EF12299322 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = TaleneCore/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		26497D8E87C1410786BB716EDD34245D /* Pods-TaleneCore_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaleneCore_Tests-dummy.m"; sourceTree = "<group>"; };
+		2773B0AB805EFDF6485C670D8ED8FB55 /* TaleneCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TaleneCore.framework; path = TaleneCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		283D9B74B6B7096ED004C48D5450B151 /* Pods_TaleneCore_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TaleneCore_Tests.framework; path = "Pods-TaleneCore_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		324DEAC5DEB796976D20CD308E86A914 /* Pods-TaleneCore_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaleneCore_Example.release.xcconfig"; sourceTree = "<group>"; };
+		35DEBD9EF48356EDB0AA9565858885EA /* TaleneCore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TaleneCore-umbrella.h"; sourceTree = "<group>"; };
+		3BD98FC5AB0C0093CEED97FF07200919 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		5FDC6309D64C6F83CD39C5C95DCBD735 /* Pods-TaleneCore_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaleneCore_Tests-umbrella.h"; sourceTree = "<group>"; };
+		6EF56F7BBB6164FD72201BEC2FC85C36 /* Pods-TaleneCore_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaleneCore_Example-umbrella.h"; sourceTree = "<group>"; };
+		7396074BEE869E82AB3A1597F1A6B60C /* TaleneCore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TaleneCore.xcconfig; sourceTree = "<group>"; };
+		7794A90BA2AF9447E33026856EAE2D98 /* Pods-TaleneCore_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaleneCore_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		81964AB220058712127FF2124F68F2C4 /* TaleneCore.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TaleneCore.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8455A756047B20A9F7B0AC28388B3803 /* Pods-TaleneCore_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaleneCore_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		85A00D1C4CF148BDBFB404622BB89BAB /* Pods-TaleneCore_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TaleneCore_Example-frameworks.sh"; sourceTree = "<group>"; };
+		9269712C09C05FDC8A6A177B9C9278A5 /* Pods-TaleneCore_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaleneCore_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9469E6D8F65F733CA7C82D8081A9F373 /* Pods-TaleneCore_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaleneCore_Example-dummy.m"; sourceTree = "<group>"; };
+		950408A252DA0D2273BF3A65A4F34A85 /* Pods-TaleneCore_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TaleneCore_Tests.modulemap"; sourceTree = "<group>"; };
+		9C3B8D622D5ACBE8872118D2C3B333AF /* TaleneCore-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TaleneCore-prefix.pch"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A2A3A34AEEA9D5C4A99EB2DDE6826076 /* TaleneCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TaleneCore.modulemap; sourceTree = "<group>"; };
+		AF01B3DC874F07936D34933B0E40E0E3 /* Pods-TaleneCore_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TaleneCore_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B2E7C34017B0A0CFCD68CDBC76238C88 /* Pods-TaleneCore_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaleneCore_Example-Info.plist"; sourceTree = "<group>"; };
+		B494573EEFDFFB03728ED1105946BA20 /* Pods-TaleneCore_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaleneCore_Tests-Info.plist"; sourceTree = "<group>"; };
+		B49B6F3AEC8FAE58C023D35315CEA99D /* Pods-TaleneCore_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TaleneCore_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CBB762EC0161C8EC54ECAC3658EB6476 /* TaleneCore-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TaleneCore-Info.plist"; sourceTree = "<group>"; };
+		F59EC62A1D593D6832C9C1041E97526F /* Pods-TaleneCore_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaleneCore_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F962B53C60B59F56E6308F52EEA3627A /* Pods-TaleneCore_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TaleneCore_Example.modulemap"; sourceTree = "<group>"; };
+		F9DA8CCF14FF2452AF2FD4336F81ED19 /* TaleneCore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TaleneCore-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5F421AF58904EDE17740866F73D6A5B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3003AFBD673186DAA5B477B6118A46EE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A222FBFCF77AEAA575458F708BAA4020 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6F4CB70D4E322D0C95F15F2601C5284 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4824C10EFF41D3ADAC5444363922F37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D0C0916001755022966006706C90F02 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		131BCF0D3FA3BD77A6EC9A06A2E91734 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B9B2889C70EFA5B3D1B68BEEA225506 /* TaleneCore */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		99BB32F360B9F977639C5803713FD39D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A2A3A34AEEA9D5C4A99EB2DDE6826076 /* TaleneCore.modulemap */,
+				7396074BEE869E82AB3A1597F1A6B60C /* TaleneCore.xcconfig */,
+				F9DA8CCF14FF2452AF2FD4336F81ED19 /* TaleneCore-dummy.m */,
+				CBB762EC0161C8EC54ECAC3658EB6476 /* TaleneCore-Info.plist */,
+				9C3B8D622D5ACBE8872118D2C3B333AF /* TaleneCore-prefix.pch */,
+				35DEBD9EF48356EDB0AA9565858885EA /* TaleneCore-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/TaleneCore";
+			sourceTree = "<group>";
+		};
+		9B9B2889C70EFA5B3D1B68BEEA225506 /* TaleneCore */ = {
+			isa = PBXGroup;
+			children = (
+				25E2C97489D21C211AC098EF12299322 /* ReplaceMe.swift */,
+				EED1C38E00A92668426B3748D02049C9 /* Pod */,
+				99BB32F360B9F977639C5803713FD39D /* Support Files */,
+			);
+			name = TaleneCore;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		A12AFC5D44EB7CFE7DB8CFB576EF9E6C /* Pods-TaleneCore_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				950408A252DA0D2273BF3A65A4F34A85 /* Pods-TaleneCore_Tests.modulemap */,
+				B49B6F3AEC8FAE58C023D35315CEA99D /* Pods-TaleneCore_Tests-acknowledgements.markdown */,
+				9269712C09C05FDC8A6A177B9C9278A5 /* Pods-TaleneCore_Tests-acknowledgements.plist */,
+				26497D8E87C1410786BB716EDD34245D /* Pods-TaleneCore_Tests-dummy.m */,
+				B494573EEFDFFB03728ED1105946BA20 /* Pods-TaleneCore_Tests-Info.plist */,
+				5FDC6309D64C6F83CD39C5C95DCBD735 /* Pods-TaleneCore_Tests-umbrella.h */,
+				F59EC62A1D593D6832C9C1041E97526F /* Pods-TaleneCore_Tests.debug.xcconfig */,
+				1DA31FCE419E47CE8277C8EA36A96440 /* Pods-TaleneCore_Tests.release.xcconfig */,
+			);
+			name = "Pods-TaleneCore_Tests";
+			path = "Target Support Files/Pods-TaleneCore_Tests";
+			sourceTree = "<group>";
+		};
+		A31F0FB51933CD77730A1C7B2F86E567 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21F78A3F752B80FE66EECBABAFD2C8E9 /* Pods_TaleneCore_Example.framework */,
+				283D9B74B6B7096ED004C48D5450B151 /* Pods_TaleneCore_Tests.framework */,
+				2773B0AB805EFDF6485C670D8ED8FB55 /* TaleneCore.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A36A31ABDA3631BA0A0DD7601141C459 /* Pods-TaleneCore_Example */ = {
+			isa = PBXGroup;
+			children = (
+				F962B53C60B59F56E6308F52EEA3627A /* Pods-TaleneCore_Example.modulemap */,
+				AF01B3DC874F07936D34933B0E40E0E3 /* Pods-TaleneCore_Example-acknowledgements.markdown */,
+				8455A756047B20A9F7B0AC28388B3803 /* Pods-TaleneCore_Example-acknowledgements.plist */,
+				9469E6D8F65F733CA7C82D8081A9F373 /* Pods-TaleneCore_Example-dummy.m */,
+				85A00D1C4CF148BDBFB404622BB89BAB /* Pods-TaleneCore_Example-frameworks.sh */,
+				B2E7C34017B0A0CFCD68CDBC76238C88 /* Pods-TaleneCore_Example-Info.plist */,
+				6EF56F7BBB6164FD72201BEC2FC85C36 /* Pods-TaleneCore_Example-umbrella.h */,
+				7794A90BA2AF9447E33026856EAE2D98 /* Pods-TaleneCore_Example.debug.xcconfig */,
+				324DEAC5DEB796976D20CD308E86A914 /* Pods-TaleneCore_Example.release.xcconfig */,
+			);
+			name = "Pods-TaleneCore_Example";
+			path = "Target Support Files/Pods-TaleneCore_Example";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				131BCF0D3FA3BD77A6EC9A06A2E91734 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				A31F0FB51933CD77730A1C7B2F86E567 /* Products */,
+				EE022D4432B1B2043BBAC4144ADAB850 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE022D4432B1B2043BBAC4144ADAB850 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A36A31ABDA3631BA0A0DD7601141C459 /* Pods-TaleneCore_Example */,
+				A12AFC5D44EB7CFE7DB8CFB576EF9E6C /* Pods-TaleneCore_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		EED1C38E00A92668426B3748D02049C9 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				0B221558E82588A95B6738BEAC471950 /* LICENSE */,
+				3BD98FC5AB0C0093CEED97FF07200919 /* README.md */,
+				81964AB220058712127FF2124F68F2C4 /* TaleneCore.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		49A12BFB3485D3AFF79B9E4C7B7BE8B2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9753FBF79A2860D44443DABFAC2ABA26 /* TaleneCore-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FAAC793809002E836B1A0FA1C8DA57C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91CC8DF867FD409532BBB22EA639E0B7 /* Pods-TaleneCore_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC91C13D933EAB58F6B8CFAA79672658 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F20DD0D2B15E648009F18FDCB23DFBC /* Pods-TaleneCore_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		681D6BB3BB801328BF5880AAB0E9356F /* Pods-TaleneCore_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D70D0522F5B4D598ED0835B8B219B66B /* Build configuration list for PBXNativeTarget "Pods-TaleneCore_Example" */;
+			buildPhases = (
+				CC91C13D933EAB58F6B8CFAA79672658 /* Headers */,
+				91D0F9F92EF6182D287F555B83203D26 /* Sources */,
+				5F421AF58904EDE17740866F73D6A5B2 /* Frameworks */,
+				60EC615F39749BCE985EED7FB6C37923 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BBF2EC8785BDFC4E2D987A28571C995 /* PBXTargetDependency */,
+			);
+			name = "Pods-TaleneCore_Example";
+			productName = "Pods-TaleneCore_Example";
+			productReference = 21F78A3F752B80FE66EECBABAFD2C8E9 /* Pods_TaleneCore_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		82E122E6993E270A0F2CD385C539F661 /* Pods-TaleneCore_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BFEABF50472FA835E4C553F5779C943 /* Build configuration list for PBXNativeTarget "Pods-TaleneCore_Tests" */;
+			buildPhases = (
+				6FAAC793809002E836B1A0FA1C8DA57C /* Headers */,
+				B8304675A4CBC69C03BE2ACC7F4EA7AC /* Sources */,
+				F4824C10EFF41D3ADAC5444363922F37 /* Frameworks */,
+				452A7AA7E2D4BB5A26E002AC2C39C4D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEB22BAE862890766484C0E1DA4EA379 /* PBXTargetDependency */,
+			);
+			name = "Pods-TaleneCore_Tests";
+			productName = "Pods-TaleneCore_Tests";
+			productReference = 283D9B74B6B7096ED004C48D5450B151 /* Pods_TaleneCore_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B4E1C1498C8E9FBA64E5724EF39BE4FA /* TaleneCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF455DDDD76AD4F857CDC0CABD3F48A8 /* Build configuration list for PBXNativeTarget "TaleneCore" */;
+			buildPhases = (
+				49A12BFB3485D3AFF79B9E4C7B7BE8B2 /* Headers */,
+				D0A6E6F80F8305D5CDA1684C7E96A5C4 /* Sources */,
+				A222FBFCF77AEAA575458F708BAA4020 /* Frameworks */,
+				EB059123EA8EBD9ACE957CA0804D5957 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TaleneCore;
+			productName = TaleneCore;
+			productReference = 2773B0AB805EFDF6485C670D8ED8FB55 /* TaleneCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = A31F0FB51933CD77730A1C7B2F86E567 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				681D6BB3BB801328BF5880AAB0E9356F /* Pods-TaleneCore_Example */,
+				82E122E6993E270A0F2CD385C539F661 /* Pods-TaleneCore_Tests */,
+				B4E1C1498C8E9FBA64E5724EF39BE4FA /* TaleneCore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		452A7AA7E2D4BB5A26E002AC2C39C4D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60EC615F39749BCE985EED7FB6C37923 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB059123EA8EBD9ACE957CA0804D5957 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		91D0F9F92EF6182D287F555B83203D26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B6DEB25AC7603C07DF71395B6E88597 /* Pods-TaleneCore_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8304675A4CBC69C03BE2ACC7F4EA7AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DD4832772D89425CB76135630BE958B /* Pods-TaleneCore_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0A6E6F80F8305D5CDA1684C7E96A5C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC248F10F57DB54CE68C69FF997A283C /* ReplaceMe.swift in Sources */,
+				8064195D09EB7195427ED6B96BC70B88 /* TaleneCore-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0BBF2EC8785BDFC4E2D987A28571C995 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TaleneCore;
+			target = B4E1C1498C8E9FBA64E5724EF39BE4FA /* TaleneCore */;
+			targetProxy = DCFF5F13480551814979E3B00734D0C4 /* PBXContainerItemProxy */;
+		};
+		DEB22BAE862890766484C0E1DA4EA379 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TaleneCore_Example";
+			target = 681D6BB3BB801328BF5880AAB0E9356F /* Pods-TaleneCore_Example */;
+			targetProxy = 1D93574A6759294664D214D0AD4F7BD6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		308535DACECBB3AA717A193E50A07D79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DA31FCE419E47CE8277C8EA36A96440 /* Pods-TaleneCore_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TaleneCore_Tests/Pods-TaleneCore_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TaleneCore_Tests/Pods-TaleneCore_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7381469AD76719B949FAD7EF1A8DA36D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F59EC62A1D593D6832C9C1041E97526F /* Pods-TaleneCore_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TaleneCore_Tests/Pods-TaleneCore_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TaleneCore_Tests/Pods-TaleneCore_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		87EF2381E169CAF20006BA6AB6AE7042 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7396074BEE869E82AB3A1597F1A6B60C /* TaleneCore.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TaleneCore/TaleneCore-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TaleneCore/TaleneCore-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TaleneCore/TaleneCore.modulemap";
+				PRODUCT_MODULE_NAME = TaleneCore;
+				PRODUCT_NAME = TaleneCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8DC0018688BED0EC3DDF250E8641ED36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 324DEAC5DEB796976D20CD308E86A914 /* Pods-TaleneCore_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TaleneCore_Example/Pods-TaleneCore_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TaleneCore_Example/Pods-TaleneCore_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8EB5D0B6C640132E6483524CD2A6310F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7794A90BA2AF9447E33026856EAE2D98 /* Pods-TaleneCore_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TaleneCore_Example/Pods-TaleneCore_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TaleneCore_Example/Pods-TaleneCore_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B0087CB4594321EF41619F3181FE120E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		EFFF8FAE169B39F1C57A41F5D101E122 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7396074BEE869E82AB3A1597F1A6B60C /* TaleneCore.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TaleneCore/TaleneCore-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TaleneCore/TaleneCore-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TaleneCore/TaleneCore.modulemap";
+				PRODUCT_MODULE_NAME = TaleneCore;
+				PRODUCT_NAME = TaleneCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */,
+				B0087CB4594321EF41619F3181FE120E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BFEABF50472FA835E4C553F5779C943 /* Build configuration list for PBXNativeTarget "Pods-TaleneCore_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7381469AD76719B949FAD7EF1A8DA36D /* Debug */,
+				308535DACECBB3AA717A193E50A07D79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D70D0522F5B4D598ED0835B8B219B66B /* Build configuration list for PBXNativeTarget "Pods-TaleneCore_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EB5D0B6C640132E6483524CD2A6310F /* Debug */,
+				8DC0018688BED0EC3DDF250E8641ED36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF455DDDD76AD4F857CDC0CABD3F48A8 /* Build configuration list for PBXNativeTarget "TaleneCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFFF8FAE169B39F1C57A41F5D101E122 /* Debug */,
+				87EF2381E169CAF20006BA6AB6AE7042 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

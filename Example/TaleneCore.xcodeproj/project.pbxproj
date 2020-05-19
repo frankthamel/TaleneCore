@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07617777A4B34EEF80711EF8 /* TaleneCore.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = TaleneCore.podspec; path = ../TaleneCore.podspec; sourceTree = "<group>"; };
+		07617777A4B34EEF80711EF8 /* TaleneCore.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TaleneCore.podspec; path = ../TaleneCore.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1A56A4157E287E8CEFAE39E5 /* Pods-TaleneCore_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaleneCore_Example.debug.xcconfig"; path = "Target Support Files/Pods-TaleneCore_Example/Pods-TaleneCore_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* TaleneCore_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaleneCore_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,11 +41,11 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		80BBDBA27A16D2D37B8DE317 /* Pods-TaleneCore_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaleneCore_Example.release.xcconfig"; path = "Target Support Files/Pods-TaleneCore_Example/Pods-TaleneCore_Example.release.xcconfig"; sourceTree = "<group>"; };
-		8627B7BF8D44F291491DED2E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8627B7BF8D44F291491DED2E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		ADE085D4D292E1A2D0A701E5 /* Pods_TaleneCore_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaleneCore_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C053BE030EAD08038A1E12B8 /* Pods-TaleneCore_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaleneCore_Tests.release.xcconfig"; path = "Target Support Files/Pods-TaleneCore_Tests/Pods-TaleneCore_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		CA8A53B87817F08F63C7185F /* Pods-TaleneCore_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaleneCore_Tests.debug.xcconfig"; path = "Target Support Files/Pods-TaleneCore_Tests/Pods-TaleneCore_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		CB3380E74BDD3B21F996CDC1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		CB3380E74BDD3B21F996CDC1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FDEFAC1CBFCFD4EA7C738ACF /* Pods_TaleneCore_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaleneCore_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -147,7 +147,6 @@
 				CA8A53B87817F08F63C7185F /* Pods-TaleneCore_Tests.debug.xcconfig */,
 				C053BE030EAD08038A1E12B8 /* Pods-TaleneCore_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

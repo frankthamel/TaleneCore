@@ -1,0 +1,6 @@
+framework module Pods_TaleneCore_Example {
+  umbrella header "Pods-TaleneCore_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

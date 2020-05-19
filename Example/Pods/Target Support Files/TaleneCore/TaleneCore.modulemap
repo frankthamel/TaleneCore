@@ -1,0 +1,6 @@
+framework module TaleneCore {
+  umbrella header "TaleneCore-umbrella.h"
+
+  export *
+  module * { export * }
+}

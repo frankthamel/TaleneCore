@@ -1,0 +1,16 @@
+PODS:
+  - TaleneCore (0.1.0)
+
+DEPENDENCIES:
+  - TaleneCore (from `../`)
+
+EXTERNAL SOURCES:
+  TaleneCore:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TaleneCore: 4a4b267cbd166a99c499d35f0310a7f1c6b8d9f1
+
+PODFILE CHECKSUM: 42d6350af7aaae3ffbe0a1d4f5d445bd966ac243
+
+COCOAPODS: 1.8.4
