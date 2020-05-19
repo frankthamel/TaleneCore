@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/w.frankthamel@gmail.com/TaleneCore'
+  s.homepage         = 'https://bitbucket.org/frankthamel/talenecore'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'w.frankthamel@gmail.com' => 'w.frankthamel@gmail.com' }
-  s.source           = { :git => 'https://github.com/w.frankthamel@gmail.com/TaleneCore.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://frankthamel@bitbucket.org/frankthamel/talenecore.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '12.0'
