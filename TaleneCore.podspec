@@ -30,7 +30,7 @@ TaleneCore is the core library for all Talene apps. This comes with a structured
 
   s.ios.deployment_target = '12.0'
 
-  s.source_files = 'TaleneCore/Source/**/*'
+  s.source_files = 'TaleneCore/Source/*'
   
   # s.resource_bundles = {
   #   'TaleneCore' => ['TaleneCore/Assets/*.png']
