@@ -15,7 +15,6 @@
 		8064195D09EB7195427ED6B96BC70B88 /* TaleneCore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DA8CCF14FF2452AF2FD4336F81ED19 /* TaleneCore-dummy.m */; };
 		91CC8DF867FD409532BBB22EA639E0B7 /* Pods-TaleneCore_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FDC6309D64C6F83CD39C5C95DCBD735 /* Pods-TaleneCore_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9753FBF79A2860D44443DABFAC2ABA26 /* TaleneCore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 35DEBD9EF48356EDB0AA9565858885EA /* TaleneCore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CC248F10F57DB54CE68C69FF997A283C /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E2C97489D21C211AC098EF12299322 /* ReplaceMe.swift */; };
 		D6F4CB70D4E322D0C95F15F2601C5284 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,29 +36,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B221558E82588A95B6738BEAC471950 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		0B221558E82588A95B6738BEAC471950 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1DA31FCE419E47CE8277C8EA36A96440 /* Pods-TaleneCore_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaleneCore_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		21F78A3F752B80FE66EECBABAFD2C8E9 /* Pods_TaleneCore_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TaleneCore_Example.framework; path = "Pods-TaleneCore_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		25E2C97489D21C211AC098EF12299322 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = TaleneCore/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		21F78A3F752B80FE66EECBABAFD2C8E9 /* Pods_TaleneCore_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaleneCore_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26497D8E87C1410786BB716EDD34245D /* Pods-TaleneCore_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaleneCore_Tests-dummy.m"; sourceTree = "<group>"; };
-		2773B0AB805EFDF6485C670D8ED8FB55 /* TaleneCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TaleneCore.framework; path = TaleneCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		283D9B74B6B7096ED004C48D5450B151 /* Pods_TaleneCore_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TaleneCore_Tests.framework; path = "Pods-TaleneCore_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2773B0AB805EFDF6485C670D8ED8FB55 /* TaleneCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TaleneCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		283D9B74B6B7096ED004C48D5450B151 /* Pods_TaleneCore_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaleneCore_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		324DEAC5DEB796976D20CD308E86A914 /* Pods-TaleneCore_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaleneCore_Example.release.xcconfig"; sourceTree = "<group>"; };
 		35DEBD9EF48356EDB0AA9565858885EA /* TaleneCore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TaleneCore-umbrella.h"; sourceTree = "<group>"; };
-		3BD98FC5AB0C0093CEED97FF07200919 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		3BD98FC5AB0C0093CEED97FF07200919 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5FDC6309D64C6F83CD39C5C95DCBD735 /* Pods-TaleneCore_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaleneCore_Tests-umbrella.h"; sourceTree = "<group>"; };
 		6EF56F7BBB6164FD72201BEC2FC85C36 /* Pods-TaleneCore_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaleneCore_Example-umbrella.h"; sourceTree = "<group>"; };
 		7396074BEE869E82AB3A1597F1A6B60C /* TaleneCore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TaleneCore.xcconfig; sourceTree = "<group>"; };
 		7794A90BA2AF9447E33026856EAE2D98 /* Pods-TaleneCore_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaleneCore_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		81964AB220058712127FF2124F68F2C4 /* TaleneCore.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TaleneCore.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		81964AB220058712127FF2124F68F2C4 /* TaleneCore.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = TaleneCore.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8455A756047B20A9F7B0AC28388B3803 /* Pods-TaleneCore_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaleneCore_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		85A00D1C4CF148BDBFB404622BB89BAB /* Pods-TaleneCore_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TaleneCore_Example-frameworks.sh"; sourceTree = "<group>"; };
 		9269712C09C05FDC8A6A177B9C9278A5 /* Pods-TaleneCore_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaleneCore_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		9469E6D8F65F733CA7C82D8081A9F373 /* Pods-TaleneCore_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaleneCore_Example-dummy.m"; sourceTree = "<group>"; };
 		950408A252DA0D2273BF3A65A4F34A85 /* Pods-TaleneCore_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TaleneCore_Tests.modulemap"; sourceTree = "<group>"; };
 		9C3B8D622D5ACBE8872118D2C3B333AF /* TaleneCore-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TaleneCore-prefix.pch"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A2A3A34AEEA9D5C4A99EB2DDE6826076 /* TaleneCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TaleneCore.modulemap; sourceTree = "<group>"; };
 		AF01B3DC874F07936D34933B0E40E0E3 /* Pods-TaleneCore_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TaleneCore_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B2E7C34017B0A0CFCD68CDBC76238C88 /* Pods-TaleneCore_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaleneCore_Example-Info.plist"; sourceTree = "<group>"; };
@@ -99,6 +97,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01B0AD8F2473950D00D39E70 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		131BCF0D3FA3BD77A6EC9A06A2E91734 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +129,7 @@
 		9B9B2889C70EFA5B3D1B68BEEA225506 /* TaleneCore */ = {
 			isa = PBXGroup;
 			children = (
-				25E2C97489D21C211AC098EF12299322 /* ReplaceMe.swift */,
+				01B0AD8F2473950D00D39E70 /* Source */,
 				EED1C38E00A92668426B3748D02049C9 /* Pod */,
 				99BB32F360B9F977639C5803713FD39D /* Support Files */,
 			);
@@ -381,7 +386,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC248F10F57DB54CE68C69FF997A283C /* ReplaceMe.swift in Sources */,
 				8064195D09EB7195427ED6B96BC70B88 /* TaleneCore-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -623,8 +627,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

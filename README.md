@@ -22,7 +22,7 @@ pod 'TaleneCore'
 
 ## Author
 
-w.frankthamel@gmail.com, frank.emmanuvel@gmail.com
+w.frankthamel@gmail.com
 
 ## License
 
