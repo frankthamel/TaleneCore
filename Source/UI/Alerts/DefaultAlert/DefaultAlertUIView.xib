@@ -17,6 +17,19 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z9V-Mt-8Ry" customClass="UIViewX" customModule="TaleneCore" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="44" width="296" height="178"/>
                     <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qPF-XS-wPC" customClass="UIViewX" customModule="TaleneCore" customModuleProvider="target">
+                            <rect key="frame" x="103" y="-45" width="90" height="90"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="GPe-65-9GB"/>
+                                <constraint firstAttribute="height" constant="100" id="sbp-iq-TkJ"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="50"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gAo-nf-gwU">
                             <rect key="frame" x="28" y="44" width="240" height="106"/>
                             <subviews>
@@ -57,9 +70,11 @@
                         <constraint firstAttribute="bottom" secondItem="EZU-SL-8iX" secondAttribute="bottom" id="BeK-ou-HV8"/>
                         <constraint firstAttribute="height" constant="178" id="DGQ-b2-Jwh"/>
                         <constraint firstItem="gAo-nf-gwU" firstAttribute="top" secondItem="61J-sJ-QFA" secondAttribute="bottom" id="IC5-sK-L8L"/>
+                        <constraint firstItem="qPF-XS-wPC" firstAttribute="centerX" secondItem="z9V-Mt-8Ry" secondAttribute="centerX" id="P57-1L-7zz"/>
                         <constraint firstItem="EZU-SL-8iX" firstAttribute="leading" secondItem="z9V-Mt-8Ry" secondAttribute="leading" id="Uf0-ly-E0g"/>
-                        <constraint firstItem="61J-sJ-QFA" firstAttribute="centerY" secondItem="z9V-Mt-8Ry" secondAttribute="top" constant="4" id="Ukv-E5-NGe"/>
+                        <constraint firstItem="61J-sJ-QFA" firstAttribute="centerY" secondItem="z9V-Mt-8Ry" secondAttribute="top" id="Ukv-E5-NGe"/>
                         <constraint firstAttribute="trailingMargin" secondItem="gAo-nf-gwU" secondAttribute="trailing" constant="20" id="XiK-81-d0Z"/>
+                        <constraint firstItem="qPF-XS-wPC" firstAttribute="centerY" secondItem="z9V-Mt-8Ry" secondAttribute="top" id="aOc-sY-RpM"/>
                         <constraint firstAttribute="trailing" secondItem="EZU-SL-8iX" secondAttribute="trailing" id="mCg-gH-IUH"/>
                         <constraint firstItem="61J-sJ-QFA" firstAttribute="centerX" secondItem="z9V-Mt-8Ry" secondAttribute="centerX" id="o1F-9b-ccY"/>
                     </constraints>
@@ -74,13 +89,15 @@
             <constraints>
                 <constraint firstItem="z9V-Mt-8Ry" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="Y4F-d1-4gC"/>
                 <constraint firstItem="z9V-Mt-8Ry" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="hLX-OA-a8S"/>
-                <constraint firstItem="z9V-Mt-8Ry" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="44" id="jXm-0T-NWK"/>
+                <constraint firstItem="z9V-Mt-8Ry" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="55" id="jXm-0T-NWK"/>
                 <constraint firstItem="z9V-Mt-8Ry" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mav-IC-TAW"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="containerView" destination="z9V-Mt-8Ry" id="HO5-k6-OJN"/>
                 <outlet property="descriptionLabel" destination="NWv-nb-TpW" id="wxY-H4-MEb"/>
                 <outlet property="iconImageView" destination="61J-sJ-QFA" id="FcB-RW-dXO"/>
+                <outlet property="layerMaskView" destination="qPF-XS-wPC" id="16N-rz-P1r"/>
                 <outlet property="titleLabel" destination="tRa-P2-FGQ" id="szj-mi-czC"/>
             </connections>
             <point key="canvasLocation" x="128.98550724637681" y="-33.482142857142854"/>
