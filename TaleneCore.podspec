@@ -30,14 +30,49 @@ TaleneCore is the core library for all Talene apps. This comes with a structured
 
   s.ios.deployment_target = '12.0'
 
-  s.source_files = 'Source/**/*.swift'
+  s.source_files = 'Source/**/*.{swift}'
   s.swift_version = '5.0'
+  s.static_framework = true
   
-  # s.resource_bundles = {
-  #   'TaleneCore' => ['TaleneCore/Assets/*.png']
-  # }
+   s.resource_bundles = {
+       'TaleneCore' => ['Source/**/**/*.{xib,xcassets}']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  # Networking
+  s.dependency 'Moya', '13.0.1'
+  s.dependency 'Kingfisher', '5.12.0'
+
+  # Database
+  s.dependency 'RealmSwift', '4.3.0'
+
+  # Keychain Access
+  s.dependency 'Locksmith', '4.0.0'
+
+  # Logger
+  s.dependency 'SwiftyBeaver', '1.8.4'
+
+  # Alerts and Progress
+  s.dependency 'SwiftMessages', '7.0.1'
+  s.dependency 'SVProgressHUD', '2.2.5'
+  s.dependency 'Malert', '4.0'
+
+  # File Manager
+  s.dependency 'FCFileManager', '1.0.20'
+
+  # Firebase
+  s.dependency 'Firebase/Core', '6.14.0'
+  s.dependency 'Firebase/Auth', '6.14.0'
+
+  # Loading
+  s.dependency 'ARSLineProgress', '3.1.0'
+
+  # Format phone number
+  s.dependency 'PhoneNumberKit', '3.2.0'
+
+  # Loading custom views
+  s.dependency 'LoadableViews', '3.4.0'
+  
 end

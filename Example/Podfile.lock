@@ -1,16 +1,200 @@
 PODS:
-  - TaleneCore (0.1.0)
+  - Alamofire (4.9.1)
+  - ARSLineProgress (3.1.0)
+  - FCFileManager (1.0.20)
+  - Firebase/Auth (6.14.0):
+    - Firebase/CoreOnly
+    - FirebaseAuth (~> 6.4.1)
+  - Firebase/Core (6.14.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (= 6.1.7)
+  - Firebase/CoreOnly (6.14.0):
+    - FirebaseCore (= 6.5.0)
+  - FirebaseAnalytics (6.1.7):
+    - FirebaseCore (~> 6.5)
+    - FirebaseInstanceID (~> 4.2)
+    - GoogleAppMeasurement (= 6.1.7)
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
+    - GoogleUtilities/MethodSwizzler (~> 6.0)
+    - GoogleUtilities/Network (~> 6.0)
+    - "GoogleUtilities/NSData+zlib (~> 6.0)"
+    - nanopb (= 0.3.9011)
+  - FirebaseAuth (6.4.2):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 6.2)
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.2)
+    - GoogleUtilities/Environment (~> 6.2)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - FirebaseAuthInterop (1.1.0)
+  - FirebaseCore (6.5.0):
+    - FirebaseCoreDiagnostics (~> 1.0)
+    - FirebaseCoreDiagnosticsInterop (~> 1.0)
+    - GoogleUtilities/Environment (~> 6.4)
+    - GoogleUtilities/Logger (~> 6.4)
+  - FirebaseCoreDiagnostics (1.2.4):
+    - FirebaseCoreDiagnosticsInterop (~> 1.2)
+    - GoogleDataTransportCCTSupport (~> 3.0)
+    - GoogleUtilities/Environment (~> 6.5)
+    - GoogleUtilities/Logger (~> 6.5)
+    - nanopb (~> 0.3.901)
+  - FirebaseCoreDiagnosticsInterop (1.2.0)
+  - FirebaseInstanceID (4.2.8):
+    - FirebaseCore (~> 6.5)
+    - GoogleUtilities/Environment (~> 6.4)
+    - GoogleUtilities/UserDefaults (~> 6.4)
+  - GoogleAppMeasurement (6.1.7):
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
+    - GoogleUtilities/MethodSwizzler (~> 6.0)
+    - GoogleUtilities/Network (~> 6.0)
+    - "GoogleUtilities/NSData+zlib (~> 6.0)"
+    - nanopb (= 0.3.9011)
+  - GoogleDataTransport (6.1.0)
+  - GoogleDataTransportCCTSupport (3.0.0):
+    - GoogleDataTransport (~> 6.0)
+    - nanopb (~> 0.3.901)
+  - GoogleUtilities/AppDelegateSwizzler (6.6.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (6.6.0):
+    - PromisesObjC (~> 1.2)
+  - GoogleUtilities/Logger (6.6.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (6.6.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (6.6.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (6.6.0)"
+  - GoogleUtilities/Reachability (6.6.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (6.6.0):
+    - GoogleUtilities/Logger
+  - GTMSessionFetcher/Core (1.4.0)
+  - Kingfisher (5.12.0):
+    - Kingfisher/Core (= 5.12.0)
+  - Kingfisher/Core (5.12.0)
+  - LoadableViews (3.4.0)
+  - Locksmith (4.0.0)
+  - Malert (4.0)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - nanopb (0.3.9011):
+    - nanopb/decode (= 0.3.9011)
+    - nanopb/encode (= 0.3.9011)
+  - nanopb/decode (0.3.9011)
+  - nanopb/encode (0.3.9011)
+  - PhoneNumberKit (3.2.0):
+    - PhoneNumberKit/PhoneNumberKitCore (= 3.2.0)
+    - PhoneNumberKit/UIKit (= 3.2.0)
+  - PhoneNumberKit/PhoneNumberKitCore (3.2.0)
+  - PhoneNumberKit/UIKit (3.2.0):
+    - PhoneNumberKit/PhoneNumberKitCore
+  - PromisesObjC (1.2.8)
+  - Realm (4.3.0):
+    - Realm/Headers (= 4.3.0)
+  - Realm/Headers (4.3.0)
+  - RealmSwift (4.3.0):
+    - Realm (= 4.3.0)
+  - Result (4.1.0)
+  - SVProgressHUD (2.2.5)
+  - SwiftMessages (7.0.1):
+    - SwiftMessages/App (= 7.0.1)
+  - SwiftMessages/App (7.0.1)
+  - SwiftyBeaver (1.8.4)
+  - TaleneCore (0.1.0):
+    - ARSLineProgress (= 3.1.0)
+    - FCFileManager (= 1.0.20)
+    - Firebase/Auth (= 6.14.0)
+    - Firebase/Core (= 6.14.0)
+    - Kingfisher (= 5.12.0)
+    - LoadableViews (= 3.4.0)
+    - Locksmith (= 4.0.0)
+    - Malert (= 4.0)
+    - Moya (= 13.0.1)
+    - PhoneNumberKit (= 3.2.0)
+    - RealmSwift (= 4.3.0)
+    - SVProgressHUD (= 2.2.5)
+    - SwiftMessages (= 7.0.1)
+    - SwiftyBeaver (= 1.8.4)
 
 DEPENDENCIES:
   - TaleneCore (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - ARSLineProgress
+    - FCFileManager
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseAuth
+    - FirebaseAuthInterop
+    - FirebaseCore
+    - FirebaseCoreDiagnostics
+    - FirebaseCoreDiagnosticsInterop
+    - FirebaseInstanceID
+    - GoogleAppMeasurement
+    - GoogleDataTransport
+    - GoogleDataTransportCCTSupport
+    - GoogleUtilities
+    - GTMSessionFetcher
+    - Kingfisher
+    - LoadableViews
+    - Locksmith
+    - Malert
+    - Moya
+    - nanopb
+    - PhoneNumberKit
+    - PromisesObjC
+    - Realm
+    - RealmSwift
+    - Result
+    - SVProgressHUD
+    - SwiftMessages
+    - SwiftyBeaver
 
 EXTERNAL SOURCES:
   TaleneCore:
     :path: "../"
 
 SPEC CHECKSUMS:
-  TaleneCore: 4a4b267cbd166a99c499d35f0310a7f1c6b8d9f1
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  ARSLineProgress: 60778657c69491796c3faf5b834c72924c405833
+  FCFileManager: e0f73316e6aa2eb04d2ff4caa75fe7df1ae44270
+  Firebase: 0219bb4782eb1406f1b9b0628a2e625484ce910d
+  FirebaseAnalytics: f68b9f3f1241385129ae0a83b63627fc420c05e5
+  FirebaseAuth: ce45d7c5d46bed90159f3a73b6efbe8976ed3573
+  FirebaseAuthInterop: a0f37ae05833af156e72028f648d313f7e7592e9
+  FirebaseCore: 632e05cc5e1199d9147122c16d92305eb04c34bd
+  FirebaseCoreDiagnostics: b59c024493a409f8aecba02c99928d0d8431d159
+  FirebaseCoreDiagnosticsInterop: 296e2c5f5314500a850ad0b83e9e7c10b011a850
+  FirebaseInstanceID: ce993a3c3670a8f5d47ce371ac5d143c560608c5
+  GoogleAppMeasurement: db118eb61a97dd8c4f7014e368d3c335cbbcf80a
+  GoogleDataTransport: f6f8eba931df03ebd2232ff4645aa85f8f47b5ab
+  GoogleDataTransportCCTSupport: 0f39025e8cf51f168711bd3fb773938d7e62ddb5
+  GoogleUtilities: 39530bc0ad980530298e9c4af8549e991fd033b1
+  GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
+  Kingfisher: dc6e0f53bb5b12c3e75bedb0e01bbd7a640eea69
+  LoadableViews: 0be9782c2fcb699cf3d281ddc4fb0a3d2d369296
+  Locksmith: e9bebbaaa4cee3c511bc358a44f843c3fe00e21f
+  Malert: 78badcb143f4df7bff1fa62f4bec05497c7865f3
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  PhoneNumberKit: df411d46177d1492da84e10b6c093846dd861452
+  PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  Realm: 9357c3589555793e1860a7104a7412bca4a48d99
+  RealmSwift: 402f1e379a8ef82c635313037b043f0f06de880c
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftMessages: b577dc7043be8b299857ab35bb663dbff6483bd0
+  SwiftyBeaver: f9a9aba96a6a6166e21682377804d728b0d20b95
+  TaleneCore: e9349b89630dc1b8ab5f29fa21e0c97376031f6c
 
-PODFILE CHECKSUM: 42d6350af7aaae3ffbe0a1d4f5d445bd966ac243
+PODFILE CHECKSUM: 577262dfb1408474324f004994df57a5cb4e6d9b
 
 COCOAPODS: 1.8.4

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="SignInAlertUIView" customModule="TaleneCore" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="362" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suH-3S-8F4">
+                    <rect key="frame" x="0.0" y="0.0" width="362" height="300"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGd-BF-xtb">
+                            <rect key="frame" x="160" y="24" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1K3-Ty-48x">
+                            <rect key="frame" x="55" y="105" width="252" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rqE-HQ-6vt">
+                            <rect key="frame" x="55" y="147" width="252" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBp-bZ-fZi">
+                            <rect key="frame" x="20" y="211" width="322" height="30"/>
+                            <state key="normal" title="Verify Phone Number"/>
+                            <connections>
+                                <action selector="didTapVerifyPhoneNumberButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="svg-lT-Af7"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CsL-2Y-mUe">
+                            <rect key="frame" x="20" y="249" width="322" height="30"/>
+                            <state key="normal" title="Submit OTP"/>
+                            <connections>
+                                <action selector="didTapSubmitOtpCode:" destination="iN0-l3-epB" eventType="touchUpInside" id="IDC-2X-VcC"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="rqE-HQ-6vt" firstAttribute="leading" secondItem="suH-3S-8F4" secondAttribute="leading" constant="55" id="HDG-uR-qUb"/>
+                        <constraint firstItem="rqE-HQ-6vt" firstAttribute="top" secondItem="1K3-Ty-48x" secondAttribute="bottom" constant="8" id="Iex-dd-LUn"/>
+                        <constraint firstItem="1K3-Ty-48x" firstAttribute="top" secondItem="ZGd-BF-xtb" secondAttribute="bottom" constant="60" id="K6i-rZ-A1J"/>
+                        <constraint firstItem="CsL-2Y-mUe" firstAttribute="top" secondItem="VBp-bZ-fZi" secondAttribute="bottom" constant="8" id="Lqh-0T-aPF"/>
+                        <constraint firstAttribute="trailing" secondItem="1K3-Ty-48x" secondAttribute="trailing" constant="55" id="eRl-Xa-uih"/>
+                        <constraint firstItem="VBp-bZ-fZi" firstAttribute="top" secondItem="rqE-HQ-6vt" secondAttribute="bottom" constant="30" id="g7O-jQ-HEc"/>
+                        <constraint firstAttribute="trailing" secondItem="VBp-bZ-fZi" secondAttribute="trailing" constant="20" id="kFH-t9-kB3"/>
+                        <constraint firstItem="CsL-2Y-mUe" firstAttribute="leading" secondItem="suH-3S-8F4" secondAttribute="leading" constant="20" id="kaH-EA-00V"/>
+                        <constraint firstItem="1K3-Ty-48x" firstAttribute="leading" secondItem="suH-3S-8F4" secondAttribute="leading" constant="55" id="pnW-ik-jII"/>
+                        <constraint firstItem="VBp-bZ-fZi" firstAttribute="leading" secondItem="suH-3S-8F4" secondAttribute="leading" constant="20" id="qDe-TI-YJ7"/>
+                        <constraint firstItem="ZGd-BF-xtb" firstAttribute="centerX" secondItem="suH-3S-8F4" secondAttribute="centerX" id="rLG-gu-zRx"/>
+                        <constraint firstAttribute="trailing" secondItem="rqE-HQ-6vt" secondAttribute="trailing" constant="55" id="s6d-Nt-96g"/>
+                        <constraint firstAttribute="height" constant="300" id="u9Q-iL-PfF"/>
+                        <constraint firstItem="ZGd-BF-xtb" firstAttribute="top" secondItem="suH-3S-8F4" secondAttribute="top" constant="24" id="xYJ-Ss-ChP"/>
+                        <constraint firstAttribute="trailing" secondItem="CsL-2Y-mUe" secondAttribute="trailing" constant="20" id="zyx-FA-6wN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="suH-3S-8F4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KvF-hG-0KI"/>
+                <constraint firstAttribute="bottom" secondItem="suH-3S-8F4" secondAttribute="bottom" id="hfX-bc-NV4"/>
+                <constraint firstItem="suH-3S-8F4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nTA-TQ-vjF"/>
+                <constraint firstAttribute="trailing" secondItem="suH-3S-8F4" secondAttribute="trailing" id="zPp-ql-Ncd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="otpTextField" destination="rqE-HQ-6vt" id="f0h-Zz-Msj"/>
+                <outlet property="phoneNumberTextField" destination="1K3-Ty-48x" id="Sff-bK-KEm"/>
+                <outlet property="titleLabel" destination="ZGd-BF-xtb" id="T69-QO-gwh"/>
+            </connections>
+            <point key="canvasLocation" x="-239.13043478260872" y="106.47321428571428"/>
+        </view>
+    </objects>
+</document>

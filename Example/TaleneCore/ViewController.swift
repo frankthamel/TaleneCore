@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-       // let core = TaleneCoreApp()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,5 +21,20 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func showInfoAlert(_ sender: Any) {
+         //let alertModel = InfoAlertModel(descriptions: [TCConstants.description : TCSay.Alerts.sign_in_verification_failed] , containerController: self)
+         let alertModel = CustomAlertModel(type: .custom(.signInWithEmail), containerController: self)
+         App.managers.alert.showAlert(model: alertModel)
+    }
+
+    @IBAction func showErrorAlert(_ sender: Any) {
+        let alertModel = FalierAlertModel(descriptions: ["description" :"This is a Test message."] , containerController: self)
+        App.managers.alert.showAlert(model: alertModel)
+    }
+
+    @IBAction func showSuccessAlert(_ sender: Any) {
+        let alertModel = SuccessAlertModel(descriptions: ["description" :"This is a Test message."] , containerController: self)
+        App.managers.alert.showAlert(model: alertModel)
+    }
 }
 

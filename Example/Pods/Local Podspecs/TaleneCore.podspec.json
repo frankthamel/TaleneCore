@@ -1,22 +1,75 @@
 {
   "name": "TaleneCore",
   "version": "0.1.0",
-  "summary": "A short description of TaleneCore.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/w.frankthamel@gmail.com/TaleneCore",
+  "summary": "TaleneCore is the core library for all Talene Apps.",
+  "description": "TaleneCore is the core library for all Talene apps. This comes with a structured framework which contains logging, analytics tracking, data handling, network handling, notification handling and so on.",
+  "homepage": "https://bitbucket.org/frankthamel/talenecore",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "w.frankthamel@gmail.com": "frank.emmanuvel@gmail.com"
+    "w.frankthamel@gmail.com": "w.frankthamel@gmail.com"
   },
   "source": {
-    "git": "https://github.com/w.frankthamel@gmail.com/TaleneCore.git",
+    "git": "https://frankthamel@bitbucket.org/frankthamel/talenecore.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "12.0"
   },
-  "source_files": "TaleneCore/Classes/**/*"
+  "source_files": "Source/**/*",
+  "swift_versions": "5.0",
+  "static_framework": true,
+  "resource_bundles": {
+    "TaleneCore": [
+      "TaleneCore/Assets/*"
+    ]
+  },
+  "frameworks": "UIKit",
+  "dependencies": {
+    "Moya": [
+      "13.0.1"
+    ],
+    "Kingfisher": [
+      "5.12.0"
+    ],
+    "RealmSwift": [
+      "4.3.0"
+    ],
+    "Locksmith": [
+      "4.0.0"
+    ],
+    "SwiftyBeaver": [
+      "1.8.4"
+    ],
+    "SwiftMessages": [
+      "7.0.1"
+    ],
+    "SVProgressHUD": [
+      "2.2.5"
+    ],
+    "Malert": [
+      "4.0"
+    ],
+    "FCFileManager": [
+      "1.0.20"
+    ],
+    "Firebase/Core": [
+      "6.14.0"
+    ],
+    "Firebase/Auth": [
+      "6.14.0"
+    ],
+    "ARSLineProgress": [
+      "3.1.0"
+    ],
+    "PhoneNumberKit": [
+      "3.2.0"
+    ],
+    "LoadableViews": [
+      "3.4.0"
+    ]
+  },
+  "swift_version": "5.0"
 }

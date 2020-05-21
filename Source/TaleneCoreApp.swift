@@ -7,8 +7,6 @@
 
 import Foundation
 
-public struct TaleneCoreApp {
-    public init() {
-
-    }
+public class TaleneCoreApp {
+    public init() {}
 }

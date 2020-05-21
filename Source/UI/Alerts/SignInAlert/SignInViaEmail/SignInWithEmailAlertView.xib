@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TCSignInWithEmailAlertView" customModule="TaleneCore" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="358" height="400"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="55i-zf-vKf">
+                    <rect key="frame" x="0.0" y="0.0" width="358" height="400"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SignIn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="af2-YT-qMC">
+                            <rect key="frame" x="155" y="40" width="48" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qfp-UC-EGz">
+                            <rect key="frame" x="30" y="346" width="298" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="400" id="Q7u-k7-oJp"/>
+                        <constraint firstAttribute="trailing" secondItem="Qfp-UC-EGz" secondAttribute="trailing" constant="30" id="bK2-us-g9w"/>
+                        <constraint firstAttribute="bottom" secondItem="Qfp-UC-EGz" secondAttribute="bottom" constant="20" id="c8Z-tQ-1Rr"/>
+                        <constraint firstItem="Qfp-UC-EGz" firstAttribute="leading" secondItem="55i-zf-vKf" secondAttribute="leading" constant="30" id="dDy-xh-2PQ"/>
+                        <constraint firstItem="af2-YT-qMC" firstAttribute="centerX" secondItem="55i-zf-vKf" secondAttribute="centerX" id="gNj-ui-0E7"/>
+                        <constraint firstItem="af2-YT-qMC" firstAttribute="top" secondItem="55i-zf-vKf" secondAttribute="top" constant="40" id="oSI-uE-NOj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="55i-zf-vKf" secondAttribute="trailing" id="HeU-h7-UqM"/>
+                <constraint firstItem="55i-zf-vKf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Tuz-ry-9u5"/>
+                <constraint firstItem="55i-zf-vKf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="aAm-fO-p6n"/>
+                <constraint firstAttribute="bottom" secondItem="55i-zf-vKf" secondAttribute="bottom" id="lqx-57-sAw"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="123.18840579710145" y="-18.080357142857142"/>
+        </view>
+    </objects>
+</document>
