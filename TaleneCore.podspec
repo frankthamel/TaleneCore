@@ -30,12 +30,12 @@ TaleneCore is the core library for all Talene apps. This comes with a structured
 
   s.ios.deployment_target = '12.0'
 
-  s.source_files = 'Source/**/*.{swift}'
+  s.source_files = 'Source/**/*.{swift,png,xib,xcassets}'
   s.swift_version = '5.0'
   s.static_framework = true
   
    s.resource_bundles = {
-       'TaleneCore' => ['Source/**/**/*.{xib,xcassets}']
+       'TaleneCore' => ['Source/**/**/*.{png,xib,xcassets}']
    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

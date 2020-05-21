@@ -18,12 +18,12 @@
   "platforms": {
     "ios": "12.0"
   },
-  "source_files": "Source/**/*",
+  "source_files": "Source/**/*.{swift,png,xib,xcassets}",
   "swift_versions": "5.0",
   "static_framework": true,
   "resource_bundles": {
     "TaleneCore": [
-      "TaleneCore/Assets/*"
+      "Source/**/**/*.{png,xib,xcassets}"
     ]
   },
   "frameworks": "UIKit",
