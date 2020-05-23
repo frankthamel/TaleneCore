@@ -12,119 +12,16 @@ import Malert
 // MARK: Alert Models
 public typealias AlertAction = () -> Void
 
-public protocol AlertModel {
-    var title: String? { get set }
-    var descriptions: [String : String] { get set }
-    var type : AlertType { get set }
-    var actions: [String : AlertAction]? { get set }
-    var closeAction: AlertAction? { get set }
-    var closeButtonName: String? { get set }
-    var containerController: UIViewController { get set }
-}
+public class AlertModel {
+    var title: String?
+    var descriptions: [String : String]
+    var type : AlertType
+    var actions: [String : AlertAction]?
+    var closeAction: AlertAction?
+    var closeButtonName: String?
+    var containerController: UIViewController
 
-public enum AlertType {
-    case success
-    case error
-    case info
-    case custom(CustomAlertViewType)
-}
-
-public struct SuccessAlertModel: AlertModel {
-
-    public var title: String?
-
-    public var descriptions: [String : String]
-
-    public var type: AlertType = .success
-
-    public var actions: [String : AlertAction]?
-
-    public var closeAction: AlertAction?
-
-    public var closeButtonName: String?
-
-    public var containerController: UIViewController
-
-    public init(title: String? = nil, descriptions: [String : String], actions: [String : AlertAction]? = nil, closeAction: AlertAction? = nil, closeButtonName: String? = nil, containerController: UIViewController) {
-        self.title = title
-        self.descriptions = descriptions
-        self.actions = actions
-        self.closeAction = closeAction
-        self.closeButtonName = closeButtonName
-        self.containerController = containerController
-    }
-
-}
-
-public struct FalierAlertModel: AlertModel {
-
-    public var title: String?
-
-    public var descriptions: [String : String]
-
-    public var type: AlertType = .error
-
-    public var actions: [String : AlertAction]?
-
-    public var closeAction: AlertAction?
-
-    public var closeButtonName: String?
-
-    public var containerController: UIViewController
-
-    public init(title: String? = nil, descriptions: [String : String], actions: [String : AlertAction]? = nil, closeAction: AlertAction? = nil, closeButtonName: String? = nil, containerController: UIViewController) {
-        self.title = title
-        self.descriptions = descriptions
-        self.actions = actions
-        self.closeAction = closeAction
-        self.closeButtonName = closeButtonName
-        self.containerController = containerController
-    }
-}
-
-public struct InfoAlertModel: AlertModel {
-
-    public var title: String?
-
-    public var descriptions: [String : String]
-
-    public var type: AlertType = .info
-
-    public var actions: [String : AlertAction]?
-
-    public var closeAction: AlertAction?
-
-    public var closeButtonName: String?
-
-    public var containerController: UIViewController
-
-    public init(title: String? = nil, descriptions: [String : String], actions: [String : AlertAction]? = nil, closeAction: AlertAction? = nil, closeButtonName: String? = nil, containerController: UIViewController) {
-        self.title = title
-        self.descriptions = descriptions
-        self.actions = actions
-        self.closeAction = closeAction
-        self.closeButtonName = closeButtonName
-        self.containerController = containerController
-    }
-}
-
-public struct CustomAlertModel: AlertModel {
-
-    public var title: String?
-
-    public var descriptions: [String : String] = [:]
-
-    public var type: AlertType
-
-    public var actions: [String : AlertAction]? = nil
-
-    public var closeAction: AlertAction? = nil
-
-    public var closeButtonName: String? = TCSay.Alerts.close
-
-    public var containerController: UIViewController
-
-    public init(title: String? = nil, descriptions: [String : String] = [:], type: AlertType, actions: [String : AlertAction]? = nil, closeAction: AlertAction? = nil, closeButtonName: String? = nil, containerController: UIViewController) {
+    public init(title: String? = nil, descriptions: [String : String], type : AlertType, actions: [String : AlertAction]? = nil, closeAction: AlertAction? = nil, closeButtonName: String? = nil, containerController: UIViewController) {
         self.title = title
         self.descriptions = descriptions
         self.type = type
@@ -132,6 +29,42 @@ public struct CustomAlertModel: AlertModel {
         self.closeAction = closeAction
         self.closeButtonName = closeButtonName
         self.containerController = containerController
+    }
+}
+
+public enum AlertType {
+    case success
+    case error
+    case info
+    case custom((AlertModel) -> Malert)
+}
+
+public class SuccessAlertModel: AlertModel {
+
+    public init(title: String? = nil, descriptions: [String : String], actions: [String : AlertAction]? = nil, closeAction: AlertAction? = nil, closeButtonName: String? = nil, containerController: UIViewController) {
+        super.init(title: title, descriptions: descriptions, type: .success, actions: actions, closeAction: closeAction, closeButtonName: closeButtonName, containerController: containerController)
+    }
+
+}
+
+public class FalierAlertModel: AlertModel {
+
+     public init(title: String? = nil, descriptions: [String : String], actions: [String : AlertAction]? = nil, closeAction: AlertAction? = nil, closeButtonName: String? = nil, containerController: UIViewController) {
+           super.init(title: title, descriptions: descriptions, type: .error, actions: actions, closeAction: closeAction, closeButtonName: closeButtonName, containerController: containerController)
+       }
+}
+
+public class InfoAlertModel: AlertModel {
+
+    public init(title: String? = nil, descriptions: [String : String], actions: [String : AlertAction]? = nil, closeAction: AlertAction? = nil, closeButtonName: String? = nil, containerController: UIViewController) {
+           super.init(title: title, descriptions: descriptions, type: .info, actions: actions, closeAction: closeAction, closeButtonName: closeButtonName, containerController: containerController)
+       }
+}
+
+public class CustomAlertModel: AlertModel {
+
+     public init(title: String? = nil, type: AlertType, actions: [String : AlertAction]? = nil, closeAction: AlertAction? = nil, closeButtonName: String? = nil, containerController: UIViewController) {
+        super.init(title: title, descriptions: [:], type: type, actions: actions, closeAction: closeAction, closeButtonName: closeButtonName, containerController: containerController)
     }
 }
 
@@ -154,10 +87,4 @@ struct AlertManager: Alert {
             model.containerController.present(alert, animated: true, completion: nil)
         }
     }
-}
-
-// MARK: Alert Factory
-
-protocol AlertFactory {
-    func createAlert(model: AlertModel) -> Malert
 }

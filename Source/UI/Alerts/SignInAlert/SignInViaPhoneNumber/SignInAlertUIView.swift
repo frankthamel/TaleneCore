@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Malert
 
 class SignInAlertUIView: UIView {
 
@@ -37,4 +38,18 @@ extension SignInAlertUIView: SignInView {
 //    func showAlertType(type: String) {
 //        titleLabel.text = type
 //    }
+}
+
+extension AppAlerts {
+    public static func createSignInAlert(model: AlertModel) -> Malert {
+        let alertView = SignInAlertUIView.instantiateFromNib()
+
+        let presenter = SignInPresenter(with: alertView)
+        presenter.alertModel = model
+        alertView.presenter = presenter
+        presenter.setUp()
+
+        let alert = Malert(customView: alertView)
+        return alert
+    }
 }

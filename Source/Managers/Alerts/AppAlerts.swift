@@ -7,9 +7,17 @@
 //
 
 import UIKit
+import Foundation
 import Malert
 
-struct AppAlerts: AlertFactory {
+// MARK: Alert Factory
+protocol AlertFactory {
+    func createAlert(model: AlertModel) -> Malert
+}
+
+public class AppAlerts: NSObject, AlertFactory {
+
+    public var customAlertsCreators: [String : (AlertModel) -> Malert] = [:]
     func createAlert(model: AlertModel) -> Malert {
         switch model.type {
         case .success:
@@ -18,24 +26,13 @@ struct AppAlerts: AlertFactory {
             return createErrorAlert(model: model)
         case .info:
             return createInfoAlert(model: model)
-        case .custom(let customViewType):
-            switch customViewType {
-            case .signIn:
-                return createSignInAlert(model: model)
-            case .signInWithEmail:
-                return createSignInWithEmailAlert(model: model)
-            }
+        case .custom(let customAlertFunc):
+            return customAlertFunc(model)
         }
     }
 }
 
 // MARK: Custom Alert Views
-
-public enum CustomAlertViewType {
-    case signIn
-    case signInWithEmail
-}
-
 extension AppAlerts {
 
     private func createDefaultAlerts(_ model: AlertModel) -> Malert {
@@ -79,36 +76,23 @@ extension AppAlerts {
     }
 
     func createSuccessAlert(model: AlertModel) -> Malert {
-        var successModel = model
+        let successModel = model
         successModel.title = TCSay.Alerts.success
         successModel.closeButtonName = TCSay.Alerts.ok
         return createDefaultAlerts(successModel)
     }
 
     func createErrorAlert(model: AlertModel) -> Malert {
-        var errorModel = model
+        let errorModel = model
         errorModel.title = TCSay.Alerts.error
         errorModel.closeButtonName = TCSay.Alerts.close
         return createDefaultAlerts(errorModel)
     }
 
     func createInfoAlert(model: AlertModel) -> Malert {
-        var infoModel = model
+        let infoModel = model
         infoModel.title = TCSay.Alerts.info
         infoModel.closeButtonName = TCSay.Alerts.close
         return createDefaultAlerts(infoModel)
     }
-
-    func createSignInAlert(model: AlertModel) -> Malert {
-        let alertView = SignInAlertUIView.instantiateFromNib()
-
-        let presenter = SignInPresenter(with: alertView)
-        presenter.alertModel = model
-        alertView.presenter = presenter
-        presenter.setUp()
-        
-        let alert = Malert(customView: alertView)
-        return alert
-    }
-
 }

@@ -23,8 +23,9 @@ class ViewController: UIViewController {
 
     @IBAction func showInfoAlert(_ sender: Any) {
          //let alertModel = InfoAlertModel(descriptions: [TCConstants.description : TCSay.Alerts.sign_in_verification_failed] , containerController: self)
-         let alertModel = CustomAlertModel(type: .custom(.signInWithEmail), containerController: self)
-         App.managers.alert.showAlert(model: alertModel)
+        //let loginAction: (Result<>)
+        let alertModel = CustomAlertModel(type: .custom(AppAlerts.createSignInWithEmailAlert),  containerController: self)
+        App.managers.alert.showAlert(model: alertModel)
     }
 
     @IBAction func showErrorAlert(_ sender: Any) {

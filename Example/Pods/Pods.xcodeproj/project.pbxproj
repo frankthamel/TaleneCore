@@ -79,6 +79,8 @@
 		00F49CB903BBFC34E24EAF326C7B4A58 /* FBLPromise+All.h in Headers */ = {isa = PBXBuildFile; fileRef = 95435D6A105F9DCCDDA8EEDFD8C2ADAD /* FBLPromise+All.h */; };
 		0111886BCBA7E203D31D37D93130988C /* RLMSyncSubscription.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = B9C410EBF8EDC38B923FA74C886A6F01 /* RLMSyncSubscription.h */; };
 		011D3383AF819C8212C6A34EF22F5C55 /* FIRAuthUIDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = ED1172739E4E0FC218619E99527072E1 /* FIRAuthUIDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0128C08524791A8A0032EB7E /* SignInWithEmailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0128C083247917DB0032EB7E /* SignInWithEmailPresenter.swift */; };
+		0128C08724791B8C0032EB7E /* SignInWithEmailEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0128C08624791B8C0032EB7E /* SignInWithEmailEvents.swift */; };
 		015A0369EB034ABD53223DCC1697046C /* RLMRealmConfiguration+Sync.h in Headers */ = {isa = PBXBuildFile; fileRef = 51EF4B2881917DB2FF4A65F6D5E8AFD1 /* RLMRealmConfiguration+Sync.h */; };
 		0165A6A02476B70F00AFF60A /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0165A69F2476B70F00AFF60A /* UIViewX.swift */; };
 		01BB6320A25E7E8068D8B58127F6B832 /* errorIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE95B5A6995595F1E3ADB9BFB9D5FD88 /* errorIcon@3x.png */; };
@@ -1784,6 +1786,8 @@
 		009FB03C2E7DFA61D225D0E81D10EBC3 /* GoogleDataTransport-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleDataTransport-dummy.m"; sourceTree = "<group>"; };
 		00BCD5F05DBA2BB2B6AA187ECB3B23A7 /* FIRAuthInterop.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAuthInterop.h; path = Interop/Auth/Public/FIRAuthInterop.h; sourceTree = "<group>"; };
 		01005C064A3009EAB0438EE954301E81 /* NSBundle+Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSBundle+Utils.swift"; path = "SwiftMessages/NSBundle+Utils.swift"; sourceTree = "<group>"; };
+		0128C083247917DB0032EB7E /* SignInWithEmailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailPresenter.swift; sourceTree = "<group>"; };
+		0128C08624791B8C0032EB7E /* SignInWithEmailEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailEvents.swift; sourceTree = "<group>"; };
 		012E344AE7CEC02E84E08B5B26D5C67E /* FBLPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBLPromise.h; path = Sources/FBLPromises/include/FBLPromise.h; sourceTree = "<group>"; };
 		0165A69F2476B70F00AFF60A /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
 		01A5425845920A136E4A96F68EFBA5EA /* cct.nanopb.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = cct.nanopb.c; path = GoogleDataTransportCCTSupport/GDTCCTLibrary/Protogen/nanopb/cct.nanopb.c; sourceTree = "<group>"; };
@@ -4041,6 +4045,8 @@
 			children = (
 				E254D2B1C31B297C8C6751FD022DC4A4 /* SignInWithEmailAlertView.xib */,
 				8350694F4B278E9DD9A414957EB7363D /* TCSignInWithEmailAlertView.swift */,
+				0128C083247917DB0032EB7E /* SignInWithEmailPresenter.swift */,
+				0128C08624791B8C0032EB7E /* SignInWithEmailEvents.swift */,
 			);
 			path = SignInViaEmail;
 			sourceTree = "<group>";
@@ -7326,6 +7332,7 @@
 				4BE233E824F2FAA67714D588C323F413 /* PhoneNumberManager.swift in Sources */,
 				C07E3340B0F4356963B1F903AE25EC09 /* RemoteAuthenticator.swift in Sources */,
 				391492A0EA0827533BE632C44D7771C6 /* RemoteNotificationManager.swift in Sources */,
+				0128C08524791A8A0032EB7E /* SignInWithEmailPresenter.swift in Sources */,
 				B431AEF5963C9CE51E0DD8047F863385 /* SetupApplication.swift in Sources */,
 				D6FF05EDE1BFA2CBA01A05058E847B9C /* SignInAlertUIView.swift in Sources */,
 				94C0706F0ECE33508FF9E73CCE04E5EA /* SignInAlertUIView.xib in Sources */,
@@ -7335,6 +7342,7 @@
 				A962483BE3E200B87D296AA6805DDA77 /* SocialShareService.swift in Sources */,
 				402C6FD1D09CBDE59CDD31B5E7A7F648 /* TaleneCore-dummy.m in Sources */,
 				A6B08EC89E18B30F60EE8CFE0D3AE1F7 /* TaleneCoreApp.swift in Sources */,
+				0128C08724791B8C0032EB7E /* SignInWithEmailEvents.swift in Sources */,
 				DD2D39AEFE3C99368620240DC413FAA4 /* TCAppMainBundle.swift in Sources */,
 				5748C339B176CD4CBFB88D3016D5B14F /* TCSay.swift in Sources */,
 				5BD10410E112CA9461F91186450B008D /* TCSignInWithEmailAlertView.swift in Sources */,

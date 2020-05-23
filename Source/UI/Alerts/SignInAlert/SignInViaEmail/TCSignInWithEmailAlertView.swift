@@ -10,7 +10,12 @@ import Malert
 
 class TCSignInWithEmailAlertView: UIView {
 
-    var presenter: SignInPresenter?
+    var presenter: SignInWithEmailPresenter?
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        presenter?.setUp()
+    }
 
     class func instantiateFromNib() -> TCSignInWithEmailAlertView {
         return App.store.mainBundle.getAppBundle().loadNibNamed("SignInWithEmailAlertView", owner: nil, options: nil)!.first as! TCSignInWithEmailAlertView
@@ -19,15 +24,15 @@ class TCSignInWithEmailAlertView: UIView {
 
 }
 
-extension TCSignInWithEmailAlertView: SignInView {
+extension TCSignInWithEmailAlertView: SiginInWithEmailView {
 
 }
 
 extension AppAlerts {
-    func createSignInWithEmailAlert(model: AlertModel) -> Malert {
+    public static func createSignInWithEmailAlert(model: AlertModel) -> Malert {
         let alertView = TCSignInWithEmailAlertView.instantiateFromNib()
 
-        let presenter = SignInPresenter(with: alertView)
+        var presenter = SignInWithEmailPresenter(with: alertView)
         presenter.alertModel = model
         alertView.presenter = presenter
         presenter.setUp()
