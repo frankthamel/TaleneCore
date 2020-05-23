@@ -17,15 +17,19 @@ public class AlertModel {
     var descriptions: [String : String]
     var type : AlertType
     var actions: [String : AlertAction]?
+    var params: [String : Any]?
+    weak var malert: Malert?
     var closeAction: AlertAction?
     var closeButtonName: String?
     var containerController: UIViewController
 
-    public init(title: String? = nil, descriptions: [String : String], type : AlertType, actions: [String : AlertAction]? = nil, closeAction: AlertAction? = nil, closeButtonName: String? = nil, containerController: UIViewController) {
+    public init(title: String? = nil, descriptions: [String : String], type : AlertType, actions: [String : AlertAction]? = nil, params: [String : Any]? = nil, malert: Malert? = nil, closeAction: AlertAction? = nil, closeButtonName: String? = nil, containerController: UIViewController) {
         self.title = title
         self.descriptions = descriptions
         self.type = type
         self.actions = actions
+        self.params = params
+        self.malert = malert
         self.closeAction = closeAction
         self.closeButtonName = closeButtonName
         self.containerController = containerController
@@ -63,8 +67,8 @@ public class InfoAlertModel: AlertModel {
 
 public class CustomAlertModel: AlertModel {
 
-     public init(title: String? = nil, type: AlertType, actions: [String : AlertAction]? = nil, closeAction: AlertAction? = nil, closeButtonName: String? = nil, containerController: UIViewController) {
-        super.init(title: title, descriptions: [:], type: type, actions: actions, closeAction: closeAction, closeButtonName: closeButtonName, containerController: containerController)
+     public init(title: String? = nil, type: AlertType, actions: [String : AlertAction]? = nil, params: [String : Any]? = nil, malert: Malert? = nil, closeAction: AlertAction? = nil, closeButtonName: String? = nil, containerController: UIViewController) {
+        super.init(title: title, descriptions: [:], type: type, actions: actions, params: params, malert: malert, closeAction: closeAction, closeButtonName: closeButtonName, containerController: containerController)
     }
 }
 

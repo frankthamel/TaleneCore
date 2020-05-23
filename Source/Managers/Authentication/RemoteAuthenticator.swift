@@ -16,4 +16,10 @@ struct RemoteAuthenticator: Authentication {
     func signIn(withVerificationCode verificationCode: String, withCompletion completion: @escaping (Result<String, UserAuthenticationError>) -> Void) {
         App.services.firebaseService.firebaseAuthenticationService.signIn(withVerificationCode: verificationCode, withCompletion: completion)
     }
+
+    func signIn(withCredential credential: Credential, withCompletion completion: @escaping (Result<String, UserAuthenticationError>) -> Void) {
+        if credential.isFirebase {
+            App.services.firebaseService.firebaseAuthenticationService.signIn(withCredential: credential, withCompletion: completion)
+        }
+    }
 }

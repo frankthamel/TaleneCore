@@ -22,20 +22,25 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qfp-UC-EGz">
-                            <rect key="frame" x="30" y="346" width="298" height="34"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsN-GC-kaN">
+                            <rect key="frame" x="0.0" y="340" width="358" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="Wop-H7-dwm"/>
+                            </constraints>
+                            <state key="normal" title="SignIn"/>
+                            <connections>
+                                <action selector="didTapSignInButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="E6B-xP-HDK"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="SsN-GC-kaN" secondAttribute="trailing" id="9Ss-rn-Ycm"/>
                         <constraint firstAttribute="height" constant="400" id="Q7u-k7-oJp"/>
-                        <constraint firstAttribute="trailing" secondItem="Qfp-UC-EGz" secondAttribute="trailing" constant="30" id="bK2-us-g9w"/>
-                        <constraint firstAttribute="bottom" secondItem="Qfp-UC-EGz" secondAttribute="bottom" constant="20" id="c8Z-tQ-1Rr"/>
-                        <constraint firstItem="Qfp-UC-EGz" firstAttribute="leading" secondItem="55i-zf-vKf" secondAttribute="leading" constant="30" id="dDy-xh-2PQ"/>
                         <constraint firstItem="af2-YT-qMC" firstAttribute="centerX" secondItem="55i-zf-vKf" secondAttribute="centerX" id="gNj-ui-0E7"/>
+                        <constraint firstItem="SsN-GC-kaN" firstAttribute="leading" secondItem="55i-zf-vKf" secondAttribute="leading" id="kAZ-Df-8dW"/>
                         <constraint firstItem="af2-YT-qMC" firstAttribute="top" secondItem="55i-zf-vKf" secondAttribute="top" constant="40" id="oSI-uE-NOj"/>
+                        <constraint firstAttribute="bottom" secondItem="SsN-GC-kaN" secondAttribute="bottom" id="w6h-3C-ejW"/>
                     </constraints>
                 </view>
             </subviews>

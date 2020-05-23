@@ -11,7 +11,7 @@ protocol SiginInWithEmailView: class {
 
 }
 
-struct SignInWithEmailPresenter: AlertPresenterBase {
+class SignInWithEmailPresenter: AlertPresenterBase {
     weak var view: SiginInWithEmailView?
     var alertModel: AlertModel?
 
@@ -22,5 +22,26 @@ struct SignInWithEmailPresenter: AlertPresenterBase {
     func setUp() {
         App.managers.analytics.track(event: SignInWithEmailEvents(.screenSetup))
     }
-    
+
+    func signIn(username: String?, password: String?) {
+        App.managers.loader.show()
+        guard let username = username, let password = password, let isFirebase = alertModel?.params?[TCConstants.isFirebase] as? Bool else {
+            App.managers.loader.showFail()
+            return
+        }
+
+        let credential = Credential(email: username, password: password, isFirebase: isFirebase)
+
+        App.managers.authenticator.signIn(withCredential: credential) { [weak self] result in
+            guard let `self` = self else { return }
+            switch result {
+            case .success:
+                App.managers.loader.showSuccess()
+                self.alertModel?.malert?.dismiss(animated: true, completion: nil)
+            case .failure:
+                App.managers.loader.showFail()
+            }
+        }
+    }
+
 }

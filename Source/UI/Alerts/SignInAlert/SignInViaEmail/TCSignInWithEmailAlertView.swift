@@ -22,6 +22,15 @@ class TCSignInWithEmailAlertView: UIView {
     }
 
 
+    @IBAction func didTapSignInButton(_ sender: Any) {
+        presenter?.signIn(username: "frank@test.com", password: "123456")
+    }
+
+    func didTapSignIn() {
+        presenter?.signIn(username: "frank@test.com", password: "123456")
+    }
+
+
 }
 
 extension TCSignInWithEmailAlertView: SiginInWithEmailView {
@@ -32,12 +41,14 @@ extension AppAlerts {
     public static func createSignInWithEmailAlert(model: AlertModel) -> Malert {
         let alertView = TCSignInWithEmailAlertView.instantiateFromNib()
 
-        var presenter = SignInWithEmailPresenter(with: alertView)
+        let presenter = SignInWithEmailPresenter(with: alertView)
+        let malert = Malert(customView: alertView)
+
+        model.malert = malert
         presenter.alertModel = model
         alertView.presenter = presenter
         presenter.setUp()
 
-        let alert = Malert(customView: alertView)
-        return alert
+        return malert
     }
 }

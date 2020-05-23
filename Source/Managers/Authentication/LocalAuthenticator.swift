@@ -9,11 +9,16 @@
 import Foundation
 
 struct LocalAuthenticator: Authentication {
+
     func verifyPhoneNumber(number: String, withCompletion completion: @escaping (Result<String, PhoneNumberVarificationError>) -> Void) {
 
     }
 
     func signIn(withVerificationCode verificationCode: String, withCompletion completion: @escaping (Result<String, UserAuthenticationError>) -> Void) {
+        
+    }
+
+    func signIn(withCredential credential: Credential, withCompletion completion: @escaping (Result<String, UserAuthenticationError>) -> Void) {
         
     }
 

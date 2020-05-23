@@ -12,6 +12,7 @@ import FirebaseAuth
 public protocol FirebaseAuthenticationService {
     func verifyPhoneNumber(phoneNumber: String, withCompletion completion: @escaping (Result<String, PhoneNumberVarificationError>) -> Void)
     func signIn(withVerificationCode verificationCode: String, withCompletion completion: @escaping (Result<String, UserAuthenticationError>) -> Void)
+    func signIn(withCredential credential: Credential, withCompletion completion: @escaping (Result<String, UserAuthenticationError>) -> Void)
 }
 
 public enum PhoneNumberVarificationError: Error {
@@ -68,6 +69,11 @@ struct FirebaseAuthenticationServiceProvider: FirebaseAuthenticationService {
             print(result.user.phoneNumber ?? 0)
             completion(.success("Success"))
         }
+    }
+
+    func signIn(withCredential credential: Credential, withCompletion completion: @escaping (Result<String, UserAuthenticationError>) -> Void) {
+        //completion(.failure(UserAuthenticationError.authResultError))
+        completion(.success("Success"))
     }
 
 }

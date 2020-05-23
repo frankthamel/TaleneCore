@@ -17,6 +17,8 @@ public struct TCSay {
         public static let close = "Close"
         public static let ok = "Ok"
 
+        public static let signIn = "SignIn"
+
         public static let sign_in_blank_number = "Mobile number cannot be blank."
         public static let sign_in_verification_failed = "Mobile number verification failed."
     }
