@@ -23,13 +23,12 @@ class TCSignInWithEmailAlertView: UIView {
 
 
     @IBAction func didTapSignInButton(_ sender: Any) {
-        presenter?.signIn(username: "frank@test.com", password: "123456")
+       presenter?.signIn(username: "w.frankthamel@gmail.com", password: "123456789")
+       // presenter?.signIn(username: "frank@test.com", password: "123456")
+        //presenter?.signUp(username: "annecharuka@gmail.com", password: "Abc@123456")
+        //presenter?.signOut()
+        //presenter?.passwordReset(username: "annecharuka@gmail.com")
     }
-
-    func didTapSignIn() {
-        presenter?.signIn(username: "frank@test.com", password: "123456")
-    }
-
 
 }
 

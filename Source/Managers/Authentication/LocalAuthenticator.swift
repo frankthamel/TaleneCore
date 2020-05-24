@@ -18,8 +18,36 @@ struct LocalAuthenticator: Authentication {
         
     }
 
-    func signIn(withCredential credential: Credential, withCompletion completion: @escaping (Result<String, UserAuthenticationError>) -> Void) {
+    func signIn(withCredential credential: Credential, withCompletion completion: @escaping (Result<User, UserAuthenticationError>) -> Void) {
         
+    }
+
+    func signUp(withCredentials credentials: Credential, withCompletion completion: @escaping (Result<User, UserAuthenticationError>) -> Void) {
+
+    }
+
+    func signOut(withCompletion completion: @escaping (Result<String, UserAuthenticationError>) -> Void) {
+        
+    }
+
+    func sendVerificationEmail(withCompletion completion: @escaping (Result<Bool, UserAuthenticationError>) -> Void) {
+
+    }
+
+    func forgotPassword(forEmail email: String, withCompletion completion: @escaping (Result<Bool, UserAuthenticationError>) -> Void) {
+
+    }
+
+    func updatePassword(withCredential credential: Credential, withCompletion completion: @escaping (Result<Bool, UserAuthenticationError>) -> Void) {
+
+    }
+
+    func reauthenticate(withCredential credential: Credential, withCompletion completion: @escaping (Result<User, UserAuthenticationError>) -> Void) {
+
+    }
+
+    func getCurrentUser() -> User? {
+        return nil
     }
 
 }
