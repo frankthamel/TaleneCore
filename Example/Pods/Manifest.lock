@@ -2,6 +2,8 @@ PODS:
   - Alamofire (4.9.1)
   - ARSLineProgress (3.1.0)
   - FCFileManager (1.0.20)
+  - Firebase/Analytics (6.14.0):
+    - Firebase/Core
   - Firebase/Auth (6.14.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 6.4.1)
@@ -109,6 +111,7 @@ PODS:
   - TaleneCore (0.1.0):
     - ARSLineProgress (= 3.1.0)
     - FCFileManager (= 1.0.20)
+    - Firebase/Analytics (= 6.14.0)
     - Firebase/Auth (= 6.14.0)
     - Firebase/Core (= 6.14.0)
     - Kingfisher (= 5.12.0)
@@ -193,7 +196,7 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftMessages: b577dc7043be8b299857ab35bb663dbff6483bd0
   SwiftyBeaver: f9a9aba96a6a6166e21682377804d728b0d20b95
-  TaleneCore: 94eae5de3adf7281b5e19c3b74c18696ec8ebb99
+  TaleneCore: 60b7364ef7906562f5f4200d9b66df0de06093e7
 
 PODFILE CHECKSUM: 577262dfb1408474324f004994df57a5cb4e6d9b
 

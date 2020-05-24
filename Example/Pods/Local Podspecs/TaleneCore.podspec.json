@@ -61,6 +61,9 @@
     "Firebase/Auth": [
       "6.14.0"
     ],
+    "Firebase/Analytics": [
+      "6.14.0"
+    ],
     "ARSLineProgress": [
       "3.1.0"
     ],

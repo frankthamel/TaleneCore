@@ -65,6 +65,7 @@ TaleneCore is the core library for all Talene apps. This comes with a structured
   # Firebase
   s.dependency 'Firebase/Core', '6.14.0'
   s.dependency 'Firebase/Auth', '6.14.0'
+  s.dependency 'Firebase/Analytics', '6.14.0'
 
   # Loading
   s.dependency 'ARSLineProgress', '3.1.0'

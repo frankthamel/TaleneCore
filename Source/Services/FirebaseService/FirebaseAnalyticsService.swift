@@ -7,11 +7,14 @@
 //
 
 import Foundation
+import FirebaseAnalytics
 
-protocol FirebaseAnalyticsService {
-
+public protocol FirebaseAnalyticsService {
+    func track(event: AnalyticsEvent)
 }
 
 struct FirebaseAnalyticsServiceProvider: FirebaseAnalyticsService {
-
+    func track(event: AnalyticsEvent) {
+        Analytics.logEvent(event.name, parameters: event.metadata)
+    }
 }

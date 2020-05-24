@@ -10,6 +10,7 @@ import Foundation
 
 struct FirebaseAnalyticsManager: AnalyticsEngine {
     func track(event: AnalyticsEvent) {
+        App.services.firebaseService.firebaseAnalyticsService.track(event: event)
         App.managers.logger.info(message: "Firebase Analytics tracked event: \(event.name)")
     }
 }

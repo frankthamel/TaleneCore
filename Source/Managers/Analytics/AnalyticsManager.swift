@@ -13,6 +13,17 @@ struct AnalyticsManager: AnalyticsEngine {
     let firebaseAnalyticsManager: AnalyticsEngine = FirebaseAnalyticsManager()
 
     func track(event: AnalyticsEvent) {
-        firebaseAnalyticsManager.track(event: event)
+        let currentUser = App.managers.authenticator.getCurrentUser()
+        var modifiedEvent = event
+
+        if var metadata = event.metadata, let user = currentUser {
+            metadata["uid"] = user.id
+            modifiedEvent.metadata = metadata
+        } else if let user = currentUser {
+            let metadata = ["uid": user.id]
+            modifiedEvent.metadata = metadata
+        }
+
+        firebaseAnalyticsManager.track(event: modifiedEvent)
     }
 }
