@@ -86,6 +86,7 @@
 		0161EE18247D7D6100B918AD /* toggle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0161EE13247D7D6100B918AD /* toggle@3x.png */; };
 		0161EE19247D7D6100B918AD /* toggle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0161EE14247D7D6100B918AD /* toggle.png */; };
 		0161EE1A247D7D6100B918AD /* toggle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0161EE14247D7D6100B918AD /* toggle.png */; };
+		0161EE1D247D8C0A00B918AD /* HapticFeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0161EE1C247D8C0A00B918AD /* HapticFeedbackManager.swift */; };
 		016244B3247AF2C800511184 /* KeyIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 016244B0247AF2C800511184 /* KeyIcon@3x.png */; };
 		016244B4247AF2C800511184 /* KeyIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 016244B0247AF2C800511184 /* KeyIcon@3x.png */; };
 		016244B5247AF2C800511184 /* KeyIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 016244B1247AF2C800511184 /* KeyIcon@2x.png */; };
@@ -1805,6 +1806,7 @@
 		0161EE12247D7D6100B918AD /* toggle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle@2x.png"; sourceTree = "<group>"; };
 		0161EE13247D7D6100B918AD /* toggle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle@3x.png"; sourceTree = "<group>"; };
 		0161EE14247D7D6100B918AD /* toggle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggle.png; sourceTree = "<group>"; };
+		0161EE1C247D8C0A00B918AD /* HapticFeedbackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedbackManager.swift; sourceTree = "<group>"; };
 		016244B0247AF2C800511184 /* KeyIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KeyIcon@3x.png"; sourceTree = "<group>"; };
 		016244B1247AF2C800511184 /* KeyIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KeyIcon@2x.png"; sourceTree = "<group>"; };
 		016244B2247AF2C800511184 /* KeyIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyIcon.png; sourceTree = "<group>"; };
@@ -3178,6 +3180,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0161EE1B247D8BF400B918AD /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				0161EE1C247D8C0A00B918AD /* HapticFeedbackManager.swift */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
 		0162C3F1247C336A0036FB75 /* Validators */ = {
 			isa = PBXGroup;
 			children = (
@@ -4265,6 +4275,7 @@
 		95FC2B80416D69E08EFE56897CF61AFB /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				0161EE1B247D8BF400B918AD /* Feedback */,
 				EA1B0E3F6D7A47492BA6BE12A4FA9A39 /* Alerts */,
 				B9EEEB93D6E338D7912AC4251F9C3F86 /* Analytics */,
 				5F413E66DE875D59B218D8ECCD32AAF9 /* Authentication */,
@@ -7430,6 +7441,7 @@
 				9C7DED41E91F347158B72BB531E2ADFD /* InfoIcon@3x.png in Sources */,
 				A375E0D72A568D7A7279862C862B492E /* Keys.swift in Sources */,
 				0162C3F3247C33AD0036FB75 /* FormValidators.swift in Sources */,
+				0161EE1D247D8C0A00B918AD /* HapticFeedbackManager.swift in Sources */,
 				79DEE4C93A12CA9A983099164361484D /* LoadingManager.swift in Sources */,
 				4B2E252CA149DDBC5F813C873979E2DF /* LocalAuthenticator.swift in Sources */,
 				8A1F1EF28B3271549CF4F5543E8D803C /* LocalNotificationManager.swift in Sources */,

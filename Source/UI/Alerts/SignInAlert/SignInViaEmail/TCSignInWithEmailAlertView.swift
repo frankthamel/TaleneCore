@@ -71,12 +71,17 @@ class TCSignInWithEmailAlertView: UIView {
     }
 
     @IBAction func didTapForgotPasswordButton(_ sender: Any) {
+
         if emailTextField.isValid {
+            App.managers.hapticFeedback.impact()
             presenter?.passwordReset(username: emailTextField.text)
+        } else {
+            App.managers.hapticFeedback.trigger(.error)
         }
     }
 
     @IBAction func didTapSignUpToggleButton(_ sender: Any) {
+        App.managers.hapticFeedback.select()
         currentState = currentState == State.signIn ? State.signUp : State.signIn
     }
 
@@ -88,11 +93,17 @@ class TCSignInWithEmailAlertView: UIView {
         switch currentState {
         case .signIn :
             if emailTextField.isValid && passwordTextField.isValid {
+                App.managers.hapticFeedback.impact()
                 nextAction?()
+            } else {
+                App.managers.hapticFeedback.trigger(.error)
             }
         case .signUp:
             if emailTextField.isValid && passwordTextField.isValid && confirmPasswordTextField.isValid {
+                App.managers.hapticFeedback.impact()
                 nextAction?()
+            } else {
+                App.managers.hapticFeedback.trigger(.error)
             }
         }
     }

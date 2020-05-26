@@ -36,6 +36,7 @@ public struct Managers {
     public let loader: Loader = LoadingManager()
     public let phoneNumber: PhoneNumber = PhoneNumberManager()
     public let notification: Notification = NotificationManager()
+    public let hapticFeedback: FeedbackGenerator = HapticFeedbackManager()
     //let connection:
     //let file
     //let keychain

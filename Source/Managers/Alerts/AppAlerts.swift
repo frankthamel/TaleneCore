@@ -79,6 +79,7 @@ extension AppAlerts {
         let successModel = model
         successModel.title = TCSay.Alerts.success
         successModel.closeButtonName = TCSay.Alerts.ok
+        App.managers.hapticFeedback.trigger(.success)
         return createDefaultAlerts(successModel)
     }
 
@@ -86,6 +87,7 @@ extension AppAlerts {
         let errorModel = model
         errorModel.title = TCSay.Alerts.error
         errorModel.closeButtonName = TCSay.Alerts.close
+        App.managers.hapticFeedback.trigger(.error)
         return createDefaultAlerts(errorModel)
     }
 
@@ -93,6 +95,7 @@ extension AppAlerts {
         let infoModel = model
         infoModel.title = TCSay.Alerts.info
         infoModel.closeButtonName = TCSay.Alerts.close
+        App.managers.hapticFeedback.trigger(.warning)
         return createDefaultAlerts(infoModel)
     }
 }

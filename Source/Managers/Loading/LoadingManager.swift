@@ -18,7 +18,6 @@ public protocol Loader: AppConfigure {
 }
 
 struct LoadingManager: Loader {
-
     func configureLoader() {
         ARSLineProgressConfiguration.backgroundViewColor = App.settings.theme.loaderBackgroundViewColor
         ARSLineProgressConfiguration.backgroundViewStyle = .full
@@ -45,10 +44,12 @@ struct LoadingManager: Loader {
 
     func showSuccess() {
         ARSLineProgress.showSuccess()
+        App.managers.hapticFeedback.trigger(.success)
     }
 
     func showFail() {
         ARSLineProgress.showFail()
+        App.managers.hapticFeedback.trigger(.error)
     }
 
     func cancelPorgressWithFailAnimation(showFail: Bool) {
