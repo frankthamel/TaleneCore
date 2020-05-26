@@ -27,5 +27,6 @@ public struct TCSay {
     public struct Authenticator {
         public static let emailPlaceholder = "youremail@text.com"
         public static let passwordPlaceHolder = "Password"
+        public static let confirmPasswordPlaceHolder = "Type the same password"
     }
 }

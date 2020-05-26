@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SiginInWithEmailView: class {
-
+    func setUpTheme()
 }
 
 class SignInWithEmailPresenter: AlertPresenterBase {
@@ -21,6 +21,7 @@ class SignInWithEmailPresenter: AlertPresenterBase {
 
     func setUp() {
         App.managers.analytics.track(event: SignInWithEmailEvents(.screenSetup))
+        view?.setUpTheme()
     }
 
     func signIn(username: String?, password: String?) {

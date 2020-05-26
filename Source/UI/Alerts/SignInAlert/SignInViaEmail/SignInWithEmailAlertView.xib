@@ -41,58 +41,67 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SignIn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtH-sX-I4o">
-                            <rect key="frame" x="148" y="53" width="62.5" height="25.5"/>
+                            <rect key="frame" x="148" y="53" width="62.5" height="26"/>
                             <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="22"/>
                             <color key="textColor" red="0.24313725490196078" green="0.24313725490196078" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yU9-a3-HYg">
-                            <rect key="frame" x="30" y="98.5" width="298" height="195.5"/>
+                            <rect key="frame" x="30" y="99" width="298" height="195"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IIb-a4-KK2">
-                                    <rect key="frame" x="0.0" y="0.0" width="298" height="88"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IIb-a4-KK2">
+                                    <rect key="frame" x="0.0" y="0.0" width="298" height="51.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uif-uU-la1">
-                                            <rect key="frame" x="0.0" y="0.0" width="298" height="17.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="298" height="16"/>
                                             <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
                                             <color key="textColor" red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="nIP-c1-q4p">
-                                            <rect key="frame" x="0.0" y="22.5" width="298" height="65.5"/>
-                                            <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="youremail@test.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wgb-lZ-CFO" customClass="TCTextField" customModule="TaleneCore" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="298" height="65.5"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
-                                                </textField>
-                                            </subviews>
-                                        </stackView>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="youremail@test.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wgb-lZ-CFO" customClass="TCTextField" customModule="TaleneCore" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="21" width="298" height="30.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                        </textField>
                                     </subviews>
                                 </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="etI-lp-UAX">
-                                    <rect key="frame" x="0.0" y="108" width="298" height="87.5"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="etI-lp-UAX">
+                                    <rect key="frame" x="0.0" y="71.5" width="298" height="52"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvs-Z3-3gf">
-                                            <rect key="frame" x="0.0" y="0.0" width="298" height="17.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="298" height="16"/>
                                             <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
                                             <color key="textColor" red="0.39607843139999999" green="0.39607843139999999" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="TNM-Ek-EQa">
-                                            <rect key="frame" x="0.0" y="22.5" width="298" height="65"/>
-                                            <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4aO-hW-a8D" customClass="TCTextField" customModule="TaleneCore" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="298" height="65"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
-                                                </textField>
-                                            </subviews>
-                                        </stackView>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4aO-hW-a8D" customClass="TCTextField" customModule="TaleneCore" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="21" width="298" height="31"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
+                                        </textField>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" id="7No-PD-1AO">
+                                    <rect key="frame" x="0.0" y="143.5" width="298" height="51.5"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2Y-8U-5dM">
+                                            <rect key="frame" x="0.0" y="0.0" width="298" height="16"/>
+                                            <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
+                                            <color key="textColor" red="0.39607843139999999" green="0.39607843139999999" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cKa-ca-UCT" customClass="TCTextField" customModule="TaleneCore" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="21" width="298" height="30.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
+                                        </textField>
                                     </subviews>
                                 </stackView>
                             </subviews>
@@ -112,11 +121,10 @@
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="knm-SB-FcC">
                             <rect key="frame" x="0.0" y="352" width="358" height="60"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5O-JI-1PX">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5O-JI-1PX">
                                     <rect key="frame" x="0.0" y="0.0" width="177" height="60"/>
                                     <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                                    <state key="normal" title="SignUp">
+                                    <state key="normal">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>
@@ -179,6 +187,9 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="confirmPasswordLabel" destination="q2Y-8U-5dM" id="08I-g3-Y3I"/>
+                <outlet property="confirmPasswordStack" destination="7No-PD-1AO" id="T20-JA-BjS"/>
+                <outlet property="confirmPasswordTextField" destination="cKa-ca-UCT" id="eOd-qH-J9c"/>
                 <outlet property="emailTextField" destination="wgb-lZ-CFO" id="b7u-HL-9gS"/>
                 <outlet property="forgotPasswordButton" destination="aJl-Gi-0V6" id="us6-gB-6wR"/>
                 <outlet property="forgotPasswordHeightConstraint" destination="3hy-xh-ACc" id="Dbp-Zi-htw"/>

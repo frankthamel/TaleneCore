@@ -11,6 +11,7 @@ enum FormValidator {
     case isEmptyValidator
     case emailValidator
     case rangeValidator(above: Int, below: Int)
+    case match(contain: String)
 }
 
 public struct FormValidators {
@@ -27,6 +28,10 @@ public struct FormValidators {
 
     public static func rangeValidator(input: String, above: Int, below: Int) -> Bool {
         return (above < input.count) && (input.count < below)
+    }
+
+    public static func matchValidator(base: String, matchTo match: String) -> Bool {
+        return base == match
     }
 
 }

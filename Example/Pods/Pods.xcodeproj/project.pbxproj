@@ -80,6 +80,12 @@
 		0111886BCBA7E203D31D37D93130988C /* RLMSyncSubscription.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = B9C410EBF8EDC38B923FA74C886A6F01 /* RLMSyncSubscription.h */; };
 		011D3383AF819C8212C6A34EF22F5C55 /* FIRAuthUIDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = ED1172739E4E0FC218619E99527072E1 /* FIRAuthUIDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		015A0369EB034ABD53223DCC1697046C /* RLMRealmConfiguration+Sync.h in Headers */ = {isa = PBXBuildFile; fileRef = 51EF4B2881917DB2FF4A65F6D5E8AFD1 /* RLMRealmConfiguration+Sync.h */; };
+		0161EE15247D7D6100B918AD /* toggle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0161EE12247D7D6100B918AD /* toggle@2x.png */; };
+		0161EE16247D7D6100B918AD /* toggle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0161EE12247D7D6100B918AD /* toggle@2x.png */; };
+		0161EE17247D7D6100B918AD /* toggle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0161EE13247D7D6100B918AD /* toggle@3x.png */; };
+		0161EE18247D7D6100B918AD /* toggle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0161EE13247D7D6100B918AD /* toggle@3x.png */; };
+		0161EE19247D7D6100B918AD /* toggle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0161EE14247D7D6100B918AD /* toggle.png */; };
+		0161EE1A247D7D6100B918AD /* toggle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0161EE14247D7D6100B918AD /* toggle.png */; };
 		016244B3247AF2C800511184 /* KeyIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 016244B0247AF2C800511184 /* KeyIcon@3x.png */; };
 		016244B4247AF2C800511184 /* KeyIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 016244B0247AF2C800511184 /* KeyIcon@3x.png */; };
 		016244B5247AF2C800511184 /* KeyIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 016244B1247AF2C800511184 /* KeyIcon@2x.png */; };
@@ -1796,6 +1802,9 @@
 		00BCD5F05DBA2BB2B6AA187ECB3B23A7 /* FIRAuthInterop.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAuthInterop.h; path = Interop/Auth/Public/FIRAuthInterop.h; sourceTree = "<group>"; };
 		01005C064A3009EAB0438EE954301E81 /* NSBundle+Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSBundle+Utils.swift"; path = "SwiftMessages/NSBundle+Utils.swift"; sourceTree = "<group>"; };
 		012E344AE7CEC02E84E08B5B26D5C67E /* FBLPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBLPromise.h; path = Sources/FBLPromises/include/FBLPromise.h; sourceTree = "<group>"; };
+		0161EE12247D7D6100B918AD /* toggle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle@2x.png"; sourceTree = "<group>"; };
+		0161EE13247D7D6100B918AD /* toggle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle@3x.png"; sourceTree = "<group>"; };
+		0161EE14247D7D6100B918AD /* toggle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggle.png; sourceTree = "<group>"; };
 		016244B0247AF2C800511184 /* KeyIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KeyIcon@3x.png"; sourceTree = "<group>"; };
 		016244B1247AF2C800511184 /* KeyIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KeyIcon@2x.png"; sourceTree = "<group>"; };
 		016244B2247AF2C800511184 /* KeyIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyIcon.png; sourceTree = "<group>"; };
@@ -3354,6 +3363,9 @@
 		1B181E0169B27B8B2F614A5C8A6C2684 /* Alert */ = {
 			isa = PBXGroup;
 			children = (
+				0161EE14247D7D6100B918AD /* toggle.png */,
+				0161EE12247D7D6100B918AD /* toggle@2x.png */,
+				0161EE13247D7D6100B918AD /* toggle@3x.png */,
 				016244B2247AF2C800511184 /* KeyIcon.png */,
 				016244B1247AF2C800511184 /* KeyIcon@2x.png */,
 				016244B0247AF2C800511184 /* KeyIcon@3x.png */,
@@ -6662,9 +6674,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0161EE15247D7D6100B918AD /* toggle@2x.png in Resources */,
 				016244B3247AF2C800511184 /* KeyIcon@3x.png in Resources */,
+				0161EE17247D7D6100B918AD /* toggle@3x.png in Resources */,
 				016244B5247AF2C800511184 /* KeyIcon@2x.png in Resources */,
 				016244B7247AF2C800511184 /* KeyIcon.png in Resources */,
+				0161EE19247D7D6100B918AD /* toggle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -6821,10 +6836,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0161EE18247D7D6100B918AD /* toggle@3x.png in Resources */,
 				8EF483A4467FC66DC4AE28BA8D0DF1D9 /* CheckMark.png in Resources */,
 				A8597A9DFC84EB48ED9AFCDFA3B91420 /* CheckMark@2x.png in Resources */,
 				DEAFF3DC8F194F9488A358ECB436C1D3 /* CheckMark@3x.png in Resources */,
 				E6AB49391A441651856F1D4C5D08B92A /* DefaultAlertUIView.xib in Resources */,
+				0161EE1A247D7D6100B918AD /* toggle.png in Resources */,
 				A8D27D9F79BFBAC392415EBC0235C5F6 /* ErrorIcon.png in Resources */,
 				366D2CBF051FEA241B025377C4E03F81 /* ErrorIcon@2x.png in Resources */,
 				5F279984EBD90BB27A81623AA8D1362F /* ErrorIcon@3x.png in Resources */,
@@ -6833,6 +6850,7 @@
 				016244B4247AF2C800511184 /* KeyIcon@3x.png in Resources */,
 				6A6C3046FDDFC94421714595CB4B3A33 /* InfoIcon@2x.png in Resources */,
 				016244B8247AF2C800511184 /* KeyIcon.png in Resources */,
+				0161EE16247D7D6100B918AD /* toggle@2x.png in Resources */,
 				4EB8280CC490A1C17B506E413A5EDC84 /* InfoIcon@3x.png in Resources */,
 				DE23A5401EDD90C3CA930FE2DF1351A1 /* SignInAlertUIView.xib in Resources */,
 				2B02E66B8123DF7781A623632BCDAC3E /* SignInWithEmailAlertView.xib in Resources */,

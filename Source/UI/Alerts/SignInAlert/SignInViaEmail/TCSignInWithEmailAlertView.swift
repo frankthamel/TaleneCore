@@ -18,6 +18,9 @@ class TCSignInWithEmailAlertView: UIView {
     @IBOutlet weak var signUpToggleButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var forgotPasswordHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var confirmPasswordLabel: UILabel!
+    @IBOutlet weak var confirmPasswordTextField: TCTextField!
+    @IBOutlet weak var confirmPasswordStack: UIStackView!
 
     var presenter: SignInWithEmailPresenter?
     var nextAction: (() -> Void)?
@@ -44,6 +47,7 @@ class TCSignInWithEmailAlertView: UIView {
         setUpTextFieldDelegates()
         setUpEmailTextField()
         setUpPasswordTextField()
+        setUpConfirmPasswordTextField()
         currentState = .signUp
     }
 
@@ -61,6 +65,11 @@ class TCSignInWithEmailAlertView: UIView {
         passwordTextField.validators = [.isEmptyValidator, .rangeValidator(above: 5, below: 20)]
     }
 
+    private func setUpConfirmPasswordTextField() {
+        confirmPasswordTextField.modifiedPlaceholder = TCSay.Authenticator.confirmPasswordPlaceHolder
+        confirmPasswordTextField.validators = [.isEmptyValidator, .rangeValidator(above: 5, below: 20), .match(contain: passwordTextField.text ?? "")]
+    }
+
     @IBAction func didTapForgotPasswordButton(_ sender: Any) {
         if emailTextField.isValid {
             presenter?.passwordReset(username: emailTextField.text)
@@ -72,8 +81,19 @@ class TCSignInWithEmailAlertView: UIView {
     }
 
     @IBAction func didTapNextButton(_ sender: Any) {
-        if emailTextField.isValid && passwordTextField.isValid {
-            nextAction?()
+        submit()
+    }
+
+    func submit() {
+        switch currentState {
+        case .signIn :
+            if emailTextField.isValid && passwordTextField.isValid {
+                nextAction?()
+            }
+        case .signUp:
+            if emailTextField.isValid && passwordTextField.isValid && confirmPasswordTextField.isValid {
+                nextAction?()
+            }
         }
     }
 
@@ -86,10 +106,12 @@ class TCSignInWithEmailAlertView: UIView {
     }
 
     private func setUpSignInPage() {
-        signUpToggleButton.setTitle( "<<<", for: .normal)
         nextAction = signInAction
         UIView.animate(withDuration: 0.2) { [weak self] in
             self?.forgotPasswordButton?.isHidden = false
+            self?.confirmPasswordLabel.isHidden = true
+            self?.confirmPasswordTextField.isHidden = true
+            self?.confirmPasswordStack.isHidden = true
             self?.titleLabel.text = TCSay.Alerts.signIn
             self?.forgotPasswordHeightConstraint.constant = 20.0
             self?.layoutIfNeeded()
@@ -97,10 +119,12 @@ class TCSignInWithEmailAlertView: UIView {
     }
 
     private func setUpSignUpPage() {
-        signUpToggleButton.setTitle( "<<<", for: .normal)
         nextAction = signUpAction
         UIView.animate(withDuration: 0.2) { [weak self] in
             self?.forgotPasswordButton?.isHidden = true
+            self?.confirmPasswordLabel.isHidden = false
+            self?.confirmPasswordTextField.isHidden = false
+            self?.confirmPasswordStack.isHidden = false
             self?.titleLabel.text = TCSay.Alerts.signUp
             self?.forgotPasswordHeightConstraint.constant = 0
             self?.layoutIfNeeded()
@@ -110,7 +134,16 @@ class TCSignInWithEmailAlertView: UIView {
 }
 
 extension TCSignInWithEmailAlertView: SiginInWithEmailView {
-
+    func setUpTheme() {
+        nextButton.backgroundColor = App.settings.theme.primaryActionColor
+        signUpToggleButton.backgroundColor = App.settings.theme.secondaryActionColor
+        signUpToggleButton.setImage(UIImage(withFrameworkName: "toggle"), for: .normal)
+        let signUpToggleButtonHeight = signUpToggleButton.frame.size.height
+        let signUpToggleButtonWidth = signUpToggleButton.frame.size.width
+        let imageEdgeInsets = UIEdgeInsets(top: (signUpToggleButtonHeight - 16.36)/2, left: (signUpToggleButtonWidth - 36)/2, bottom: (signUpToggleButtonHeight - 16.36)/2, right: (signUpToggleButtonWidth - 36)/2)
+        signUpToggleButton.imageEdgeInsets = imageEdgeInsets
+        signUpToggleButton.imageView?.contentMode = .scaleAspectFit
+    }
 }
 
 extension TCSignInWithEmailAlertView: UITextFieldDelegate {
@@ -118,6 +151,7 @@ extension TCSignInWithEmailAlertView: UITextFieldDelegate {
     func setUpTextFieldDelegates() {
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        confirmPasswordTextField.delegate = self
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -126,14 +160,24 @@ extension TCSignInWithEmailAlertView: UITextFieldDelegate {
             return true
         } else if textField == passwordTextField {
             textField.resignFirstResponder()
-
-            if emailTextField.isValid && passwordTextField.isValid {
-                nextAction?()
+            if currentState == .signIn {
+                submit()
             }
-
+            return true
+        } else if textField == confirmPasswordTextField {
+            textField.resignFirstResponder()
+            if currentState == .signUp {
+                submit()
+            }
             return true
         }
         return true
+    }
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == confirmPasswordTextField {
+            confirmPasswordTextField.validators = [.isEmptyValidator, .rangeValidator(above: 5, below: 20), .match(contain: passwordTextField.text ?? "")]
+        }
     }
 
 }

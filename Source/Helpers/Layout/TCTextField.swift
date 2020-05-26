@@ -21,6 +21,7 @@ class TCTextField: UITextField {
     private var isEmptyValidator: ((String) -> Bool)?
     private var isEmailValidator: ((String) -> Bool)?
     private var rangeValidator: ((((String, Int, Int) -> Bool)), Int, Int)?
+    private var matchValidator: (((String, String) -> Bool), String)?
 
     var validators: [FormValidator] = [] {
         didSet {
@@ -32,6 +33,8 @@ class TCTextField: UITextField {
                     isEmailValidator = FormValidators.emailValidator
                 case .rangeValidator(let above, let below):
                     rangeValidator = (FormValidators.rangeValidator, above, below)
+                case .match(contain: let match):
+                    matchValidator = (FormValidators.matchValidator, match)
                 }
             }
         }
@@ -78,6 +81,7 @@ class TCTextField: UITextField {
         var isEmpty = true
         var isValidEmail = true
         var isInValidRange = true
+        var isValidMatch = true
 
         if let isEmptyValidator = isEmptyValidator {
             isEmpty = isEmptyValidator(self.text ?? "")
@@ -94,7 +98,12 @@ class TCTextField: UITextField {
             setErrorState(status: !isInValidRange)
         }
 
-        isValid = !isEmpty && isValidEmail && isInValidRange
+        if let matchValidator = matchValidator {
+            isValidMatch = matchValidator.0((self.text ?? ""), matchValidator.1)
+            setErrorState(status: !isValidMatch)
+        }
+
+        isValid = !isEmpty && isValidEmail && isInValidRange && isValidMatch
     }
 
     func setErrorState(status: Bool) {
