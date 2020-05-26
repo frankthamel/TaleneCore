@@ -21,12 +21,12 @@
                             <rect key="frame" x="98" y="-50" width="100" height="100"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="100" id="GPe-65-9GB"/>
-                                <constraint firstAttribute="height" constant="100" id="sbp-iq-TkJ"/>
+                                <constraint firstAttribute="width" constant="90" id="GPe-65-9GB"/>
+                                <constraint firstAttribute="height" constant="90" id="sbp-iq-TkJ"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="50"/>
+                                    <real key="value" value="45"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
@@ -50,8 +50,8 @@
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CheckMark.png" translatesAutoresizingMaskIntoConstraints="NO" id="61J-sJ-QFA">
                             <rect key="frame" x="108" y="-40" width="80" height="80"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="80" id="3ME-uM-V0K"/>
-                                <constraint firstAttribute="width" constant="80" id="aKJ-00-1Hp"/>
+                                <constraint firstAttribute="height" constant="70" id="3ME-uM-V0K"/>
+                                <constraint firstAttribute="width" constant="70" id="aKJ-00-1Hp"/>
                             </constraints>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZU-SL-8iX">

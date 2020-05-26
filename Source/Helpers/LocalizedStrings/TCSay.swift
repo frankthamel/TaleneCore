@@ -22,4 +22,9 @@ public struct TCSay {
         public static let sign_in_blank_number = "Mobile number cannot be blank."
         public static let sign_in_verification_failed = "Mobile number verification failed."
     }
+
+    public struct Authenticator {
+        public static let emailPlaceholder = "youremail@text.com"
+        public static let passwordPlaceHolder = "Password"
+    }
 }

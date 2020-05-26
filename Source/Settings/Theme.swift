@@ -22,6 +22,12 @@ public protocol Theme {
     var subColorFour: UIColor { get set }
     var subColorFive: UIColor { get set }
 
+    // Text Fields
+    var textFieldBorderColorLight: UIColor { get set }
+    var textFieldBackgroundColorLight: UIColor { get set }
+    var textFieldPlaceholder: UIColor { get set }
+    var textFieldError: UIColor { get set }
+
     // Alerts
     var successColor: UIColor { get set }
     var falierColor: UIColor { get set }
@@ -64,6 +70,16 @@ struct AppTheme: Theme {
     public var subColorFour: UIColor = UIColor.white
 
     public var subColorFive: UIColor = UIColor.white
+
+    // Text Fields
+
+    var textFieldBorderColorLight: UIColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.00)
+
+    var textFieldBackgroundColorLight: UIColor = UIColor.white
+
+    var textFieldPlaceholder: UIColor = UIColor(red: 0.71, green: 0.72, blue: 0.72, alpha: 1.00)
+
+    var textFieldError: UIColor = UIColor(red: 1.00, green: 0.20, blue: 0.20, alpha: 1.00)
 
     // Alerts
 
