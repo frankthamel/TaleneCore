@@ -17,16 +17,18 @@ class TCSignInWithEmailAlertView: UIView {
     @IBOutlet weak var forgotPasswordButton: UIButton?
     @IBOutlet weak var signUpToggleButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var forgotPasswordHeightConstraint: NSLayoutConstraint!
 
     var presenter: SignInWithEmailPresenter?
+    var nextAction: (() -> Void)?
 
     var currentState: State = .signIn {
         didSet {
             switch currentState {
             case .signIn:
-                print("signIn")
+                setUpSignInPage()
             case .signUp:
-                print("signUp")
+                setUpSignUpPage()
             }
         }
     }
@@ -39,8 +41,10 @@ class TCSignInWithEmailAlertView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         presenter?.setUp()
+        setUpTextFieldDelegates()
         setUpEmailTextField()
         setUpPasswordTextField()
+        currentState = .signUp
     }
 
     class func instantiateFromNib() -> TCSignInWithEmailAlertView {
@@ -57,14 +61,6 @@ class TCSignInWithEmailAlertView: UIView {
         passwordTextField.validators = [.isEmptyValidator, .rangeValidator(above: 5, below: 20)]
     }
 
-    @IBAction func didTapSignInButton(_ sender: Any) {
-       presenter?.signIn(username: "w.frankthamel@gmail.com", password: "123456789")
-        //presenter?.signIn(username: "frank@test.com", password: "123456")
-        //presenter?.signUp(username: "annecharuka@gmail.com", password: "Abc@123456")
-        //presenter?.signOut()
-        //presenter?.passwordReset(username: "annecharuka@gmail.com")
-    }
-
     @IBAction func didTapForgotPasswordButton(_ sender: Any) {
         if emailTextField.isValid {
             presenter?.passwordReset(username: emailTextField.text)
@@ -77,13 +73,68 @@ class TCSignInWithEmailAlertView: UIView {
 
     @IBAction func didTapNextButton(_ sender: Any) {
         if emailTextField.isValid && passwordTextField.isValid {
-            presenter?.signIn(username: emailTextField.text, password: passwordTextField.text)
+            nextAction?()
+        }
+    }
+
+    private func signInAction() {
+        presenter?.signIn(username: emailTextField.text, password: passwordTextField.text)
+    }
+
+    private func signUpAction() {
+        presenter?.signUp(username: emailTextField.text, password: passwordTextField.text)
+    }
+
+    private func setUpSignInPage() {
+        signUpToggleButton.setTitle( "<<<", for: .normal)
+        nextAction = signInAction
+        UIView.animate(withDuration: 0.2) { [weak self] in
+            self?.forgotPasswordButton?.isHidden = false
+            self?.titleLabel.text = TCSay.Alerts.signIn
+            self?.forgotPasswordHeightConstraint.constant = 20.0
+            self?.layoutIfNeeded()
+        }
+    }
+
+    private func setUpSignUpPage() {
+        signUpToggleButton.setTitle( "<<<", for: .normal)
+        nextAction = signUpAction
+        UIView.animate(withDuration: 0.2) { [weak self] in
+            self?.forgotPasswordButton?.isHidden = true
+            self?.titleLabel.text = TCSay.Alerts.signUp
+            self?.forgotPasswordHeightConstraint.constant = 0
+            self?.layoutIfNeeded()
         }
     }
 
 }
 
 extension TCSignInWithEmailAlertView: SiginInWithEmailView {
+
+}
+
+extension TCSignInWithEmailAlertView: UITextFieldDelegate {
+
+    func setUpTextFieldDelegates() {
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailTextField {
+            textField.resignFirstResponder()
+            return true
+        } else if textField == passwordTextField {
+            textField.resignFirstResponder()
+
+            if emailTextField.isValid && passwordTextField.isValid {
+                nextAction?()
+            }
+
+            return true
+        }
+        return true
+    }
 
 }
 

@@ -66,7 +66,7 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                                 </textField>
                                             </subviews>
                                         </stackView>
@@ -181,6 +181,7 @@
             <connections>
                 <outlet property="emailTextField" destination="wgb-lZ-CFO" id="b7u-HL-9gS"/>
                 <outlet property="forgotPasswordButton" destination="aJl-Gi-0V6" id="us6-gB-6wR"/>
+                <outlet property="forgotPasswordHeightConstraint" destination="3hy-xh-ACc" id="Dbp-Zi-htw"/>
                 <outlet property="iconImageView" destination="2Bq-Qm-vlq" id="h64-WQ-BYp"/>
                 <outlet property="nextButton" destination="fVL-UZ-ktz" id="qRn-lh-4I1"/>
                 <outlet property="passwordTextField" destination="4aO-hW-a8D" id="5cq-l3-JFQ"/>
