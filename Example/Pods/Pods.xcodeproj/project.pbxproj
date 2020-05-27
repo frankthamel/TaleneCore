@@ -96,6 +96,8 @@
 		0162C3EE247BEF360036FB75 /* TCTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0162C3ED247BEF360036FB75 /* TCTextField.swift */; };
 		0162C3F0247BF16C0036FB75 /* UIColor+TaleneCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0162C3EF247BF16C0036FB75 /* UIColor+TaleneCore.swift */; };
 		0162C3F3247C33AD0036FB75 /* FormValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0162C3F2247C33AD0036FB75 /* FormValidators.swift */; };
+		01645D69247E26D700E62D13 /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01645D68247E26D700E62D13 /* MessageManager.swift */; };
+		01645D6B247EAF9500E62D13 /* MessageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01645D6A247EAF9500E62D13 /* MessageFactory.swift */; };
 		01BB6320A25E7E8068D8B58127F6B832 /* errorIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE95B5A6995595F1E3ADB9BFB9D5FD88 /* errorIcon@3x.png */; };
 		01DCB86BBB77999BA02C8FB01F813C4B /* FIRInstanceID.m in Sources */ = {isa = PBXBuildFile; fileRef = B079B37CCCECC2A7B4272FD2800ED721 /* FIRInstanceID.m */; };
 		01DD354FE3CC37DA3BED7F13C833AF64 /* Locksmith-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DCB2EEEB4B832FA8D61324BB21F743B0 /* Locksmith-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1813,6 +1815,8 @@
 		0162C3ED247BEF360036FB75 /* TCTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTextField.swift; sourceTree = "<group>"; };
 		0162C3EF247BF16C0036FB75 /* UIColor+TaleneCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+TaleneCore.swift"; sourceTree = "<group>"; };
 		0162C3F2247C33AD0036FB75 /* FormValidators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValidators.swift; sourceTree = "<group>"; };
+		01645D68247E26D700E62D13 /* MessageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageManager.swift; sourceTree = "<group>"; };
+		01645D6A247EAF9500E62D13 /* MessageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFactory.swift; sourceTree = "<group>"; };
 		01A5425845920A136E4A96F68EFBA5EA /* cct.nanopb.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = cct.nanopb.c; path = GoogleDataTransportCCTSupport/GDTCCTLibrary/Protogen/nanopb/cct.nanopb.c; sourceTree = "<group>"; };
 		02785AD092B0D4A1BF2CF9A1B1AFDA90 /* GULReachabilityChecker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULReachabilityChecker.m; path = GoogleUtilities/Reachability/GULReachabilityChecker.m; sourceTree = "<group>"; };
 		02D4ECF6A898DF6BD002A137E075A53B /* NSError+FIRInstanceID.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+FIRInstanceID.m"; path = "Firebase/InstanceID/NSError+FIRInstanceID.m"; sourceTree = "<group>"; };
@@ -3196,6 +3200,15 @@
 			path = Validators;
 			sourceTree = "<group>";
 		};
+		01645D65247E217B00E62D13 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				01645D68247E26D700E62D13 /* MessageManager.swift */,
+				01645D6A247EAF9500E62D13 /* MessageFactory.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
 		025975EC41CA2C292353032BFD28DBA7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -4275,6 +4288,7 @@
 		95FC2B80416D69E08EFE56897CF61AFB /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				01645D65247E217B00E62D13 /* Messages */,
 				0161EE1B247D8BF400B918AD /* Feedback */,
 				EA1B0E3F6D7A47492BA6BE12A4FA9A39 /* Alerts */,
 				B9EEEB93D6E338D7912AC4251F9C3F86 /* Analytics */,
@@ -7415,6 +7429,7 @@
 				F065F38B564D9FB83FACDFFA0ED1A5DD /* AlertManager.swift in Sources */,
 				5DEBA15494F11B737E86CC0651316870 /* AlertPresenterBase.swift in Sources */,
 				BF12C908C215BC2FD30C400575D30F89 /* AnalyticsEngine.swift in Sources */,
+				01645D6B247EAF9500E62D13 /* MessageFactory.swift in Sources */,
 				E05443665CDF6B7AD4A730F25F4AC6EC /* AnalyticsManager.swift in Sources */,
 				C3B91FE42196203EB31236E3FA56960D /* AppAlerts.swift in Sources */,
 				3E4712B86154E7D18874B55199C44E3B /* AppConfig.swift in Sources */,
@@ -7449,6 +7464,7 @@
 				37A81D69D2D7FC9DDD7531667FBF29B5 /* LoggingManager.swift in Sources */,
 				129912A5B6961C01C6D4DACD0C82DFDC /* NotificationManager.swift in Sources */,
 				656640158708EC04267D72A7A4AF8E6E /* PhoneNumberManager.swift in Sources */,
+				01645D69247E26D700E62D13 /* MessageManager.swift in Sources */,
 				1B72E5DD57A335593A12BEE7EE375CE0 /* RemoteAuthenticator.swift in Sources */,
 				FA11BE74C62DE8DFEC23746CCD01460B /* RemoteNotificationManager.swift in Sources */,
 				EDD1C89D4655FA71A0B7B1623DEC21D8 /* SetupApplication.swift in Sources */,

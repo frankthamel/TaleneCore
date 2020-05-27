@@ -24,9 +24,20 @@ public struct TCSay {
         public static let sign_in_verification_failed = "Mobile number verification failed."
     }
 
+    public struct Messages {
+        public static let hide = "Hide"
+    }
+
     public struct Authenticator {
         public static let emailPlaceholder = "youremail@text.com"
         public static let passwordPlaceHolder = "Password"
         public static let confirmPasswordPlaceHolder = "Type the same password"
+        public static let emailVerification = "Email verification"
+        public static let emailVerificationMessage = "Email verification sent successfully. Check your email."
+        public static let passwordReset = "Password Reset"
+        public static let passwordResetMessege = "Password Reset sent successfully. Check your email"
+        public static let usernameAlreadyTaken = "Username already registered. Try again with a new email."
+        public static let signUpfailed = "SignUp failed. Try again."
+
     }
 }

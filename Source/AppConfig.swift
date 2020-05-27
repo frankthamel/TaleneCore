@@ -29,7 +29,7 @@ public struct InternalServices {
 
 public struct Managers {
     public let alert: Alert = AlertManager()
-    //let toast
+    public let message: Message = MessageManager()
     public let analytics: AnalyticsEngine = AnalyticsManager()
     public let logger: Logger = LoggingManager()
     public let authenticator: Authentication = AuthenticationManager()

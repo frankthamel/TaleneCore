@@ -70,8 +70,6 @@ class SignInWithEmailPresenter: AlertPresenterBase {
             return
         }
 
-        // validate form fields
-
         let credential = Credential(email: username, password: password, isFirebase: isFirebase)
 
         App.managers.authenticator.signUp(withCredentials: credential) { [weak self] result in
@@ -83,8 +81,15 @@ class SignInWithEmailPresenter: AlertPresenterBase {
                 App.managers.loader.showSuccess()
                 self.alertModel?.malert?.dismiss(animated: true, completion: nil)
             case .failure(let errorMessage):
+                switch errorMessage {
+                case .signUpFailed(let message):
+                    App.managers.message.showMessage(model: MessageModel(title: "User SignUp Failed", subTitle: message, type: .error))
+                default:
+                    App.managers.message.showMessage(model: MessageModel(title: "User SignUp Failed", subTitle: TCSay.Authenticator.signUpfailed, type: .error))
+                }
                 App.managers.logger.error(message: errorMessage)
                 App.managers.loader.showFail()
+
             }
         }
     }
@@ -112,7 +117,8 @@ class SignInWithEmailPresenter: AlertPresenterBase {
             case .success(let status):
                 if status {
                     App.managers.loader.showSuccess()
-                    App.managers.logger.info(message: "Email verification sent successfully.")
+                    App.managers.logger.info(message: TCSay.Authenticator.emailVerificationMessage)
+                    App.managers.message.showMessage(model: MessageModel(title: TCSay.Authenticator.emailVerification, subTitle: TCSay.Authenticator.emailVerificationMessage, type: .success, duration: .seconds(seconds: 4)))
                 }
             case .failure(let message):
                 App.managers.logger.error(message: message)
@@ -129,13 +135,12 @@ class SignInWithEmailPresenter: AlertPresenterBase {
             return
         }
 
-        // validate username as email
-
         App.managers.authenticator.forgotPassword(forEmail: username) { result in
             switch result {
             case .success:
                 App.managers.loader.showSuccess()
-                App.managers.logger.info(message: "Password reset sent successfully.")
+                App.managers.logger.info(message: TCSay.Authenticator.passwordResetMessege)
+                App.managers.message.showMessage(model: MessageModel(title: TCSay.Authenticator.passwordReset, subTitle: TCSay.Authenticator.passwordResetMessege, type: .success, duration: .seconds(seconds: 4)))
             case .failure(let message):
                 App.managers.logger.error(message: message)
                 App.managers.loader.showFail()

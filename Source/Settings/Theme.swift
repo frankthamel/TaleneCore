@@ -34,6 +34,7 @@ public protocol Theme {
     var infoColor: UIColor { get set }
     var primaryActionColor: UIColor { get set }
     var secondaryActionColor: UIColor { get set }
+    var foregroundColor: UIColor { get set }
 
     // Loadder
     var loaderBackgroundViewColor: CGColor { get set }
@@ -93,6 +94,8 @@ struct AppTheme: Theme {
     public var primaryActionColor: UIColor = UIColor(red: 104/255, green: 118/255, blue: 251/255, alpha: 1)
 
     public var secondaryActionColor: UIColor = UIColor(red: 0.28, green: 0.28, blue: 0.28, alpha: 1.00)
+
+    public var foregroundColor: UIColor = UIColor.white
 
     // Loadder
 
