@@ -33,15 +33,15 @@ public class MessageFactoryImpl: MessageFactory {
     }
 
     func configureSuccessTheme(forView view: inout MessageView, model: MessageModel) {
-        view.configureTheme(backgroundColor: App.settings.theme.successColor, foregroundColor: App.settings.theme.foregroundColor)
+        configureCustomTheme(forView: &view, backgroundColor: App.settings.theme.successColor, foregroundColor: App.settings.theme.foregroundColor, iconImage: UIImage(withFrameworkName: "CheckMarkMessegeIcon"), iconText: nil)
     }
 
     func configureFailTheme(forView view: inout MessageView, model: MessageModel) {
-        view.configureTheme(backgroundColor: App.settings.theme.falierColor, foregroundColor: App.settings.theme.foregroundColor)
+        configureCustomTheme(forView: &view, backgroundColor: App.settings.theme.falierColor, foregroundColor: App.settings.theme.foregroundColor, iconImage: UIImage(withFrameworkName: "ErrorMessegeIcon"), iconText: nil)
     }
 
     func configureWarningTheme(forView view: inout MessageView, model: MessageModel) {
-        view.configureTheme(backgroundColor: App.settings.theme.infoColor, foregroundColor: App.settings.theme.foregroundColor)
+        configureCustomTheme(forView: &view, backgroundColor: App.settings.theme.infoColor, foregroundColor: App.settings.theme.foregroundColor, iconImage: UIImage(withFrameworkName: "warningMessegeIcon"), iconText: nil)
     }
 
     func configurePlainTheme(forView view: inout MessageView, model: MessageModel) {

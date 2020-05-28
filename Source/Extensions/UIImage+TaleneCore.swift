@@ -13,5 +13,10 @@ extension UIImage {
         let path = App.store.mainBundle.getAppBundle().path(forResource: withFrameworkName, ofType: "png")
         self.init(contentsOfFile: path ?? "")
     }
+
+    convenience init?(fromSVG svg: String) {
+        let path = App.store.mainBundle.getAppBundle().path(forResource: svg, ofType: "svg")
+        self.init(contentsOfFile: path ?? "")
+    }
 }
 

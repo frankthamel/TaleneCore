@@ -98,6 +98,24 @@
 		0162C3F3247C33AD0036FB75 /* FormValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0162C3F2247C33AD0036FB75 /* FormValidators.swift */; };
 		01645D69247E26D700E62D13 /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01645D68247E26D700E62D13 /* MessageManager.swift */; };
 		01645D6B247EAF9500E62D13 /* MessageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01645D6A247EAF9500E62D13 /* MessageFactory.swift */; };
+		0164E58B247F6554006F222C /* ErrorMessegeIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E588247F6554006F222C /* ErrorMessegeIcon@3x.png */; };
+		0164E58C247F6554006F222C /* ErrorMessegeIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E588247F6554006F222C /* ErrorMessegeIcon@3x.png */; };
+		0164E58D247F6554006F222C /* ErrorMessegeIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E589247F6554006F222C /* ErrorMessegeIcon@2x.png */; };
+		0164E58E247F6554006F222C /* ErrorMessegeIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E589247F6554006F222C /* ErrorMessegeIcon@2x.png */; };
+		0164E58F247F6554006F222C /* ErrorMessegeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E58A247F6554006F222C /* ErrorMessegeIcon.png */; };
+		0164E590247F6554006F222C /* ErrorMessegeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E58A247F6554006F222C /* ErrorMessegeIcon.png */; };
+		0164E594247F65F7006F222C /* CheckMarkMessegeIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E591247F65F6006F222C /* CheckMarkMessegeIcon@3x.png */; };
+		0164E595247F65F7006F222C /* CheckMarkMessegeIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E591247F65F6006F222C /* CheckMarkMessegeIcon@3x.png */; };
+		0164E596247F65F7006F222C /* CheckMarkMessegeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E592247F65F6006F222C /* CheckMarkMessegeIcon.png */; };
+		0164E597247F65F7006F222C /* CheckMarkMessegeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E592247F65F6006F222C /* CheckMarkMessegeIcon.png */; };
+		0164E598247F65F7006F222C /* CheckMarkMessegeIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E593247F65F6006F222C /* CheckMarkMessegeIcon@2x.png */; };
+		0164E599247F65F7006F222C /* CheckMarkMessegeIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E593247F65F6006F222C /* CheckMarkMessegeIcon@2x.png */; };
+		0164E5A6247F6EA3006F222C /* warningMessegeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E5A3247F6EA2006F222C /* warningMessegeIcon.png */; };
+		0164E5A7247F6EA3006F222C /* warningMessegeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E5A3247F6EA2006F222C /* warningMessegeIcon.png */; };
+		0164E5A8247F6EA3006F222C /* warningMessegeIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E5A4247F6EA2006F222C /* warningMessegeIcon@2x.png */; };
+		0164E5A9247F6EA3006F222C /* warningMessegeIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E5A4247F6EA2006F222C /* warningMessegeIcon@2x.png */; };
+		0164E5AA247F6EA3006F222C /* warningMessegeIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E5A5247F6EA3006F222C /* warningMessegeIcon@3x.png */; };
+		0164E5AB247F6EA3006F222C /* warningMessegeIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E5A5247F6EA3006F222C /* warningMessegeIcon@3x.png */; };
 		01BB6320A25E7E8068D8B58127F6B832 /* errorIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE95B5A6995595F1E3ADB9BFB9D5FD88 /* errorIcon@3x.png */; };
 		01DCB86BBB77999BA02C8FB01F813C4B /* FIRInstanceID.m in Sources */ = {isa = PBXBuildFile; fileRef = B079B37CCCECC2A7B4272FD2800ED721 /* FIRInstanceID.m */; };
 		01DD354FE3CC37DA3BED7F13C833AF64 /* Locksmith-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DCB2EEEB4B832FA8D61324BB21F743B0 /* Locksmith-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1817,6 +1835,15 @@
 		0162C3F2247C33AD0036FB75 /* FormValidators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValidators.swift; sourceTree = "<group>"; };
 		01645D68247E26D700E62D13 /* MessageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageManager.swift; sourceTree = "<group>"; };
 		01645D6A247EAF9500E62D13 /* MessageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFactory.swift; sourceTree = "<group>"; };
+		0164E588247F6554006F222C /* ErrorMessegeIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ErrorMessegeIcon@3x.png"; sourceTree = "<group>"; };
+		0164E589247F6554006F222C /* ErrorMessegeIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ErrorMessegeIcon@2x.png"; sourceTree = "<group>"; };
+		0164E58A247F6554006F222C /* ErrorMessegeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ErrorMessegeIcon.png; sourceTree = "<group>"; };
+		0164E591247F65F6006F222C /* CheckMarkMessegeIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckMarkMessegeIcon@3x.png"; sourceTree = "<group>"; };
+		0164E592247F65F6006F222C /* CheckMarkMessegeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckMarkMessegeIcon.png; sourceTree = "<group>"; };
+		0164E593247F65F6006F222C /* CheckMarkMessegeIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckMarkMessegeIcon@2x.png"; sourceTree = "<group>"; };
+		0164E5A3247F6EA2006F222C /* warningMessegeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warningMessegeIcon.png; sourceTree = "<group>"; };
+		0164E5A4247F6EA2006F222C /* warningMessegeIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warningMessegeIcon@2x.png"; sourceTree = "<group>"; };
+		0164E5A5247F6EA3006F222C /* warningMessegeIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warningMessegeIcon@3x.png"; sourceTree = "<group>"; };
 		01A5425845920A136E4A96F68EFBA5EA /* cct.nanopb.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = cct.nanopb.c; path = GoogleDataTransportCCTSupport/GDTCCTLibrary/Protogen/nanopb/cct.nanopb.c; sourceTree = "<group>"; };
 		02785AD092B0D4A1BF2CF9A1B1AFDA90 /* GULReachabilityChecker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULReachabilityChecker.m; path = GoogleUtilities/Reachability/GULReachabilityChecker.m; sourceTree = "<group>"; };
 		02D4ECF6A898DF6BD002A137E075A53B /* NSError+FIRInstanceID.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+FIRInstanceID.m"; path = "Firebase/InstanceID/NSError+FIRInstanceID.m"; sourceTree = "<group>"; };
@@ -3209,6 +3236,22 @@
 			path = Messages;
 			sourceTree = "<group>";
 		};
+		0164E587247F64C2006F222C /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				0164E5A3247F6EA2006F222C /* warningMessegeIcon.png */,
+				0164E5A4247F6EA2006F222C /* warningMessegeIcon@2x.png */,
+				0164E5A5247F6EA3006F222C /* warningMessegeIcon@3x.png */,
+				0164E592247F65F6006F222C /* CheckMarkMessegeIcon.png */,
+				0164E593247F65F6006F222C /* CheckMarkMessegeIcon@2x.png */,
+				0164E591247F65F6006F222C /* CheckMarkMessegeIcon@3x.png */,
+				0164E58A247F6554006F222C /* ErrorMessegeIcon.png */,
+				0164E589247F6554006F222C /* ErrorMessegeIcon@2x.png */,
+				0164E588247F6554006F222C /* ErrorMessegeIcon@3x.png */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
 		025975EC41CA2C292353032BFD28DBA7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -3621,6 +3664,7 @@
 		357854E14EFDE56C121778649C29891A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				0164E587247F64C2006F222C /* Message */,
 				1B181E0169B27B8B2F614A5C8A6C2684 /* Alert */,
 			);
 			path = Assets;
@@ -6699,11 +6743,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0164E594247F65F7006F222C /* CheckMarkMessegeIcon@3x.png in Resources */,
+				0164E58D247F6554006F222C /* ErrorMessegeIcon@2x.png in Resources */,
 				0161EE15247D7D6100B918AD /* toggle@2x.png in Resources */,
+				0164E598247F65F7006F222C /* CheckMarkMessegeIcon@2x.png in Resources */,
+				0164E58B247F6554006F222C /* ErrorMessegeIcon@3x.png in Resources */,
+				0164E5A6247F6EA3006F222C /* warningMessegeIcon.png in Resources */,
 				016244B3247AF2C800511184 /* KeyIcon@3x.png in Resources */,
+				0164E5AA247F6EA3006F222C /* warningMessegeIcon@3x.png in Resources */,
+				0164E58F247F6554006F222C /* ErrorMessegeIcon.png in Resources */,
 				0161EE17247D7D6100B918AD /* toggle@3x.png in Resources */,
+				0164E596247F65F7006F222C /* CheckMarkMessegeIcon.png in Resources */,
 				016244B5247AF2C800511184 /* KeyIcon@2x.png in Resources */,
 				016244B7247AF2C800511184 /* KeyIcon.png in Resources */,
+				0164E5A8247F6EA3006F222C /* warningMessegeIcon@2x.png in Resources */,
 				0161EE19247D7D6100B918AD /* toggle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -6862,13 +6915,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				0161EE18247D7D6100B918AD /* toggle@3x.png in Resources */,
+				0164E5AB247F6EA3006F222C /* warningMessegeIcon@3x.png in Resources */,
+				0164E590247F6554006F222C /* ErrorMessegeIcon.png in Resources */,
 				8EF483A4467FC66DC4AE28BA8D0DF1D9 /* CheckMark.png in Resources */,
+				0164E599247F65F7006F222C /* CheckMarkMessegeIcon@2x.png in Resources */,
 				A8597A9DFC84EB48ED9AFCDFA3B91420 /* CheckMark@2x.png in Resources */,
+				0164E595247F65F7006F222C /* CheckMarkMessegeIcon@3x.png in Resources */,
 				DEAFF3DC8F194F9488A358ECB436C1D3 /* CheckMark@3x.png in Resources */,
+				0164E58E247F6554006F222C /* ErrorMessegeIcon@2x.png in Resources */,
+				0164E58C247F6554006F222C /* ErrorMessegeIcon@3x.png in Resources */,
 				E6AB49391A441651856F1D4C5D08B92A /* DefaultAlertUIView.xib in Resources */,
 				0161EE1A247D7D6100B918AD /* toggle.png in Resources */,
 				A8D27D9F79BFBAC392415EBC0235C5F6 /* ErrorIcon.png in Resources */,
 				366D2CBF051FEA241B025377C4E03F81 /* ErrorIcon@2x.png in Resources */,
+				0164E597247F65F7006F222C /* CheckMarkMessegeIcon.png in Resources */,
 				5F279984EBD90BB27A81623AA8D1362F /* ErrorIcon@3x.png in Resources */,
 				016244B6247AF2C800511184 /* KeyIcon@2x.png in Resources */,
 				814D23228016D37C674161445A61537D /* InfoIcon.png in Resources */,
@@ -6876,8 +6936,10 @@
 				6A6C3046FDDFC94421714595CB4B3A33 /* InfoIcon@2x.png in Resources */,
 				016244B8247AF2C800511184 /* KeyIcon.png in Resources */,
 				0161EE16247D7D6100B918AD /* toggle@2x.png in Resources */,
+				0164E5A7247F6EA3006F222C /* warningMessegeIcon.png in Resources */,
 				4EB8280CC490A1C17B506E413A5EDC84 /* InfoIcon@3x.png in Resources */,
 				DE23A5401EDD90C3CA930FE2DF1351A1 /* SignInAlertUIView.xib in Resources */,
+				0164E5A9247F6EA3006F222C /* warningMessegeIcon@2x.png in Resources */,
 				2B02E66B8123DF7781A623632BCDAC3E /* SignInWithEmailAlertView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

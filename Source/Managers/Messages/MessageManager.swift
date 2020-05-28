@@ -19,7 +19,7 @@ public class MessageModel {
     var iconStyle: IconStyle = .default
     var duration: SwiftMessages.Duration = .automatic
 
-    init(title: String, subTitle: String, type: MessageType, icon: UIImage? = nil, viewType: MessageView.Layout = .cardView, iconStyle: IconStyle = .default, iconText: String? = nil, duration: SwiftMessages.Duration = .automatic) {
+    public init(title: String, subTitle: String, type: MessageType, icon: UIImage? = nil, viewType: MessageView.Layout = .cardView, iconStyle: IconStyle = .default, iconText: String? = nil, duration: SwiftMessages.Duration = .automatic) {
         self.title = title
         self.subTitle = subTitle
         self.type = type

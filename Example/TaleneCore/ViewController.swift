@@ -18,7 +18,6 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     @IBAction func showInfoAlert(_ sender: Any) {
@@ -28,8 +27,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showErrorAlert(_ sender: Any) {
-        let alertModel = FalierAlertModel(descriptions: ["description" :"This is a Test message."] , containerController: self)
-        App.managers.alert.showAlert(model: alertModel)
+        //let alertModel = FalierAlertModel(descriptions: ["description" :"This is a Test message."] , containerController: self)
+        //App.managers.alert.showAlert(model: alertModel)
+        let messegeModel = MessageModel(title: "Error Messege!", subTitle: "This is s sample error messege.", type: .info)
+        App.managers.message.showMessage(model: messegeModel)
     }
 
     @IBAction func showSuccessAlert(_ sender: Any) {
