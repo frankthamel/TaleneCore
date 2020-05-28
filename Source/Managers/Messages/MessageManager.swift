@@ -48,9 +48,12 @@ public enum MessageType {
     case view
 }
 
+public typealias CoreMessageView = MessageView
+
 public protocol Message {
     func showMessage(model: MessageModel)
     func showMessageView<T: MessageView>(_ viewType: T.Type)
+    func hide()
 }
 
 struct MessageManager: Message {
@@ -58,6 +61,7 @@ struct MessageManager: Message {
     let messageFactory: MessageFactory = MessageFactoryImpl()
 
     func showMessage(model: MessageModel) {
+        App.managers.hapticFeedback.select()
         SwiftMessages.show(config: model.configs, view: messageFactory.createMessage(model: model))
     }
 
@@ -68,7 +72,13 @@ struct MessageManager: Message {
 
         let view:T? = messageFactory.createMessageView(model: model)
         if let view = view {
+            App.managers.hapticFeedback.select()
             SwiftMessages.show(config: model.configs, view: view)
         }
+    }
+
+    func hide() {
+        App.managers.hapticFeedback.impact()
+        SwiftMessages.hide()
     }
 }

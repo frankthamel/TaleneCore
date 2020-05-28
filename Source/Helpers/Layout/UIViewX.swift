@@ -8,7 +8,6 @@
 
 import UIKit
 
-@IBDesignable
 public class UIViewX: UIView {
 
     @IBInspectable public var borderColor: UIColor = UIColor.clear {

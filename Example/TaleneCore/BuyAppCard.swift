@@ -7,13 +7,23 @@
 //
 
 import Foundation
-import SwiftMessages
 import TaleneCore
 
-class BuyAppCard: MessageView {
+class BuyAppCard: CoreMessageView {
     var cancelAction: (() -> Void)?
+
+    override class func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
 
     deinit {
         App.managers.logger.verbose(message: "deinit: BuyAppCard")
     }
+
+    @IBAction func close(_ sender: Any) {
+        App.managers.message.hide()
+    }
+
+
 }
