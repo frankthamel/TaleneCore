@@ -13,19 +13,26 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // register observer
+        App.managers.notification.localNotificationManager.addObserver(forNotification: AppNotifications.Core.userAuthenticatedSuccess, inClass: self, withTarget: #selector(testSelector))
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
+    deinit {
+        print("Viewcontroller deinit.")
+        App.managers.notification.localNotificationManager.removeObserver(inClass: self)
+    }
+
     @IBAction func showInfoAlert(_ sender: Any) {
          //let alertModel = InfoAlertModel(descriptions: [TCConstants.description : TCSay.Alerts.sign_in_verification_failed] , containerController: self)
-         //let alertModel = CustomAlertModel(type: .custom(AppAlerts.createSignInWithEmailAlert), params: [TCConstants.isFirebase: true], containerController: self)
-         //App.managers.alert.showAlert(model: alertModel)
+         let alertModel = CustomAlertModel(type: .custom(AppAlerts.createSignInWithEmailAlert), params: [TCConstants.isFirebase: true], containerController: self)
+         App.managers.alert.showAlert(model: alertModel)
 
-        App.managers.message.showMessageView(BuyAppCard.self)
+        //App.managers.message.showMessageView(BuyAppCard.self)
     }
 
     @IBAction func showErrorAlert(_ sender: Any) {
@@ -38,5 +45,9 @@ class ViewController: UIViewController {
     @IBAction func showSuccessAlert(_ sender: Any) {
         let alertModel = SuccessAlertModel(descriptions: ["description" :"This is a Test message."] , containerController: self)
         App.managers.alert.showAlert(model: alertModel)
+    }
+
+    @objc func testSelector(_ notification: NSNotification) {
+        print("Notification called with info \(notification.userInfo ?? [:])")
     }
 }

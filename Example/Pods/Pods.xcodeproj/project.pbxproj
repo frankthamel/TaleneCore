@@ -116,6 +116,7 @@
 		0164E5A9247F6EA3006F222C /* warningMessegeIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E5A4247F6EA2006F222C /* warningMessegeIcon@2x.png */; };
 		0164E5AA247F6EA3006F222C /* warningMessegeIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E5A5247F6EA3006F222C /* warningMessegeIcon@3x.png */; };
 		0164E5AB247F6EA3006F222C /* warningMessegeIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E5A5247F6EA3006F222C /* warningMessegeIcon@3x.png */; };
+		0164E5B42480228D006F222C /* AppNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0164E5B32480228D006F222C /* AppNotifications.swift */; };
 		01BB6320A25E7E8068D8B58127F6B832 /* errorIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE95B5A6995595F1E3ADB9BFB9D5FD88 /* errorIcon@3x.png */; };
 		01DCB86BBB77999BA02C8FB01F813C4B /* FIRInstanceID.m in Sources */ = {isa = PBXBuildFile; fileRef = B079B37CCCECC2A7B4272FD2800ED721 /* FIRInstanceID.m */; };
 		01DD354FE3CC37DA3BED7F13C833AF64 /* Locksmith-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DCB2EEEB4B832FA8D61324BB21F743B0 /* Locksmith-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1844,6 +1845,7 @@
 		0164E5A3247F6EA2006F222C /* warningMessegeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warningMessegeIcon.png; sourceTree = "<group>"; };
 		0164E5A4247F6EA2006F222C /* warningMessegeIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warningMessegeIcon@2x.png"; sourceTree = "<group>"; };
 		0164E5A5247F6EA3006F222C /* warningMessegeIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warningMessegeIcon@3x.png"; sourceTree = "<group>"; };
+		0164E5B32480228D006F222C /* AppNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNotifications.swift; sourceTree = "<group>"; };
 		01A5425845920A136E4A96F68EFBA5EA /* cct.nanopb.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = cct.nanopb.c; path = GoogleDataTransportCCTSupport/GDTCCTLibrary/Protogen/nanopb/cct.nanopb.c; sourceTree = "<group>"; };
 		02785AD092B0D4A1BF2CF9A1B1AFDA90 /* GULReachabilityChecker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULReachabilityChecker.m; path = GoogleUtilities/Reachability/GULReachabilityChecker.m; sourceTree = "<group>"; };
 		02D4ECF6A898DF6BD002A137E075A53B /* NSError+FIRInstanceID.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+FIRInstanceID.m"; path = "Firebase/InstanceID/NSError+FIRInstanceID.m"; sourceTree = "<group>"; };
@@ -4241,6 +4243,7 @@
 			isa = PBXGroup;
 			children = (
 				5FE12ADE332F178DB6D8969912C72E2C /* Constants.swift */,
+				0164E5B32480228D006F222C /* AppNotifications.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -7532,6 +7535,7 @@
 				EDD1C89D4655FA71A0B7B1623DEC21D8 /* SetupApplication.swift in Sources */,
 				2791132ECB48098713FE1E537FA75F8D /* SignInAlertUIView.swift in Sources */,
 				0162C3EE247BEF360036FB75 /* TCTextField.swift in Sources */,
+				0164E5B42480228D006F222C /* AppNotifications.swift in Sources */,
 				DD845D423580FB39AFF75D3A4B68F23B /* SignInAlertUIView.xib in Sources */,
 				38BD7EF83DF619443A871866DF0DE9B5 /* SignInEvents.swift in Sources */,
 				C6BF9E9DE4F21C885D49D23A4C128137 /* SignInModel.swift in Sources */,
