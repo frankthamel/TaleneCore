@@ -28,7 +28,6 @@ public class MessageModel {
         self.iconStyle = iconStyle
         self.iconText = iconText
         self.duration = duration
-
         setupTaleneDefault()
     }
 
@@ -46,10 +45,12 @@ public enum MessageType {
     case error
     case plain
     case custom(backgroundColor: UIColor, foregroundColor: UIColor, iconImage: UIImage?, iconText: String?)
+    case view
 }
 
 public protocol Message {
     func showMessage(model: MessageModel)
+    func showMessageView<T: MessageView>(_ viewType: T.Type)
 }
 
 struct MessageManager: Message {
@@ -58,5 +59,16 @@ struct MessageManager: Message {
 
     func showMessage(model: MessageModel) {
         SwiftMessages.show(config: model.configs, view: messageFactory.createMessage(model: model))
+    }
+
+    func showMessageView<T: MessageView>(_ viewType: T.Type) {
+        let model = MessageModel(title: "", subTitle: "", type: .view, duration: .forever)
+        model.configs.presentationContext = .window(windowLevel: UIWindow.Level.statusBar)
+        model.configs.presentationStyle = .bottom
+
+        let view:T? = messageFactory.createMessageView(model: model)
+        if let view = view {
+            SwiftMessages.show(config: model.configs, view: view)
+        }
     }
 }

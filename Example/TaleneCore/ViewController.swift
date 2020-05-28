@@ -22,8 +22,10 @@ class ViewController: UIViewController {
 
     @IBAction func showInfoAlert(_ sender: Any) {
          //let alertModel = InfoAlertModel(descriptions: [TCConstants.description : TCSay.Alerts.sign_in_verification_failed] , containerController: self)
-        let alertModel = CustomAlertModel(type: .custom(AppAlerts.createSignInWithEmailAlert), params: [TCConstants.isFirebase: true], containerController: self)
-        App.managers.alert.showAlert(model: alertModel)
+         //let alertModel = CustomAlertModel(type: .custom(AppAlerts.createSignInWithEmailAlert), params: [TCConstants.isFirebase: true], containerController: self)
+         //App.managers.alert.showAlert(model: alertModel)
+
+        App.managers.message.showMessageView(BuyAppCard.self)
     }
 
     @IBAction func showErrorAlert(_ sender: Any) {

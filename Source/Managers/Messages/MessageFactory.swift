@@ -10,6 +10,7 @@ import SwiftMessages
 
 protocol MessageFactory {
     func createMessage(model: MessageModel) -> MessageView
+    func createMessageView<T: MessageView>(model: MessageModel) -> T?
 }
 
 public class MessageFactoryImpl: MessageFactory {
@@ -28,7 +29,14 @@ public class MessageFactoryImpl: MessageFactory {
                 configurePlainTheme(forView: &view, model: model)
             case .custom(let backgroundColor, let foregroundColor, let iconImage, let iconText):
                 configureCustomTheme(forView: &view, backgroundColor: backgroundColor, foregroundColor: foregroundColor, iconImage: iconImage, iconText: iconText)
+            case .view:
+                configurePlainTheme(forView: &view, model: model)
         }
+        return view
+    }
+
+    func createMessageView<T: MessageView>(model: MessageModel) -> T? {
+        let view: T = try! SwiftMessages.viewFromNib()
         return view
     }
 
@@ -51,4 +59,5 @@ public class MessageFactoryImpl: MessageFactory {
     func configureCustomTheme(forView view: inout MessageView, backgroundColor: UIColor, foregroundColor: UIColor, iconImage: UIImage?, iconText: String?) {
         view.configureTheme(backgroundColor: backgroundColor, foregroundColor: foregroundColor, iconImage: iconImage, iconText: iconText)
     }
+
 }

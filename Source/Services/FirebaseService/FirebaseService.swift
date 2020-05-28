@@ -21,6 +21,7 @@ struct FirebaseServiceProvider: FirebaseService {
 
     func configure() {
         FirebaseApp.configure()
+        FirebaseConfiguration.shared.setLoggerLevel(.min)
     }
 
 }
