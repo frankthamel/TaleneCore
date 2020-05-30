@@ -19,7 +19,7 @@ struct FirebaseServiceProvider: FirebaseService {
     var firebaseAuthenticationService: FirebaseAuthenticationService = FirebaseAuthenticationServiceProvider()
     var firebaseAnalyticsService: FirebaseAnalyticsService = FirebaseAnalyticsServiceProvider()
 
-    func configure() {
+    func configure<T>(inType type: T) {
         FirebaseApp.configure()
         FirebaseConfiguration.shared.setLoggerLevel(.min)
     }

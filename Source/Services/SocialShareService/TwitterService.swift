@@ -13,7 +13,7 @@ public protocol TwitterService: AppConfigure {
 }
 
 struct TwitterServiceProvider: TwitterService {
-    func configure() {
+    func configure<T>(inType type: T) {
 
     }
 

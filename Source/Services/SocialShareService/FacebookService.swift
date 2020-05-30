@@ -13,7 +13,7 @@ public protocol FacebookService: AppConfigure {
 }
 
 struct FacebookServiceProvider: FacebookService {
-    func configure() {
+    func configure<T>(inType type: T) {
         
     }
 

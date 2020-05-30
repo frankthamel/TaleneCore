@@ -29,10 +29,10 @@ class ViewController: UIViewController {
 
     @IBAction func showInfoAlert(_ sender: Any) {
          //let alertModel = InfoAlertModel(descriptions: [TCConstants.description : TCSay.Alerts.sign_in_verification_failed] , containerController: self)
-         let alertModel = CustomAlertModel(type: .custom(AppAlerts.createSignInWithEmailAlert), params: [TCConstants.isFirebase: true], containerController: self)
-         App.managers.alert.showAlert(model: alertModel)
+         //let alertModel = CustomAlertModel(type: .custom(AppAlerts.createSignInWithEmailAlert), params: [TCConstants.isFirebase: true], containerController: self)
+         //App.managers.alert.showAlert(model: alertModel)
 
-        //App.managers.message.showMessageView(BuyAppCard.self)
+        App.managers.message.showMessageView(BuyAppCard.self)
     }
 
     @IBAction func showErrorAlert(_ sender: Any) {
@@ -45,6 +45,28 @@ class ViewController: UIViewController {
     @IBAction func showSuccessAlert(_ sender: Any) {
         let alertModel = SuccessAlertModel(descriptions: ["description" :"This is a Test message."] , containerController: self)
         App.managers.alert.showAlert(model: alertModel)
+
+
+        // schedule local notifications
+//        let localNotificationModel1 = LocalNotificationModel(title: "Test Local push 1", subtitle: nil, body: "Teat Local Push body.", repeatableDays: [.saturday], hour: 18, minute: 50, year: nil, isActive: true)
+//        App.managers.notification.localPushNotificationManager.scheduleTrigger(localNotificationModel1)
+//
+//        let localNotificationModel2 = LocalNotificationModel(title: "Test Local push 2", subtitle: nil, body: "Teat Local Push body.", repeatableDays: [.sunday], hour: 18, minute: 55, year: nil, isActive: true)
+//        App.managers.notification.localPushNotificationManager.scheduleTrigger(localNotificationModel2)
+//
+//        let localNotificationModel3 = LocalNotificationModel(title: "Test Local push 3", subtitle: nil, body: "Teat Local Push body.", repeatableDays: [.saturday], hour: 18, minute: 59, year: nil, isActive: true)
+//        App.managers.notification.localPushNotificationManager.scheduleTrigger(localNotificationModel3)
+
+
+        App.managers.notification.localPushNotificationManager.listScheduledNotifications { models in
+            guard let models = models else { return }
+            models.forEach { (model) in
+                print("Local notifications: \(model.id) - Title: \(model.title)")
+            }
+        }
+
+       // App.managers.notification.localPushNotificationManager.removeAllPendingNotifications()
+
     }
 
     @objc func testSelector(_ notification: NSNotification) {

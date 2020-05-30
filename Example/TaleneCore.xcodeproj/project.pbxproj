@@ -34,6 +34,7 @@
 		0164E5AD247FD9AD006F222C /* BuyAppCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyAppCard.xib; sourceTree = "<group>"; };
 		0164E5AF247FDB24006F222C /* BuyAppCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyAppCard.swift; sourceTree = "<group>"; };
 		0165A57F24762E6600AFF60A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		01BA950024824FF900C9FE7C /* TaleneCore_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TaleneCore_Example.entitlements; sourceTree = "<group>"; };
 		07617777A4B34EEF80711EF8 /* TaleneCore.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TaleneCore.podspec; path = ../TaleneCore.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1A56A4157E287E8CEFAE39E5 /* Pods-TaleneCore_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaleneCore_Example.debug.xcconfig"; path = "Target Support Files/Pods-TaleneCore_Example/Pods-TaleneCore_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* TaleneCore_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaleneCore_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +88,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				01BA950024824FF900C9FE7C /* TaleneCore_Example.entitlements */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for TaleneCore */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -559,6 +561,7 @@
 			baseConfigurationReference = 1A56A4157E287E8CEFAE39E5 /* Pods-TaleneCore_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TaleneCore_Example.entitlements;
 				DEVELOPMENT_TEAM = MV76X88Q4Q;
 				INFOPLIST_FILE = TaleneCore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -576,6 +579,7 @@
 			baseConfigurationReference = 80BBDBA27A16D2D37B8DE317 /* Pods-TaleneCore_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TaleneCore_Example.entitlements;
 				DEVELOPMENT_TEAM = MV76X88Q4Q;
 				INFOPLIST_FILE = TaleneCore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;

@@ -11,14 +11,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BuyAppCard" customModule="TaleneCore_Example" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="350"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="291"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5g-Vo-MoK" customClass="UIViewX" customModule="TaleneCore">
-                    <rect key="frame" x="8" y="0.0" width="584" height="316"/>
+                    <rect key="frame" x="12" y="0.0" width="576" height="257"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xY-y9-JmJ">
-                            <rect key="frame" x="256" y="134.5" width="72" height="47"/>
+                            <rect key="frame" x="252" y="105" width="72" height="47"/>
                             <fontDescription key="fontDescription" type="system" pointSize="29"/>
                             <state key="normal" title="Close">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -32,7 +32,7 @@
                     <constraints>
                         <constraint firstItem="8xY-y9-JmJ" firstAttribute="centerX" secondItem="x5g-Vo-MoK" secondAttribute="centerX" id="Hkn-lg-v9c"/>
                         <constraint firstItem="8xY-y9-JmJ" firstAttribute="centerY" secondItem="x5g-Vo-MoK" secondAttribute="centerY" id="JAF-vz-QLx"/>
-                        <constraint firstAttribute="height" constant="316" id="z2R-lA-dxJ"/>
+                        <constraint firstAttribute="height" constant="257" id="but-w2-5Ek"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -43,14 +43,14 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="x5g-Vo-MoK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="8CK-Fx-wsT"/>
+                <constraint firstItem="x5g-Vo-MoK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="8CK-Fx-wsT"/>
                 <constraint firstItem="x5g-Vo-MoK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LXe-ee-zmJ"/>
-                <constraint firstItem="x5g-Vo-MoK" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-8" id="V6s-Lp-L7s"/>
+                <constraint firstItem="x5g-Vo-MoK" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-12" id="V6s-Lp-L7s"/>
                 <constraint firstItem="x5g-Vo-MoK" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="xcJ-f1-qb5"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="142.02898550724638" y="76.339285714285708"/>
+            <point key="canvasLocation" x="142.02898550724638" y="56.584821428571423"/>
         </view>
     </objects>
 </document>

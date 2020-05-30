@@ -30,7 +30,7 @@ struct LoadingManager: Loader {
         ARSLineProgressConfiguration.circleColorOuter = App.settings.theme.loaderCircleColorOuter
     }
 
-    func configure() {
+    func configure<T>(inType type: T) {
         configureLoader()
     }
 

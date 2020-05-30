@@ -40,4 +40,20 @@ public struct TCSay {
         public static let signUpfailed = "SignUp failed. Try again."
 
     }
+
+    public struct Days {
+        public static let all = "All"
+        public static let sunday = "Sunday"
+        public static let monday = "Monday"
+        public static let tuesday = "Tuesday"
+        public static let wednesday = "Wednesday"
+        public static let thursday = "Thursday"
+        public static let friday = "Friday"
+        public static let saturday = "Saturday"
+    }
+
+    public struct Notification {
+        public static let notificationCreateErrorTitle = "Can not Schedule this task."
+        public static let notificationCreateErrorSubtitle = "Error occoured while scheduling this task. please try again."
+    }
 }

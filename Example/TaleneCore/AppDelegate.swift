@@ -8,6 +8,7 @@
 
 import UIKit
 import TaleneCore
+import NotificationCenter
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -48,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
     func configureTaleneCore() {
-        configureTaleneCoreApp()
+        configureTaleneCoreApp(inType: self)
     }
 }
 

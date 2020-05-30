@@ -18,8 +18,8 @@ struct SocialShareServiceProvider: SocialShareService {
     var facebookService: FacebookService = FacebookServiceProvider()
     var twitterService: TwitterService = TwitterServiceProvider()
 
-    func configure() {
-        facebookService.configure()
-        twitterService.configure()
+    func configure<T>(inType type: T) {
+        facebookService.configure(inType: type)
+        twitterService.configure(inType: type)
     }
 }

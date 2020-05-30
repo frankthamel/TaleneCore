@@ -117,6 +117,10 @@
 		0164E5AA247F6EA3006F222C /* warningMessegeIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E5A5247F6EA3006F222C /* warningMessegeIcon@3x.png */; };
 		0164E5AB247F6EA3006F222C /* warningMessegeIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E5A5247F6EA3006F222C /* warningMessegeIcon@3x.png */; };
 		0164E5B42480228D006F222C /* AppNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0164E5B32480228D006F222C /* AppNotifications.swift */; };
+		01BA94F82481FFF300C9FE7C /* DaysOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BA94F72481FFF300C9FE7C /* DaysOfWeek.swift */; };
+		01BA94FA248206A800C9FE7C /* LocalNotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BA94F9248206A800C9FE7C /* LocalNotificationModel.swift */; };
+		01BA94FD24822AEB00C9FE7C /* DateHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BA94FC24822AEB00C9FE7C /* DateHelpers.swift */; };
+		01BA94FF248242E700C9FE7C /* UUIDGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BA94FE248242E700C9FE7C /* UUIDGenerator.swift */; };
 		01BB6320A25E7E8068D8B58127F6B832 /* errorIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE95B5A6995595F1E3ADB9BFB9D5FD88 /* errorIcon@3x.png */; };
 		01DCB86BBB77999BA02C8FB01F813C4B /* FIRInstanceID.m in Sources */ = {isa = PBXBuildFile; fileRef = B079B37CCCECC2A7B4272FD2800ED721 /* FIRInstanceID.m */; };
 		01DD354FE3CC37DA3BED7F13C833AF64 /* Locksmith-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DCB2EEEB4B832FA8D61324BB21F743B0 /* Locksmith-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1847,6 +1851,10 @@
 		0164E5A5247F6EA3006F222C /* warningMessegeIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warningMessegeIcon@3x.png"; sourceTree = "<group>"; };
 		0164E5B32480228D006F222C /* AppNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNotifications.swift; sourceTree = "<group>"; };
 		01A5425845920A136E4A96F68EFBA5EA /* cct.nanopb.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = cct.nanopb.c; path = GoogleDataTransportCCTSupport/GDTCCTLibrary/Protogen/nanopb/cct.nanopb.c; sourceTree = "<group>"; };
+		01BA94F72481FFF300C9FE7C /* DaysOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOfWeek.swift; sourceTree = "<group>"; };
+		01BA94F9248206A800C9FE7C /* LocalNotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationModel.swift; sourceTree = "<group>"; };
+		01BA94FC24822AEB00C9FE7C /* DateHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelpers.swift; sourceTree = "<group>"; };
+		01BA94FE248242E700C9FE7C /* UUIDGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDGenerator.swift; sourceTree = "<group>"; };
 		02785AD092B0D4A1BF2CF9A1B1AFDA90 /* GULReachabilityChecker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULReachabilityChecker.m; path = GoogleUtilities/Reachability/GULReachabilityChecker.m; sourceTree = "<group>"; };
 		02D4ECF6A898DF6BD002A137E075A53B /* NSError+FIRInstanceID.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+FIRInstanceID.m"; path = "Firebase/InstanceID/NSError+FIRInstanceID.m"; sourceTree = "<group>"; };
 		035978E753185D4F4FDEB2A4553292ED /* NSButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSButton+Kingfisher.swift"; path = "Sources/Extensions/NSButton+Kingfisher.swift"; sourceTree = "<group>"; };
@@ -3254,6 +3262,15 @@
 			path = Message;
 			sourceTree = "<group>";
 		};
+		01BA94FB24822AD000C9FE7C /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				01BA94FC24822AEB00C9FE7C /* DateHelpers.swift */,
+				01BA94FE248242E700C9FE7C /* UUIDGenerator.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
 		025975EC41CA2C292353032BFD28DBA7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -4244,6 +4261,7 @@
 			children = (
 				5FE12ADE332F178DB6D8969912C72E2C /* Constants.swift */,
 				0164E5B32480228D006F222C /* AppNotifications.swift */,
+				01BA94F72481FFF300C9FE7C /* DaysOfWeek.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -4631,6 +4649,7 @@
 			isa = PBXGroup;
 			children = (
 				7353E532CC882421731A495F736FA79C /* SignInModel.swift */,
+				01BA94F9248206A800C9FE7C /* LocalNotificationModel.swift */,
 			);
 			name = Model;
 			path = Source/Model;
@@ -5365,6 +5384,7 @@
 		F4886D1306712EAD647997B9CF42B3D6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				01BA94FB24822AD000C9FE7C /* Functions */,
 				0162C3F1247C336A0036FB75 /* Validators */,
 				803DC2FF34760B9DAE988D5E55ABC36D /* Constants */,
 				F331A381402CED16E8A193C8AC8BD2E1 /* Layout */,
@@ -7495,6 +7515,7 @@
 				5DEBA15494F11B737E86CC0651316870 /* AlertPresenterBase.swift in Sources */,
 				BF12C908C215BC2FD30C400575D30F89 /* AnalyticsEngine.swift in Sources */,
 				01645D6B247EAF9500E62D13 /* MessageFactory.swift in Sources */,
+				01BA94FA248206A800C9FE7C /* LocalNotificationModel.swift in Sources */,
 				E05443665CDF6B7AD4A730F25F4AC6EC /* AnalyticsManager.swift in Sources */,
 				C3B91FE42196203EB31236E3FA56960D /* AppAlerts.swift in Sources */,
 				3E4712B86154E7D18874B55199C44E3B /* AppConfig.swift in Sources */,
@@ -7518,6 +7539,7 @@
 				56FE7AC14125E9841A3D5DFACB07C067 /* FirebaseService.swift in Sources */,
 				64AE6C7FE79D48BC4A2E28CC4E7A1D81 /* InfoIcon.png in Sources */,
 				192AE6AF805F71873CB24B8A6ABAEC52 /* InfoIcon@2x.png in Sources */,
+				01BA94F82481FFF300C9FE7C /* DaysOfWeek.swift in Sources */,
 				9C7DED41E91F347158B72BB531E2ADFD /* InfoIcon@3x.png in Sources */,
 				A375E0D72A568D7A7279862C862B492E /* Keys.swift in Sources */,
 				0162C3F3247C33AD0036FB75 /* FormValidators.swift in Sources */,
@@ -7526,6 +7548,7 @@
 				4B2E252CA149DDBC5F813C873979E2DF /* LocalAuthenticator.swift in Sources */,
 				8A1F1EF28B3271549CF4F5543E8D803C /* LocalNotificationManager.swift in Sources */,
 				AA07A69EAABA94355A464928AF14113C /* LocalPushNotificationManager.swift in Sources */,
+				01BA94FD24822AEB00C9FE7C /* DateHelpers.swift in Sources */,
 				37A81D69D2D7FC9DDD7531667FBF29B5 /* LoggingManager.swift in Sources */,
 				129912A5B6961C01C6D4DACD0C82DFDC /* NotificationManager.swift in Sources */,
 				656640158708EC04267D72A7A4AF8E6E /* PhoneNumberManager.swift in Sources */,
@@ -7552,6 +7575,7 @@
 				720B2C4FD682ECFD237606B9B2AEAD81 /* Theme.swift in Sources */,
 				DB3276B35970179AC08CBADB389FAF87 /* TwitterService.swift in Sources */,
 				9A3F9BCD20CDA7F7ECCDEF157FB6BA00 /* UIImage+TaleneCore.swift in Sources */,
+				01BA94FF248242E700C9FE7C /* UUIDGenerator.swift in Sources */,
 				1DFF3C152EE5EE2D61866316B7C20409 /* UIViewX.swift in Sources */,
 				372703791B15923AA2826B3791AB70E2 /* UserDefaultKeys.swift in Sources */,
 				C2784DA3DA833C3DEF82EC4690F81E46 /* UserDefaultsStore.swift in Sources */,

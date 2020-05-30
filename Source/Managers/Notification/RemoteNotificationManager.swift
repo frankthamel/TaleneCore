@@ -13,7 +13,7 @@ public protocol RemoteNotification: AppConfigure {
 }
 
 struct RemoteNotificationManager: RemoteNotification {
-    func configure() {
+    func configure<T>(inType type: T) {
         
     }
 
