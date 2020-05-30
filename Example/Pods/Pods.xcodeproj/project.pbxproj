@@ -117,6 +117,11 @@
 		0164E5AA247F6EA3006F222C /* warningMessegeIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E5A5247F6EA3006F222C /* warningMessegeIcon@3x.png */; };
 		0164E5AB247F6EA3006F222C /* warningMessegeIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0164E5A5247F6EA3006F222C /* warningMessegeIcon@3x.png */; };
 		0164E5B42480228D006F222C /* AppNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0164E5B32480228D006F222C /* AppNotifications.swift */; };
+		0184C5032482D4E400209D1F /* TCAds.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0184C5022482D4E400209D1F /* TCAds.xib */; };
+		0184C5042482D4E400209D1F /* TCAds.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0184C5022482D4E400209D1F /* TCAds.xib */; };
+		0184C5062482D51C00209D1F /* TCAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0184C5052482D51C00209D1F /* TCAds.swift */; };
+		0184C5082482D7A100209D1F /* TCAdsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0184C5072482D7A100209D1F /* TCAdsPresenter.swift */; };
+		0184C50A2482D89000209D1F /* TCAdsEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0184C5092482D89000209D1F /* TCAdsEvents.swift */; };
 		01BA94F82481FFF300C9FE7C /* DaysOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BA94F72481FFF300C9FE7C /* DaysOfWeek.swift */; };
 		01BA94FA248206A800C9FE7C /* LocalNotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BA94F9248206A800C9FE7C /* LocalNotificationModel.swift */; };
 		01BA94FD24822AEB00C9FE7C /* DateHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BA94FC24822AEB00C9FE7C /* DateHelpers.swift */; };
@@ -1850,6 +1855,10 @@
 		0164E5A4247F6EA2006F222C /* warningMessegeIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warningMessegeIcon@2x.png"; sourceTree = "<group>"; };
 		0164E5A5247F6EA3006F222C /* warningMessegeIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warningMessegeIcon@3x.png"; sourceTree = "<group>"; };
 		0164E5B32480228D006F222C /* AppNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNotifications.swift; sourceTree = "<group>"; };
+		0184C5022482D4E400209D1F /* TCAds.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TCAds.xib; sourceTree = "<group>"; };
+		0184C5052482D51C00209D1F /* TCAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAds.swift; sourceTree = "<group>"; };
+		0184C5072482D7A100209D1F /* TCAdsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAdsPresenter.swift; sourceTree = "<group>"; };
+		0184C5092482D89000209D1F /* TCAdsEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAdsEvents.swift; sourceTree = "<group>"; };
 		01A5425845920A136E4A96F68EFBA5EA /* cct.nanopb.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = cct.nanopb.c; path = GoogleDataTransportCCTSupport/GDTCCTLibrary/Protogen/nanopb/cct.nanopb.c; sourceTree = "<group>"; };
 		01BA94F72481FFF300C9FE7C /* DaysOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOfWeek.swift; sourceTree = "<group>"; };
 		01BA94F9248206A800C9FE7C /* LocalNotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationModel.swift; sourceTree = "<group>"; };
@@ -3262,6 +3271,17 @@
 			path = Message;
 			sourceTree = "<group>";
 		};
+		0184C5012482D4B300209D1F /* TCAds */ = {
+			isa = PBXGroup;
+			children = (
+				0184C5022482D4E400209D1F /* TCAds.xib */,
+				0184C5052482D51C00209D1F /* TCAds.swift */,
+				0184C5072482D7A100209D1F /* TCAdsPresenter.swift */,
+				0184C5092482D89000209D1F /* TCAdsEvents.swift */,
+			);
+			path = TCAds;
+			sourceTree = "<group>";
+		};
 		01BA94FB24822AD000C9FE7C /* Functions */ = {
 			isa = PBXGroup;
 			children = (
@@ -3488,6 +3508,7 @@
 		23E141568C13131677F4F32969F29431 /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
+				0184C5012482D4B300209D1F /* TCAds */,
 				5FBC0D2268A356519D9A23300474E561 /* DefaultAlert */,
 				1E9C095E912A68A21F9FBF3C83A4A9F4 /* SignInAlert */,
 			);
@@ -6775,6 +6796,7 @@
 				016244B3247AF2C800511184 /* KeyIcon@3x.png in Resources */,
 				0164E5AA247F6EA3006F222C /* warningMessegeIcon@3x.png in Resources */,
 				0164E58F247F6554006F222C /* ErrorMessegeIcon.png in Resources */,
+				0184C5032482D4E400209D1F /* TCAds.xib in Resources */,
 				0161EE17247D7D6100B918AD /* toggle@3x.png in Resources */,
 				0164E596247F65F7006F222C /* CheckMarkMessegeIcon.png in Resources */,
 				016244B5247AF2C800511184 /* KeyIcon@2x.png in Resources */,
@@ -6946,6 +6968,7 @@
 				0164E595247F65F7006F222C /* CheckMarkMessegeIcon@3x.png in Resources */,
 				DEAFF3DC8F194F9488A358ECB436C1D3 /* CheckMark@3x.png in Resources */,
 				0164E58E247F6554006F222C /* ErrorMessegeIcon@2x.png in Resources */,
+				0184C5042482D4E400209D1F /* TCAds.xib in Resources */,
 				0164E58C247F6554006F222C /* ErrorMessegeIcon@3x.png in Resources */,
 				E6AB49391A441651856F1D4C5D08B92A /* DefaultAlertUIView.xib in Resources */,
 				0161EE1A247D7D6100B918AD /* toggle.png in Resources */,
@@ -7511,6 +7534,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0184C5062482D51C00209D1F /* TCAds.swift in Sources */,
 				F065F38B564D9FB83FACDFFA0ED1A5DD /* AlertManager.swift in Sources */,
 				5DEBA15494F11B737E86CC0651316870 /* AlertPresenterBase.swift in Sources */,
 				BF12C908C215BC2FD30C400575D30F89 /* AnalyticsEngine.swift in Sources */,
@@ -7526,6 +7550,7 @@
 				0162C3F0247BF16C0036FB75 /* UIColor+TaleneCore.swift in Sources */,
 				EBF8C009486901267CBEFE48D6417742 /* CheckMark@2x.png in Sources */,
 				83A5BA0762417D0DFCDDB0A4E0FF5B5B /* CheckMark@3x.png in Sources */,
+				0184C5082482D7A100209D1F /* TCAdsPresenter.swift in Sources */,
 				2357A7890BDEA1AA90F33BE4C157B13C /* Constants.swift in Sources */,
 				910B78454AEE17838389A43CA4837695 /* DefaultAlertUIView.swift in Sources */,
 				DD8C2AABBB6F1577DCBA7B43276F33DA /* DefaultAlertUIView.xib in Sources */,
@@ -7537,6 +7562,7 @@
 				48FF476357C12010E67AAF28B8D75638 /* FirebaseAnalyticsService.swift in Sources */,
 				BB92B6CE41EC7DAB58A5A19538976691 /* FirebaseAuthenticationService.swift in Sources */,
 				56FE7AC14125E9841A3D5DFACB07C067 /* FirebaseService.swift in Sources */,
+				0184C50A2482D89000209D1F /* TCAdsEvents.swift in Sources */,
 				64AE6C7FE79D48BC4A2E28CC4E7A1D81 /* InfoIcon.png in Sources */,
 				192AE6AF805F71873CB24B8A6ABAEC52 /* InfoIcon@2x.png in Sources */,
 				01BA94F82481FFF300C9FE7C /* DaysOfWeek.swift in Sources */,

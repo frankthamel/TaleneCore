@@ -43,7 +43,7 @@ class TCSignInWithEmailAlertView: UIView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        presenter?.setUp()
+        //presenter?.setUp()
         setUpTextFieldDelegates()
         setUpEmailTextField()
         setUpPasswordTextField()
