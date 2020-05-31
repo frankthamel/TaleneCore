@@ -34,7 +34,7 @@ class TCAdsPresenter: AlertPresenterBase {
             return
         }
         
-        App.managers.logger.error(message: "Share mossage on Facebook. \(model.message)")
+        App.managers.logger.error(message: "Share message on Facebook. \(model.message)")
     }
 
     private func getLoadUrlrequest() -> URLRequest? {
@@ -48,20 +48,4 @@ class TCAdsPresenter: AlertPresenterBase {
         return request
     }
 
-}
-
-public struct AdsShareModel {
-    public let message: String
-    public let hashTags: [String]
-    public var openUrl: String?
-    public var shareUrl: String?
-    public var image: UIImage?
-
-    public init(message: String, hashTags: [String], openUrl: String? = nil, shareUrl: String? = nil, image: UIImage? = nil) {
-        self.message = message
-        self.hashTags = hashTags
-        self.openUrl = openUrl
-        self.shareUrl = shareUrl
-        self.image = image
-    }
 }

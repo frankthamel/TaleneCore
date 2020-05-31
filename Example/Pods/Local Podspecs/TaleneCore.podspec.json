@@ -34,6 +34,9 @@
     "Kingfisher": [
       "5.12.0"
     ],
+    "SwiftyJSON": [
+      "~> 4.0"
+    ],
     "RealmSwift": [
       "4.3.0"
     ],
@@ -62,6 +65,9 @@
       "6.14.0"
     ],
     "Firebase/Analytics": [
+      "6.14.0"
+    ],
+    "Firebase/Messaging": [
       "6.14.0"
     ],
     "ARSLineProgress": [

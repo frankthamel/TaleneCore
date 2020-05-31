@@ -44,6 +44,7 @@ TaleneCore is the core library for all Talene apps. This comes with a structured
   # Networking
   s.dependency 'Moya', '13.0.1'
   s.dependency 'Kingfisher', '5.12.0'
+  s.dependency 'SwiftyJSON', '~> 4.0'
 
   # Database
   s.dependency 'RealmSwift', '4.3.0'
@@ -66,6 +67,7 @@ TaleneCore is the core library for all Talene apps. This comes with a structured
   s.dependency 'Firebase/Core', '6.14.0'
   s.dependency 'Firebase/Auth', '6.14.0'
   s.dependency 'Firebase/Analytics', '6.14.0'
+  s.dependency 'Firebase/Messaging', '6.14.0'
 
   # Loading
   s.dependency 'ARSLineProgress', '3.1.0'

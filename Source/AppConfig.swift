@@ -11,6 +11,7 @@ import Foundation
 public let App = AppConfig()
 
 public struct AppConfig {
+    public let context = AppContext()
     public let services = Services()
     //let inter
     public let managers = Managers()

@@ -9,17 +9,13 @@
 import UIKit
 import TaleneCore
 
-class ViewController: UIViewController {
+class ViewController: TCViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // register observer
         App.managers.notification.localNotificationManager.addObserver(forNotification: AppNotifications.Core.userAuthenticatedSuccess, inClass: self, withTarget: #selector(testSelector))
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 
     deinit {
@@ -32,7 +28,7 @@ class ViewController: UIViewController {
         //let alertModel = CustomAlertModel(type: .custom(AppAlerts.createSignInWithEmailAlert), params: [TCConstants.isFirebase: true], containerController: self)
 
 
-        let model = AdsShareModel(message: "This is a test message", hashTags: ["#Talene"], openUrl: "https://www.google.com/", image: nil)
+        let model = AdsShareModel(title: "test", message: "This is a test message", hashTags: ["#Talene"], openUrl: "https://www.google.com/", image: nil)
         let alertModel = CustomAlertModel(type: .custom(AppAlerts.createTCAdsAlert), params: [TCConstants.model: model], containerController: self)
         
         App.managers.alert.showAlert(model: alertModel)

@@ -15,7 +15,7 @@ public protocol LocalNotification: AppConfigure {
 }
 
 struct LocalNotificationManager: LocalNotification {
-    func configure<T>(inType type: T) {}
+    func configure<T>(inType type: T, application: UIApplication) {}
 
     func send(notification: String, info: [String : Any]?) {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: notification), object: nil, userInfo: info)

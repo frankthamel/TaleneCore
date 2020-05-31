@@ -9,17 +9,20 @@
 import Foundation
 
 public protocol AppConfigure {
-    func configure<T>(inType type: T)
+    func configure<T>(inType type: T, application: UIApplication)
 }
 
-public func configureTaleneCoreApp<T>(inType type: T) {
-
-    // configure managers
-    App.managers.loader.configure(inType: type)
-    App.managers.notification.configure(inType: type)
+public func configureTaleneCoreApp<T>(inType type: T, application: UIApplication) {
 
     // configure services
-    App.services.firebaseService.configure(inType: type)
-    App.services.socialShareService.configure(inType: type)
+    App.services.firebaseService.configure(inType: type, application: application)
+    App.services.socialShareService.configure(inType: type, application: application)
+    
+    // configure managers
+    App.managers.loader.configure(inType: type, application: application)
+    App.managers.notification.configure(inType: type, application: application)
+
+
+
 }
 

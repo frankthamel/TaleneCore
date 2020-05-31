@@ -19,7 +19,7 @@ public protocol LocalPushNotification: AppConfigure {
 
 class LocalPushNotificationManager: NSObject, LocalPushNotification {
 
-    func configure<T>(inType type: T) {
+    func configure<T>(inType type: T, application: UIApplication) {
         UNUserNotificationCenter.current().delegate = self
     }
 

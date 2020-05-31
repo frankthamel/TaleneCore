@@ -19,9 +19,9 @@ struct NotificationManager: Notification {
     var localPushNotificationManager: LocalPushNotification = LocalPushNotificationManager()
     var localNotificationManager: LocalNotification = LocalNotificationManager()
 
-    func configure<T>(inType type: T) {
-        remoteNotificationManager.configure(inType: type)
-        localPushNotificationManager.configure(inType: type)
-        localNotificationManager.configure(inType: type)
+    func configure<T>(inType type: T, application: UIApplication) {
+        remoteNotificationManager.configure(inType: type, application: application)
+        localPushNotificationManager.configure(inType: type, application: application)
+        localNotificationManager.configure(inType: type, application: application)
     }
 }
