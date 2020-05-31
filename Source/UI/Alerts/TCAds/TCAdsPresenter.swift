@@ -9,6 +9,8 @@ import UIKit
 
 protocol TCAdsView: class {
     func loadUrl(_ request: URLRequest)
+    func setTitle(_ title: String?)
+    func setBody(_ body: String?)
 }
 
 class TCAdsPresenter: AlertPresenterBase {
@@ -26,6 +28,9 @@ class TCAdsPresenter: AlertPresenterBase {
         if let request = getLoadUrlrequest() {
             view?.loadUrl(request)
         }
+
+        view?.setTitle(adsShareModel?.title)
+        view?.setBody(adsShareModel?.message)
     }
 
     func share() {

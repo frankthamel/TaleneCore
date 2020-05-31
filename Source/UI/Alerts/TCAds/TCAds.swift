@@ -13,6 +13,8 @@ public class TCAds: UIView {
 
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var bodyLabel: UILabel!
 
     var presenter: TCAdsPresenter?
 
@@ -39,6 +41,26 @@ extension TCAds {
 extension TCAds: TCAdsView {
     func loadUrl(_ request: URLRequest) {
         webView.load(request)
+    }
+
+    func setTitle(_ title: String?) {
+        if let titleString = title {
+            titleLabel.text = titleString
+            titleLabel.isHidden = false
+            self.layoutIfNeeded()
+        } else {
+            titleLabel.isHidden = true
+        }
+    }
+
+    func setBody(_ body: String?) {
+        if let bodyString = body {
+            bodyLabel.text = bodyString
+            bodyLabel.isHidden = false
+            self.layoutIfNeeded()
+        } else {
+            bodyLabel.isHidden = true
+        }
     }
 }
 
