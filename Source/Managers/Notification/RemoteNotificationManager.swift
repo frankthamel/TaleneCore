@@ -7,12 +7,14 @@
 //
 
 import Foundation
+import FirebaseCore
 import FirebaseMessaging
 import NotificationCenter
 import SwiftyJSON
 
 public protocol RemoteNotification: AppConfigure {
     func showRemoteMessage(_ userInfo: [AnyHashable: Any])
+    func registerForRemoteNotificationsWithDeviceToken(token: Data)
 }
 
 class RemoteNotificationManager: NSObject, RemoteNotification {
@@ -50,6 +52,10 @@ class RemoteNotificationManager: NSObject, RemoteNotification {
 
         let alertModel = CustomAlertModel(type: .custom(AppAlerts.createTCAdsAlert), params: [TCConstants.model: notification.toAdsShareModel()], containerController: controller)
         App.managers.alert.showAlert(model: alertModel)
+    }
+
+    func registerForRemoteNotificationsWithDeviceToken(token: Data) {
+        Messaging.messaging().apnsToken = token
     }
 
 }

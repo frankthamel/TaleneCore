@@ -14,15 +14,16 @@ public protocol AppConfigure {
 
 public func configureTaleneCoreApp<T>(inType type: T, application: UIApplication) {
 
+    // Reset badge
+    UIApplication.shared.applicationIconBadgeNumber = 0
+
     // configure services
     App.services.firebaseService.configure(inType: type, application: application)
     App.services.socialShareService.configure(inType: type, application: application)
-    
+
     // configure managers
     App.managers.loader.configure(inType: type, application: application)
     App.managers.notification.configure(inType: type, application: application)
-
-
 
 }
 
