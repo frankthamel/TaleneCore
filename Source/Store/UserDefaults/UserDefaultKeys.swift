@@ -8,16 +8,10 @@
 
 import Foundation
 
-enum UserDefaultKeys: String {
-
-    func key() -> String {
-        return self.rawValue
-    }
+public struct UserDefaultKeys {
 
     //MARK: Firebase Authentication
-    case verificationID
-    case userMobileNumber
-
-
+    public static let verificationID = "verificationID"
+    public static let userMobileNumber = "userMobileNumber"
 }
 

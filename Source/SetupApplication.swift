@@ -25,5 +25,8 @@ public func configureTaleneCoreApp<T>(inType type: T, application: UIApplication
     App.services.firebaseService.configure(inType: type, application: application)
     App.services.socialShareService.configure(inType: type, application: application)
 
+    // configure store
+    App.settings.configs.configure(inType: type, application: application)
+
 }
 

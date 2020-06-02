@@ -11,11 +11,22 @@ import TaleneCore
 
 class ViewController: TCViewController {
 
+    let configs: [String: NSObject] = ["isSaleActive": "false" as NSObject]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // register observer
         App.managers.notification.localNotificationManager.addObserver(forNotification: AppNotifications.Core.userAuthenticatedSuccess, inClass: self, withTarget: #selector(testSelector))
+
+        // set remote configs
+        //App.settings.configs.rc.setDefaults(fromDictionary: configs)
+        App.settings.configs.rc.setDefaults(fromPlist: TCConstants.firebaseRemoteConfigs)
+        TCRun.afterDelay(seconds: 20) {
+            print("isSaleActive: \(App.settings.configs.rc.remoteConfig.configValue(forKey: "isSaleActive").stringValue ?? "")")
+            print("salePercentage: \(App.settings.configs.rc.remoteConfig.configValue(forKey: "salePercentage").stringValue ?? "")")
+        }
+
     }
 
     deinit {
@@ -74,3 +85,5 @@ class ViewController: TCViewController {
         print("Notification called with info \(notification.userInfo ?? [:])")
     }
 }
+
+

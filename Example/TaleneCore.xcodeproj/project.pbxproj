@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010AD82C2486544D0081F2F7 /* FirebaseRemoteConfigs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 010AD82B2486544D0081F2F7 /* FirebaseRemoteConfigs.plist */; };
 		0164E5AE247FD9AD006F222C /* BuyAppCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0164E5AD247FD9AD006F222C /* BuyAppCard.xib */; };
 		0164E5B0247FDB24006F222C /* BuyAppCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0164E5AF247FDB24006F222C /* BuyAppCard.swift */; };
 		0165A58024762E6700AFF60A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0165A57F24762E6600AFF60A /* GoogleService-Info.plist */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		010AD82B2486544D0081F2F7 /* FirebaseRemoteConfigs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FirebaseRemoteConfigs.plist; sourceTree = "<group>"; };
 		0164E5AD247FD9AD006F222C /* BuyAppCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyAppCard.xib; sourceTree = "<group>"; };
 		0164E5AF247FDB24006F222C /* BuyAppCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyAppCard.swift; sourceTree = "<group>"; };
 		0165A57F24762E6600AFF60A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			children = (
 				0165A57F24762E6600AFF60A /* GoogleService-Info.plist */,
 				607FACD41AFB9204008FA782 /* Info.plist */,
+				010AD82B2486544D0081F2F7 /* FirebaseRemoteConfigs.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				0164E5AE247FD9AD006F222C /* BuyAppCard.xib in Resources */,
+				010AD82C2486544D0081F2F7 /* FirebaseRemoteConfigs.plist in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				0165A58024762E6700AFF60A /* GoogleService-Info.plist in Resources */,
 			);

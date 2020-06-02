@@ -42,7 +42,7 @@ public enum UserAuthenticationError: Error {
 
 struct FirebaseAuthenticationServiceProvider: FirebaseAuthenticationService {
     func verifyPhoneNumber(phoneNumber: String, withCompletion completion: @escaping (Result<String, PhoneNumberVarificationError>) -> Void) {
-        App.store.userDefaults.save(value: phoneNumber, forKey: UserDefaultKeys.userMobileNumber.key())
+        App.store.userDefaults.save(value: phoneNumber, forKey: UserDefaultKeys.userMobileNumber)
         PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { (verificationID, error) in
             if let error = error {
                 App.managers.logger.error(message: error.localizedDescription)
@@ -51,7 +51,7 @@ struct FirebaseAuthenticationServiceProvider: FirebaseAuthenticationService {
             }
 
             if let verificationID = verificationID {
-                App.store.userDefaults.save(value: verificationID, forKey: UserDefaultKeys.verificationID.key())
+                App.store.userDefaults.save(value: verificationID, forKey: UserDefaultKeys.verificationID)
                 completion(.success(verificationID))
             } else {
                 App.managers.logger.error(message: error?.localizedDescription ?? "nil VerificationId Error")
@@ -62,7 +62,7 @@ struct FirebaseAuthenticationServiceProvider: FirebaseAuthenticationService {
 
     func signIn(withVerificationCode verificationCode: String, withCompletion completion: @escaping (Result<String, UserAuthenticationError>) -> Void ) {
 
-        guard let verificationID: String = App.store.userDefaults.getValue(forKey: UserDefaultKeys.verificationID.key()) else {
+        guard let verificationID: String = App.store.userDefaults.getValue(forKey: UserDefaultKeys.verificationID) else {
             return
         }
 

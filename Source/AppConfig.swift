@@ -13,7 +13,7 @@ public let App = AppConfig()
 public struct AppConfig {
     public let context = AppContext()
     public let services = Services()
-    //let inter
+    public let internalServices = InternalServices()
     public let managers = Managers()
     public let store = Store()
     public let settings = Settings()
@@ -58,5 +58,7 @@ public struct Settings {
     public let urls: AppUrls = ApplicationUrls()
     public let keys: Keys = AppKeys()
     public let appSetings: AppSettings = AppSettingsBase()
+    public let configs: Configs = ConfigStore()
+    //configs // remote // app // core
     
 }

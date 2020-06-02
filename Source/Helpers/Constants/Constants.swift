@@ -17,4 +17,10 @@ public struct TCConstants {
 
     //MARK: Alerts Model
     public static let model = "model"
+
+    //MARK: Remote Configs
+    public static let fetchInterval: TimeInterval = 3600
+    public static let expirationPeriod: TimeInterval = 3600
+    public static let firebaseRemoteConfigs = "FirebaseRemoteConfigs"
+
 }
