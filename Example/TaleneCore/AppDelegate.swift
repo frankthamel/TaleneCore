@@ -49,12 +49,10 @@ extension AppDelegate {
     }
 
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
-        print("didReceiveRemoteNotification1", userInfo)
     }
 
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],
                      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        print("didReceiveRemoteNotification2", userInfo)
         App.managers.notification.remoteNotificationManager.showRemoteMessage(userInfo)
         completionHandler(UIBackgroundFetchResult.newData)
     }
@@ -64,7 +62,7 @@ extension AppDelegate {
     }
 
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        print("Failed to register for notifications: \(error.localizedDescription)")
+        App.managers.logger.error(message: "Failed to register for notifications: \(error.localizedDescription)")
     }
 
 }
