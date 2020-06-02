@@ -40,7 +40,7 @@ TaleneCore is the core library for all Talene apps. This comes with a structured
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+
   # Networking
   s.dependency 'Moya', '13.0.1'
   s.dependency 'Kingfisher', '5.12.0'
@@ -77,5 +77,8 @@ TaleneCore is the core library for all Talene apps. This comes with a structured
 
   # Loading custom views
   s.dependency 'LoadableViews', '3.4.0'
+
+  # File Handling
+  s.dependency 'SSZipArchive', '2.2.3'
   
 end

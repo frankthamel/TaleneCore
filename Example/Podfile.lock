@@ -117,6 +117,7 @@ PODS:
   - RealmSwift (4.3.0):
     - Realm (= 4.3.0)
   - Result (4.1.0)
+  - SSZipArchive (2.2.3)
   - SVProgressHUD (2.2.5)
   - SwiftMessages (7.0.1):
     - SwiftMessages/App (= 7.0.1)
@@ -137,6 +138,7 @@ PODS:
     - Moya (= 13.0.1)
     - PhoneNumberKit (= 3.2.0)
     - RealmSwift (= 4.3.0)
+    - SSZipArchive (= 2.2.3)
     - SVProgressHUD (= 2.2.5)
     - SwiftMessages (= 7.0.1)
     - SwiftyBeaver (= 1.8.4)
@@ -177,6 +179,7 @@ SPEC REPOS:
     - Realm
     - RealmSwift
     - Result
+    - SSZipArchive
     - SVProgressHUD
     - SwiftMessages
     - SwiftyBeaver
@@ -217,11 +220,12 @@ SPEC CHECKSUMS:
   Realm: 9357c3589555793e1860a7104a7412bca4a48d99
   RealmSwift: 402f1e379a8ef82c635313037b043f0f06de880c
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SSZipArchive: 62d4947b08730e4cda640473b0066d209ff033c9
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftMessages: b577dc7043be8b299857ab35bb663dbff6483bd0
   SwiftyBeaver: f9a9aba96a6a6166e21682377804d728b0d20b95
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
-  TaleneCore: 96b5188f7f973431e8d5f53246ebac61fede2dc2
+  TaleneCore: 5304d0c64f13cc4eb7597b218a8bd4e1f1c3ad1f
 
 PODFILE CHECKSUM: 577262dfb1408474324f004994df57a5cb4e6d9b
 

@@ -39,7 +39,7 @@ public struct Managers {
     public let notification: Notification = NotificationManager()
     public let hapticFeedback: FeedbackGenerator = HapticFeedbackManager()
     //let connection:
-    //let file
+    let file: FileHandling = TCFileManager()
     //let keychain
     //let parentalGate
     //let link

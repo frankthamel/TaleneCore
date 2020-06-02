@@ -62,5 +62,10 @@ extension AppDelegate {
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         App.managers.notification.remoteNotificationManager.registerForRemoteNotificationsWithDeviceToken(token: deviceToken)
     }
+
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("Failed to register for notifications: \(error.localizedDescription)")
+    }
+
 }
 

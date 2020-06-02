@@ -78,6 +78,9 @@
     ],
     "LoadableViews": [
       "3.4.0"
+    ],
+    "SSZipArchive": [
+      "2.2.3"
     ]
   },
   "swift_version": "5.0"
