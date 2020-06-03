@@ -22,6 +22,9 @@ public struct AppConfig {
 public struct Services {
     public let firebaseService: FirebaseService = FirebaseServiceProvider()
     public let socialShareService: SocialShareService = SocialShareServiceProvider()
+    public let zip: Zip = ZipServiceProvider()
+    public let keychain: KeychainService = KeychainServiceProvider()
+    public let connectionService: ConnectionService = ConnectionServiceProvider()
 }
 
 public struct InternalServices {
@@ -38,9 +41,9 @@ public struct Managers {
     public let phoneNumber: PhoneNumber = PhoneNumberManager()
     public let notification: Notification = NotificationManager()
     public let hapticFeedback: FeedbackGenerator = HapticFeedbackManager()
-    //let connection:
-    let file: FileHandling = TCFileManager()
-    //let keychain
+    public let connection: Connection = ConnectionManager()
+    public let file: FileHandling = TCFileManager()
+    public let keychain: Keychain = KeychainManager()
     //let parentalGate
     //let link
 

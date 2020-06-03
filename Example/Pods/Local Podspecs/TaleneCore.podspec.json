@@ -37,6 +37,9 @@
     "SwiftyJSON": [
       "~> 4.0"
     ],
+    "ReachabilitySwift": [
+      "5.0.0"
+    ],
     "RealmSwift": [
       "4.3.0"
     ],

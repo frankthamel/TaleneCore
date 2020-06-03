@@ -126,6 +126,7 @@ PODS:
     - PhoneNumberKit/PhoneNumberKitCore
   - PromisesObjC (1.2.8)
   - Protobuf (3.11.4)
+  - ReachabilitySwift (5.0.0)
   - Realm (4.3.0):
     - Realm/Headers (= 4.3.0)
   - Realm/Headers (4.3.0)
@@ -153,6 +154,7 @@ PODS:
     - Malert (= 4.0)
     - Moya (= 13.0.1)
     - PhoneNumberKit (= 3.2.0)
+    - ReachabilitySwift (= 5.0.0)
     - RealmSwift (= 4.3.0)
     - SSZipArchive (= 2.2.3)
     - SVProgressHUD (= 2.2.5)
@@ -194,6 +196,7 @@ SPEC REPOS:
     - PhoneNumberKit
     - PromisesObjC
     - Protobuf
+    - ReachabilitySwift
     - Realm
     - RealmSwift
     - Result
@@ -237,6 +240,7 @@ SPEC CHECKSUMS:
   PhoneNumberKit: df411d46177d1492da84e10b6c093846dd861452
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   Realm: 9357c3589555793e1860a7104a7412bca4a48d99
   RealmSwift: 402f1e379a8ef82c635313037b043f0f06de880c
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
@@ -245,7 +249,7 @@ SPEC CHECKSUMS:
   SwiftMessages: b577dc7043be8b299857ab35bb663dbff6483bd0
   SwiftyBeaver: f9a9aba96a6a6166e21682377804d728b0d20b95
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
-  TaleneCore: 007884acae254065b7b0b3996e88665c768a2168
+  TaleneCore: 9b539e0e117c75de4c26e20f6ea24757008be1c2
 
 PODFILE CHECKSUM: 577262dfb1408474324f004994df57a5cb4e6d9b
 

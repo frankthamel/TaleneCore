@@ -19,26 +19,29 @@ public protocol FileHandling {
     func createDirectroy(atPath path: String, inDirectory directory: FileManager.SearchPathDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask) -> Bool
     func listContent(inDirectoryName name: String, inDirectory directory: FileManager.SearchPathDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask) -> [String]?
     func listContentURLs(inDirectoryName name: String, inDirectory directory: FileManager.SearchPathDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask) -> [URL]?
-    // zip
-    // unzip
+    func createZipFile(atPath path: String, withContentsOfDirectory contentDirectoryPath: String)
+    func unzipFile(atPath path: String, toDestination destinationPath: String, withCompletion completion:((String, Bool, Error?) -> Void)?)
+    func createZipFile(atPath path: String, withContentsOfDirectory contentDirectoryPath: String, password: String)
+    func unzipFile(atPath path: String, toDestination destinationPath: String, password: String, withCompletion completion:((String, Bool, Error?) -> Void)?)
+    func isFilePasswordProtected(_ filePath: String) -> Bool
 }
 
 struct TCFileManager: FileHandling {
-    func directoryURL(directory: FileManager.SearchPathDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask) -> URL? {
+    func directoryURL(directory: FileManager.SearchPathDirectory = .documentDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask = .userDomainMask) -> URL? {
         if let dir = FileManager.default.urls(for: directory, in: domainMask).first {
             return dir
         }
         return nil
     }
-    
-    func getFileURL(fileName name: String, inDirectory directory: FileManager.SearchPathDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask) -> URL? {
+
+    func getFileURL(fileName name: String, inDirectory directory: FileManager.SearchPathDirectory = .documentDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask = .userDomainMask) -> URL? {
         guard let directoryUrl = directoryURL(directory: directory, inDomainMask: domainMask) else {
             return nil
         }
         return directoryUrl.appendingPathComponent(name)
     }
     
-    func isFileExist(fileName name: String, inDirectory directory: FileManager.SearchPathDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask) -> Bool {
+    func isFileExist(fileName name: String, inDirectory directory: FileManager.SearchPathDirectory = .documentDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask = .userDomainMask) -> Bool {
         let fileURL = getFileURL(fileName: name, inDirectory: directory, inDomainMask: domainMask)
 
         guard let filePath = fileURL?.path else { return false }
@@ -52,7 +55,7 @@ struct TCFileManager: FileHandling {
         }
     }
     
-    func readFile(fileName name: String, inDirectory directory: FileManager.SearchPathDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask) -> String? {
+    func readFile(fileName name: String, inDirectory directory: FileManager.SearchPathDirectory = .documentDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask = .userDomainMask) -> String? {
         guard let fileUrl = getFileURL(fileName: name, inDirectory: directory, inDomainMask: domainMask) else { return nil }
 
         do {
@@ -63,7 +66,7 @@ struct TCFileManager: FileHandling {
         }
     }
     
-    func writeFile(fileName name: String, content: String, inDirectory directory: FileManager.SearchPathDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask) {
+    func writeFile(fileName name: String, content: String, inDirectory directory: FileManager.SearchPathDirectory = .documentDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask = .userDomainMask) {
         guard let fileUrl = getFileURL(fileName: name, inDirectory: directory, inDomainMask: domainMask) else {
             App.managers.logger.error(message: "cant write content to a nil filepath.")
             return
@@ -76,7 +79,7 @@ struct TCFileManager: FileHandling {
         }
     }
     
-    func copyFile(file fromFile: String, toFile: String, inDirectory directory: FileManager.SearchPathDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask) -> Bool {
+    func copyFile(file fromFile: String, toFile: String, inDirectory directory: FileManager.SearchPathDirectory = .documentDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask = .userDomainMask) -> Bool {
         guard let directoryUrl = directoryURL(directory: directory, inDomainMask: domainMask) else { return false }
         
         let originalFile = directoryUrl.appendingPathComponent(fromFile)
@@ -92,7 +95,7 @@ struct TCFileManager: FileHandling {
         }
     }
     
-    func moveFile(fromPath: String, toPath: String, inDirectory directory: FileManager.SearchPathDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask) -> Bool {
+    func moveFile(fromPath: String, toPath: String, inDirectory directory: FileManager.SearchPathDirectory = .documentDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask = .userDomainMask) -> Bool {
         guard let directoryUrl = directoryURL(directory: directory, inDomainMask: domainMask) else { return false }
 
         let oldPath = directoryUrl.appendingPathComponent(fromPath)
@@ -108,7 +111,7 @@ struct TCFileManager: FileHandling {
         }
     }
     
-    func deleteFile(atPath path: String, inDirectroy directory: FileManager.SearchPathDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask) -> Bool {
+    func deleteFile(atPath path: String, inDirectroy directory: FileManager.SearchPathDirectory = .documentDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask = .userDomainMask) -> Bool {
         guard let fileUrl = getFileURL(fileName: path, inDirectory: directory, inDomainMask: domainMask) else { return false }
 
         let fileManager = FileManager.default
@@ -121,7 +124,7 @@ struct TCFileManager: FileHandling {
         }
     }
     
-    func createDirectroy(atPath path: String, inDirectory directory: FileManager.SearchPathDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask) -> Bool {
+    func createDirectroy(atPath path: String, inDirectory directory: FileManager.SearchPathDirectory = .documentDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask = .userDomainMask) -> Bool {
         guard let directoryUrl = directoryURL(directory: directory, inDomainMask: domainMask) else { return false }
 
         let newDirectoryUrl = directoryUrl.appendingPathComponent(path)
@@ -134,7 +137,7 @@ struct TCFileManager: FileHandling {
         }
     }
     
-    func listContent(inDirectoryName name: String, inDirectory directory: FileManager.SearchPathDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask) -> [String]? {
+    func listContent(inDirectoryName name: String, inDirectory directory: FileManager.SearchPathDirectory = .documentDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask = .userDomainMask) -> [String]? {
         guard let directoryUrl = directoryURL(directory: directory, inDomainMask: domainMask) else { return nil }
 
         let newDirectoryUrl = directoryUrl.appendingPathComponent(name)
@@ -147,7 +150,7 @@ struct TCFileManager: FileHandling {
         }
     }
     
-    func listContentURLs(inDirectoryName name: String, inDirectory directory: FileManager.SearchPathDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask) -> [URL]? {
+    func listContentURLs(inDirectoryName name: String, inDirectory directory: FileManager.SearchPathDirectory = .documentDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask = .userDomainMask) -> [URL]? {
         guard let content = listContent(inDirectoryName: name, inDirectory: directory, inDomainMask: domainMask) else { return nil }
 
         var contentUrls: [URL] = []
@@ -157,5 +160,25 @@ struct TCFileManager: FileHandling {
         }
 
         return (contentUrls.count > 0) ? contentUrls : nil
+    }
+
+    func createZipFile(atPath path: String, withContentsOfDirectory contentDirectoryPath: String) {
+        App.services.zip.createZipFile(atPath: path, withContentsOfDirectory: contentDirectoryPath)
+    }
+
+    func unzipFile(atPath path: String, toDestination destinationPath: String, withCompletion completion:((String, Bool, Error?) -> Void)?) {
+        App.services.zip.unzipFile(atPath: path, toDestination: destinationPath, withCompletion: completion)
+    }
+
+    func createZipFile(atPath path: String, withContentsOfDirectory contentDirectoryPath: String, password: String) {
+        App.services.zip.createZipFile(atPath: path, withContentsOfDirectory: contentDirectoryPath, password: password)
+    }
+
+    func unzipFile(atPath path: String, toDestination destinationPath: String, password: String, withCompletion completion:((String, Bool, Error?) -> Void)?) {
+        App.services.zip.unzipFile(atPath: path, toDestination: destinationPath, password: password, withCompletion: completion)
+    }
+
+    func isFilePasswordProtected(_ filePath: String) -> Bool {
+        return App.services.zip.isFilePasswordProtected(filePath)
     }
 }

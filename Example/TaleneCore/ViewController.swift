@@ -50,8 +50,18 @@ class ViewController: TCViewController {
     @IBAction func showErrorAlert(_ sender: Any) {
         //let alertModel = FalierAlertModel(descriptions: ["description" :"This is a Test message."] , containerController: self)
         //App.managers.alert.showAlert(model: alertModel)
-        let messegeModel = MessageModel(title: "Error Messege!", subTitle: "This is s sample error messege.", type: .info)
-        App.managers.message.showMessage(model: messegeModel)
+
+
+
+        if App.managers.connection.isReachable() {
+            let messegeModel = MessageModel(title: "😀", subTitle: "Have internet connection.", type: .success)
+            App.managers.message.showMessage(model: messegeModel)
+        } else {
+            let messegeModel = MessageModel(title: "Error", subTitle: "No internet connection.", type: .error)
+            App.managers.message.showMessage(model: messegeModel)
+        }
+
+
     }
 
     @IBAction func showSuccessAlert(_ sender: Any) {

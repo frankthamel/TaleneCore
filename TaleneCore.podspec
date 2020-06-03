@@ -45,6 +45,7 @@ TaleneCore is the core library for all Talene apps. This comes with a structured
   s.dependency 'Moya', '13.0.1'
   s.dependency 'Kingfisher', '5.12.0'
   s.dependency 'SwiftyJSON', '~> 4.0'
+  s.dependency 'ReachabilitySwift', '5.0.0'
 
   # Database
   s.dependency 'RealmSwift', '4.3.0'
