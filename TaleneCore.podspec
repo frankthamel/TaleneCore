@@ -82,5 +82,10 @@ TaleneCore is the core library for all Talene apps. This comes with a structured
 
   # File Handling
   s.dependency 'SSZipArchive', '2.2.3'
+
+  # Facebook
+  s.dependency 'FBSDKCoreKit/Swift', '6.5.2'
+  s.dependency 'FBSDKLoginKit/Swift', '6.5.2'
+  s.dependency 'FBSDKShareKit/Swift', '6.5.2'
   
 end

@@ -23,11 +23,11 @@ struct FirebaseServiceProvider: FirebaseService {
     var firebasePushNotificationService: FirebasePushNotificationService = FirebasePushNotificationServiceProvider()
     var firebaseRemoteConfigService: FirebaseRemoteConfigService = FirebaseRemoteConfigServiceProvider()
 
-    func configure<T>(inType type: T, application: UIApplication) {
+    func configure<T>(inType type: T, application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         FirebaseApp.configure()
         FirebaseConfiguration.shared.setLoggerLevel(.min)
-        firebasePushNotificationService.configure(inType: type, application: application)
-        firebaseRemoteConfigService.configure(inType: type, application: application)
+        firebasePushNotificationService.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
+        firebaseRemoteConfigService.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
     }
 
 }

@@ -16,7 +16,7 @@ public protocol RemoteNotification: AppConfigure {
 }
 
 class RemoteNotificationManager: NSObject, RemoteNotification {
-    func configure<T>(inType type: T, application: UIApplication) {
+    func configure<T>(inType type: T, application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
     }
     
     func showRemoteMessage(_ userInfo: [AnyHashable: Any]) {

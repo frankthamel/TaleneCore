@@ -87,6 +87,15 @@
     ],
     "SSZipArchive": [
       "2.2.3"
+    ],
+    "FBSDKCoreKit/Swift": [
+      "6.5.2"
+    ],
+    "FBSDKLoginKit/Swift": [
+      "6.5.2"
+    ],
+    "FBSDKShareKit/Swift": [
+      "6.5.2"
     ]
   },
   "swift_version": "5.0"

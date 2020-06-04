@@ -39,6 +39,14 @@ public class MessageModel {
     }
 }
 
+extension MessageModel {
+    public static var noInternet: MessageModel = {
+        let model = MessageModel(title: "Connection Error!", subTitle: "Make sure that Wi-Fi or cellular mobile data is turned on, then try again.", type: MessageType.error)
+        return model
+    }()
+}
+
+
 public enum MessageType {
     case info
     case success

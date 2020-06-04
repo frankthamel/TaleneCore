@@ -18,8 +18,8 @@ struct SocialShareServiceProvider: SocialShareService {
     var facebookService: FacebookService = FacebookServiceProvider()
     var twitterService: TwitterService = TwitterServiceProvider()
 
-    func configure<T>(inType type: T, application: UIApplication) {
-        facebookService.configure(inType: type, application: application)
-        twitterService.configure(inType: type, application: application)
+    func configure<T>(inType type: T, application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+        facebookService.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
+        twitterService.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
     }
 }

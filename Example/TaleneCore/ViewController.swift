@@ -25,7 +25,11 @@ class ViewController: TCViewController {
         TCRun.afterDelay(seconds: 20) {
             print("isSaleActive: \(App.settings.configs.rc.remoteConfig.configValue(forKey: "isSaleActive").stringValue ?? "")")
             print("salePercentage: \(App.settings.configs.rc.remoteConfig.configValue(forKey: "salePercentage").stringValue ?? "")")
+
+            App.managers.connection.showReachableMesage()
         }
+
+
 
     }
 
@@ -94,6 +98,38 @@ class ViewController: TCViewController {
     @objc func testSelector(_ notification: NSNotification) {
         print("Notification called with info \(notification.userInfo ?? [:])")
     }
+
+    @IBAction func shareImage(_ sender: Any) {
+        let image = #imageLiteral(resourceName: "TaleneSchoolPost")
+        App.services.socialShareService.facebookService.share(image: image, hashTag: "#TaleneSchool", inViewController: self, delegate: self)
+    }
+
+    @IBAction func shareImages(_ sender: Any) {
+        let image = #imageLiteral(resourceName: "TaleneSchoolPost")
+        let image2 = #imageLiteral(resourceName: "TaleSchoolPost2")
+        App.services.socialShareService.facebookService.share(images: [image, image2], hashTag: "#TaleneSchool", inViewController: self, delegate: self)
+    }
+
+    @IBAction func shareUrl(_ sender: Any) {
+        App.services.socialShareService.facebookService.share(url: "https://www.wikipedia.org", withComment: "Stop the spread!", hashTag: "#TaleneSchool", inViewController: self, delegate: self)
+    }
+
+    @IBAction func shareText(_ sender: Any) {
+        App.services.socialShareService.facebookService.share(comment: "Stop the spread!", hashTag: "#TaleneSchool", inViewController: self, delegate: self)
+    }
 }
 
+extension ViewController: FacebookServiceDelegate {
+    func didCompleteWithResults(results: [String : Any]) {
+        print(results)
+    }
+
+    func didFailWithError(error: Error) {
+        print(error.localizedDescription)
+    }
+
+    func didCancel() {
+        print("Facebook share cancelled.")
+    }
+}
 

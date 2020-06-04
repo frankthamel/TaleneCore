@@ -20,7 +20,7 @@ class FirebaseRemoteConfigServiceProvider: FirebaseRemoteConfigService {
 
     var remoteConfig: RemoteConfig = RemoteConfig.remoteConfig()
 
-    func configure<T>(inType type: T, application: UIApplication) {
+    func configure<T>(inType type: T, application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         remoteConfig = RemoteConfig.remoteConfig()
         let settings = RemoteConfigSettings()
         settings.minimumFetchInterval = TCConstants.fetchInterval

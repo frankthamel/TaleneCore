@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        configureTaleneCore(application)
+        configureTaleneCore(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }
 
@@ -44,8 +44,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 extension AppDelegate {
-    func configureTaleneCore(_ application: UIApplication) {
-        configureTaleneCoreApp(inType: self, application: application)
+    func configureTaleneCore(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+        configureTaleneCoreApp(inType: self, application: application, didFinishLaunchingWithOptions: launchOptions)
     }
 
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {

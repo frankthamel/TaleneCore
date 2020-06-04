@@ -50,5 +50,19 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>FacebookAppID</key>
+	<string>294337927566449</string>
+	<key>FacebookDisplayName</key>
+	<string>TaleneCore</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+		<string>twitter</string>
+		<string>twitterauth</string>
+		<string>fb-messenger-share-api</string>
+	</array>
 </dict>
 </plist>

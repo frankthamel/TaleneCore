@@ -14,7 +14,7 @@ public protocol Configs: AppConfigure {
 class ConfigStore: Configs {
     var rc = RemoteAppConfigs()
 
-    func configure<T>(inType type: T, application: UIApplication) {
+    func configure<T>(inType type: T, application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         rc.configure(inType: type, application: application)
     }
 }

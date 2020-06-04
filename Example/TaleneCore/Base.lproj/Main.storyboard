@@ -54,13 +54,49 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZIQ-Ti-NWp">
+                                <rect key="frame" x="36" y="258.5" width="303" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAY-CW-2Wx">
+                                        <rect key="frame" x="0.0" y="0.0" width="303" height="30"/>
+                                        <state key="normal" title="Share Image"/>
+                                        <connections>
+                                            <action selector="shareImage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1vF-CN-CWf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpZ-sl-Egt">
+                                        <rect key="frame" x="0.0" y="40" width="303" height="30"/>
+                                        <state key="normal" title="Share Images"/>
+                                        <connections>
+                                            <action selector="shareImages:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UBd-kN-TML"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf6-2e-rqh">
+                                        <rect key="frame" x="0.0" y="80" width="303" height="30"/>
+                                        <state key="normal" title="Share url"/>
+                                        <connections>
+                                            <action selector="shareUrl:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bIC-xB-0r8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5f-y3-GwG">
+                                        <rect key="frame" x="0.0" y="120" width="303" height="30"/>
+                                        <state key="normal" title="Share plain text"/>
+                                        <connections>
+                                            <action selector="shareText:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YTT-On-1gJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.16078431372549018" green="0.17254901960784313" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="LCf-AA-HCT" secondAttribute="trailing" id="FmN-kJ-eb0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZIQ-Ti-NWp" secondAttribute="trailing" constant="20" id="N7f-yT-b8G"/>
                             <constraint firstItem="y9N-bm-bne" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="SNm-YQ-iJ3"/>
+                            <constraint firstItem="ZIQ-Ti-NWp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="lYi-3p-FL9"/>
                             <constraint firstItem="LCf-AA-HCT" firstAttribute="top" secondItem="y9N-bm-bne" secondAttribute="bottom" constant="12" id="rCM-vy-QAj"/>
                             <constraint firstItem="LCf-AA-HCT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="thr-Qv-MFH"/>
+                            <constraint firstItem="ZIQ-Ti-NWp" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="yEO-2S-OEg"/>
                             <constraint firstItem="y9N-bm-bne" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="yn0-lp-Mf7"/>
                         </constraints>
                     </view>

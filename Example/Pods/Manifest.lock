@@ -1,6 +1,24 @@
 PODS:
   - Alamofire (4.9.1)
   - ARSLineProgress (3.1.0)
+  - FBSDKCoreKit (6.5.2):
+    - FBSDKCoreKit/Basics (= 6.5.2)
+    - FBSDKCoreKit/Core (= 6.5.2)
+  - FBSDKCoreKit/Basics (6.5.2)
+  - FBSDKCoreKit/Core (6.5.2):
+    - FBSDKCoreKit/Basics
+  - FBSDKCoreKit/Swift (6.5.2):
+    - FBSDKCoreKit/Core
+  - FBSDKLoginKit/Login (6.5.2):
+    - FBSDKCoreKit (~> 6.5.2)
+  - FBSDKLoginKit/Swift (6.5.2):
+    - FBSDKCoreKit/Swift (~> 6.5.2)
+    - FBSDKLoginKit/Login
+  - FBSDKShareKit/Share (6.5.2):
+    - FBSDKCoreKit (~> 6.5.2)
+  - FBSDKShareKit/Swift (6.5.2):
+    - FBSDKCoreKit/Swift (~> 6.5.2)
+    - FBSDKShareKit/Share
   - FCFileManager (1.0.20)
   - Firebase/Analytics (6.14.0):
     - Firebase/Core
@@ -142,6 +160,9 @@ PODS:
   - SwiftyJSON (4.3.0)
   - TaleneCore (0.1.0):
     - ARSLineProgress (= 3.1.0)
+    - FBSDKCoreKit/Swift (= 6.5.2)
+    - FBSDKLoginKit/Swift (= 6.5.2)
+    - FBSDKShareKit/Swift (= 6.5.2)
     - FCFileManager (= 1.0.20)
     - Firebase/Analytics (= 6.14.0)
     - Firebase/Auth (= 6.14.0)
@@ -169,6 +190,9 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - ARSLineProgress
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - FBSDKShareKit
     - FCFileManager
     - Firebase
     - FirebaseABTesting
@@ -213,6 +237,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   ARSLineProgress: 60778657c69491796c3faf5b834c72924c405833
+  FBSDKCoreKit: ada5c8a05188daefc9addb985c52b8a1b26da519
+  FBSDKLoginKit: caa165495afa29a12324cb2307fe6e5b33783142
+  FBSDKShareKit: d0538e2385480d8b2901468c80abcf22aeaf2abd
   FCFileManager: e0f73316e6aa2eb04d2ff4caa75fe7df1ae44270
   Firebase: 0219bb4782eb1406f1b9b0628a2e625484ce910d
   FirebaseABTesting: 821a3a3e4a145987e80fee3657c4de1cb9adf693
@@ -249,7 +276,7 @@ SPEC CHECKSUMS:
   SwiftMessages: b577dc7043be8b299857ab35bb663dbff6483bd0
   SwiftyBeaver: f9a9aba96a6a6166e21682377804d728b0d20b95
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
-  TaleneCore: 9b539e0e117c75de4c26e20f6ea24757008be1c2
+  TaleneCore: 85bb517f6c98e45f91468192960406c9b5aec8fa
 
 PODFILE CHECKSUM: 577262dfb1408474324f004994df57a5cb4e6d9b
 

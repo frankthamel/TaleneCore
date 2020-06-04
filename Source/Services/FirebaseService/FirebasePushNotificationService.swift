@@ -14,7 +14,7 @@ public protocol FirebasePushNotificationService: AppConfigure {
 }
 
 class FirebasePushNotificationServiceProvider: NSObject, FirebasePushNotificationService {
-    func configure<T>(inType type: T, application: UIApplication) {
+    func configure<T>(inType type: T, application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         if #available(iOS 10.0, *) {
             UNUserNotificationCenter.current().delegate = self
             let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]

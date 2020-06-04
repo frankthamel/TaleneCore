@@ -9,24 +9,24 @@
 import Foundation
 
 public protocol AppConfigure {
-    func configure<T>(inType type: T, application: UIApplication)
+    func configure<T>(inType type: T, application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?)
 }
 
-public func configureTaleneCoreApp<T>(inType type: T, application: UIApplication) {
+public func configureTaleneCoreApp<T>(inType type: T, application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
 
     // Reset badge
     UIApplication.shared.applicationIconBadgeNumber = 0
 
     // configure managers
-    App.managers.loader.configure(inType: type, application: application)
-    App.managers.notification.configure(inType: type, application: application)
+    App.managers.loader.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
+    App.managers.notification.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
 
     // configure services
-    App.services.firebaseService.configure(inType: type, application: application)
-    App.services.socialShareService.configure(inType: type, application: application)
+    App.services.firebaseService.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
+    App.services.socialShareService.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
 
     // configure store
-    App.settings.configs.configure(inType: type, application: application)
+    App.settings.configs.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
 
 }
 

@@ -13,7 +13,7 @@ public protocol TwitterService: AppConfigure {
 }
 
 struct TwitterServiceProvider: TwitterService {
-    func configure<T>(inType type: T, application: UIApplication) {
+    func configure<T>(inType type: T, application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
 
     }
 
