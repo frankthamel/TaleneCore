@@ -111,7 +111,7 @@ class ViewController: TCViewController {
     }
 
     @IBAction func shareUrl(_ sender: Any) {
-        App.services.socialShareService.facebookService.share(url: "https://www.wikipedia.org", withComment: "Stop the spread!", hashTag: "#TaleneSchool", inViewController: self, delegate: self)
+        App.services.socialShareService.facebookService.share(urlString: "https://www.hirunews.lk", withComment: "ශ්‍රී ලංකාවෙන් වාර්තාවන කොරෝනා වෛරස් ආසාදිතයන් සංඛ්‍යාව 1790ක් දක්වා ඉහළ ගොස් තිබෙනවා.", hashTag: "#TaleneSchool", inViewController: self, delegate: self)
     }
 
     @IBAction func shareText(_ sender: Any) {

@@ -13,7 +13,7 @@ import FBSDKCoreKit
 public protocol FacebookService: AppConfigure {
     func share(image: UIImage?, hashTag: String, inViewController controller: UIViewController, delegate: FacebookServiceDelegate?)
     func share(images: [UIImage?], hashTag: String, inViewController controller: UIViewController, delegate: FacebookServiceDelegate?)
-    func share(url: String, withComment comment: String, hashTag: String, inViewController controller: UIViewController, delegate: FacebookServiceDelegate?)
+    func share(urlString: String, withComment comment: String, hashTag: String, inViewController controller: UIViewController, delegate: FacebookServiceDelegate?)
     func share(comment: String, hashTag: String, inViewController controller: UIViewController, delegate: FacebookServiceDelegate?)
 }
 
@@ -56,14 +56,14 @@ class FacebookServiceProvider: NSObject, FacebookService {
         }
     }
 
-    func share(url: String, withComment comment: String, hashTag: String, inViewController controller: UIViewController, delegate: FacebookServiceDelegate? = nil) {
+    func share(urlString: String, withComment comment: String, hashTag: String, inViewController controller: UIViewController, delegate: FacebookServiceDelegate? = nil) {
         if App.managers.connection.showReachableMesage() {
             return
         }
 
         self.delegate = delegate
 
-        guard let url = URL(string: url) else {
+        guard let url = URL(string: urlString) else {
             return
         }
 
