@@ -109,6 +109,7 @@
 		0176F0E6CCA537A9FEA3CD9AB557F19E /* GULKeychainUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 64665B142B4AD73A9C03BF63ABBB8D40 /* GULKeychainUtils.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		0186F0CF2489FDFA00E586BD /* BannerAdService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0186F0CE2489FDFA00E586BD /* BannerAdService.swift */; };
 		0186F0D1248A165300E586BD /* VideoAdService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0186F0D0248A165300E586BD /* VideoAdService.swift */; };
+		0186F0E6248ABA0F00E586BD /* LocalConfigStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0186F0E5248ABA0F00E586BD /* LocalConfigStore.swift */; };
 		01913A686F3A2F257BE55D30D2846205 /* RCNUserDefaultsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E49F102BD1B66BE700900B3015017A6 /* RCNUserDefaultsManager.m */; };
 		019C29EFF4C844332C98526618263674 /* FIRMessagingDelayedMessageQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 217569E61F73128DB6ECACBBE60CB1DC /* FIRMessagingDelayedMessageQueue.m */; };
 		01A8AEC377BD43C48C003CB9C73CD041 /* FIREmailLinkSignInRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C306DA89863FF646A48A5F91599FE79 /* FIREmailLinkSignInRequest.m */; };
@@ -2770,6 +2771,7 @@
 		017535CAB69B057708D7C4807FAEE9C3 /* AlertPresenterBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AlertPresenterBase.swift; sourceTree = "<group>"; };
 		0186F0CE2489FDFA00E586BD /* BannerAdService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdService.swift; sourceTree = "<group>"; };
 		0186F0D0248A165300E586BD /* VideoAdService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoAdService.swift; sourceTree = "<group>"; };
+		0186F0E5248ABA0F00E586BD /* LocalConfigStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalConfigStore.swift; sourceTree = "<group>"; };
 		01BFC0851C590631BC5531FCD0B0E89B /* mz_compat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_compat.h; path = SSZipArchive/minizip/mz_compat.h; sourceTree = "<group>"; };
 		01C04382AEE7EAF5593A170615E57E96 /* GDTCCTNanopbHelpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDTCCTNanopbHelpers.m; path = GoogleDataTransportCCTSupport/GDTCCTLibrary/GDTCCTNanopbHelpers.m; sourceTree = "<group>"; };
 		01CAA9FE54A1DF668B42419AFFE15337 /* FIRGetOOBConfirmationCodeRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRGetOOBConfirmationCodeRequest.m; path = Firebase/Auth/Source/Backend/RPC/FIRGetOOBConfirmationCodeRequest.m; sourceTree = "<group>"; };
@@ -7300,6 +7302,7 @@
 			children = (
 				490FFC55CA00702FF050BFB681426AD7 /* ConfigStore.swift */,
 				EE478AD1ECD08855B6BA9B043703A218 /* RemoteConfigStore.swift */,
+				0186F0E5248ABA0F00E586BD /* LocalConfigStore.swift */,
 			);
 			path = Configs;
 			sourceTree = "<group>";
@@ -10962,6 +10965,7 @@
 				7778B54DF8E6F85FACE595A1BE0BD5CB /* AppSettings.swift in Sources */,
 				8C72D04B86A97189824D171D1D2148D0 /* AppUrls.swift in Sources */,
 				CFBA7E8FCCF8D9F50C58A0F1FB786DFC /* AuthenticationManager.swift in Sources */,
+				0186F0E6248ABA0F00E586BD /* LocalConfigStore.swift in Sources */,
 				E653E02709B49707703B956DA59F54D1 /* CheckMark.png in Sources */,
 				0C5A7208D8285A8277E7E041FB089AE4 /* CheckMark@2x.png in Sources */,
 				84A8FF0EC7C376A0D69BDE420BC8FA3C /* CheckMark@3x.png in Sources */,

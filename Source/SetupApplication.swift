@@ -20,6 +20,7 @@ public func configureTaleneCoreApp<T>(inType type: T, application: UIApplication
     // configure settings
     App.settings.keys.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
     App.settings.urls.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
+    App.settings.configs.lc.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
 
     // configure managers
     App.managers.loader.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)

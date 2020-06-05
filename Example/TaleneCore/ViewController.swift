@@ -65,7 +65,7 @@ class ViewController: TCViewController {
             let messegeModel = MessageModel(title: "😀", subTitle: "Have internet connection.", type: .success)
             App.managers.message.showMessage(model: messegeModel)
         } else {
-            let messegeModel = MessageModel(title: "Error", subTitle: "No internet connection.", type: .error)
+            let messegeModel = MessageModel(title: "Error", subTitle: "No internet connection.", type: .error, duration: .seconds(seconds: TimeInterval(App.settings.configs.lc.messageDisplayTime ?? 2)))
             App.managers.message.showMessage(model: messegeModel)
         }
 
@@ -106,6 +106,8 @@ class ViewController: TCViewController {
     @IBAction func shareImage(_ sender: Any) {
         let image = #imageLiteral(resourceName: "TaleneSchoolPost")
         App.services.socialShareService.facebookService.share(image: image, hashTag: "#TaleneSchool", inViewController: self, delegate: self)
+
+        print(App.settings.configs.lc.developerDetails ?? "")
     }
 
     @IBAction func shareImages(_ sender: Any) {

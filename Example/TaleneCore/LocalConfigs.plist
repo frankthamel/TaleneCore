@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>developerDetails</key>
+	<string>{&quot;name&quot;: &quot;Frank Thamel&quot;,&quot;email&quot;: &quot;w.frankthamel@gmail.com&quot;}</string>
+	<key>messageDisplayTime</key>
+	<string>5</string>
+</dict>
+</plist>

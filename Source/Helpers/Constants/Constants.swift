@@ -11,7 +11,6 @@ import Foundation
 public struct TCConstants {
     public static let description = "description"
 
-
     //MARK: Authentication
     public static let isFirebase = "isFirebase"
 

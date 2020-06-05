@@ -9,12 +9,12 @@ import Foundation
 
 public protocol Configs: AppConfigure {
     var rc: RemoteAppConfigs { get set }
-    // core config
-    // app config
+    var lc: LocalConfigStore { get set }
 }
 
 class ConfigStore: Configs {
     var rc = RemoteAppConfigs()
+    var lc = LocalConfigStore()
 
     func configure<T>(inType type: T, application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         rc.configure(inType: type, application: application)
