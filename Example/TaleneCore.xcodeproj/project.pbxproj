@@ -11,6 +11,12 @@
 		0164E5AE247FD9AD006F222C /* BuyAppCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0164E5AD247FD9AD006F222C /* BuyAppCard.xib */; };
 		0164E5B0247FDB24006F222C /* BuyAppCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0164E5AF247FDB24006F222C /* BuyAppCard.swift */; };
 		0165A58024762E6700AFF60A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0165A57F24762E6600AFF60A /* GoogleService-Info.plist */; };
+		0186F0D4248A85FF00E586BD /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0186F0D3248A85FF00E586BD /* Keys.swift */; };
+		0186F0D6248A896100E586BD /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0186F0D5248A896100E586BD /* Keys.plist */; };
+		0186F0D7248A897100E586BD /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0186F0D5248A896100E586BD /* Keys.plist */; };
+		0186F0D9248A992300E586BD /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0186F0D8248A992300E586BD /* Urls.swift */; };
+		0186F0DB248A993900E586BD /* Urls.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0186F0DA248A993900E586BD /* Urls.plist */; };
+		0186F0DC248A993900E586BD /* Urls.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0186F0DA248A993900E586BD /* Urls.plist */; };
 		3BF8C3663AE0FCF96D765805 /* Pods_TaleneCore_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEFAC1CBFCFD4EA7C738ACF /* Pods_TaleneCore_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -36,6 +42,10 @@
 		0164E5AD247FD9AD006F222C /* BuyAppCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyAppCard.xib; sourceTree = "<group>"; };
 		0164E5AF247FDB24006F222C /* BuyAppCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyAppCard.swift; sourceTree = "<group>"; };
 		0165A57F24762E6600AFF60A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0186F0D3248A85FF00E586BD /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		0186F0D5248A896100E586BD /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		0186F0D8248A992300E586BD /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
+		0186F0DA248A993900E586BD /* Urls.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Urls.plist; sourceTree = "<group>"; };
 		01BA950024824FF900C9FE7C /* TaleneCore_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TaleneCore_Example.entitlements; sourceTree = "<group>"; };
 		07617777A4B34EEF80711EF8 /* TaleneCore.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TaleneCore.podspec; path = ../TaleneCore.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1A56A4157E287E8CEFAE39E5 /* Pods-TaleneCore_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaleneCore_Example.debug.xcconfig"; path = "Target Support Files/Pods-TaleneCore_Example/Pods-TaleneCore_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +97,17 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		0186F0D2248A85DF00E586BD /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				0186F0D3248A85FF00E586BD /* Keys.swift */,
+				0186F0D5248A896100E586BD /* Keys.plist */,
+				0186F0D8248A992300E586BD /* Urls.swift */,
+				0186F0DA248A993900E586BD /* Urls.plist */,
+			);
+			name = settings;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +148,7 @@
 		607FACD31AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0186F0D2248A85DF00E586BD /* settings */,
 				0165A57F24762E6600AFF60A /* GoogleService-Info.plist */,
 				607FACD41AFB9204008FA782 /* Info.plist */,
 				010AD82B2486544D0081F2F7 /* FirebaseRemoteConfigs.plist */,
@@ -273,8 +295,10 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				0186F0DB248A993900E586BD /* Urls.plist in Resources */,
 				0164E5AE247FD9AD006F222C /* BuyAppCard.xib in Resources */,
 				010AD82C2486544D0081F2F7 /* FirebaseRemoteConfigs.plist in Resources */,
+				0186F0D6248A896100E586BD /* Keys.plist in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				0165A58024762E6700AFF60A /* GoogleService-Info.plist in Resources */,
 			);
@@ -284,6 +308,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0186F0DC248A993900E586BD /* Urls.plist in Resources */,
+				0186F0D7248A897100E586BD /* Keys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,8 +454,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0164E5B0247FDB24006F222C /* BuyAppCard.swift in Sources */,
+				0186F0D4248A85FF00E586BD /* Keys.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				0186F0D9248A992300E586BD /* Urls.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

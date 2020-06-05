@@ -48,7 +48,7 @@ class BannerAdServiceProvider:NSObject, BannerAdService  {
     
     func setUp(bannerAd : FirebaseBannerAdsView, rootViewController: UIViewController, delegate: FirebaseBannerAdsDelegate?) {
         self.delegate = delegate
-        bannerAd.adUnitID = App.context.bannerAdsID
+        bannerAd.adUnitID = App.settings.keys.bannerAdsID
         bannerAd.rootViewController = rootViewController
         bannerAd.delegate = self
     }

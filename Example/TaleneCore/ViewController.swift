@@ -33,6 +33,8 @@ class ViewController: TCViewController {
 
         /// load video ad
         App.services.firebaseService.firebaseAdsService.videoAdsService.loadVideoAd()
+
+        view.backgroundColor = App.settings.theme.navigationBarColor
     }
 
     deinit {

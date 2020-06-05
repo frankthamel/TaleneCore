@@ -24,6 +24,7 @@ public protocol FileHandling {
     func createZipFile(atPath path: String, withContentsOfDirectory contentDirectoryPath: String, password: String)
     func unzipFile(atPath path: String, toDestination destinationPath: String, password: String, withCompletion completion:((String, Bool, Error?) -> Void)?)
     func isFilePasswordProtected(_ filePath: String) -> Bool
+    func readPlist(name: String) -> [String: AnyObject]?
 }
 
 struct TCFileManager: FileHandling {
@@ -180,5 +181,18 @@ struct TCFileManager: FileHandling {
 
     func isFilePasswordProtected(_ filePath: String) -> Bool {
         return App.services.zip.isFilePasswordProtected(filePath)
+    }
+
+    func readPlist(name: String) -> [String: AnyObject]? {
+        var propertyListFormat =  PropertyListSerialization.PropertyListFormat.xml
+        guard let plistPath = Bundle.main.path(forResource: name, ofType: "plist") else { return nil }
+        guard let plistXML = FileManager.default.contents(atPath: plistPath) else { return nil }
+        do {
+            let plistData = try PropertyListSerialization.propertyList(from: plistXML, options: .mutableContainersAndLeaves, format: &propertyListFormat) as! [String:AnyObject]
+            return plistData
+        } catch {
+            App.managers.logger.error(message: "Error reading plist: \(error), format: \(propertyListFormat)")
+            return nil
+        }
     }
 }

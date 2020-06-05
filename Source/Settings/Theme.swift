@@ -51,71 +51,127 @@ public protocol Theme {
 
 struct AppTheme: Theme {
 
-    //TODO: Should load from a json file
     // App
 
-    public var navigationBarColor: UIColor = UIColor(red: 23/255, green: 25/255, blue: 44/255, alpha: 1)
+    public var navigationBarColor: UIColor = {
+        return UIColor(named: "navigationBarColor") ?? UIColor.black
+    }()
 
-    public var tabBarColor: UIColor = UIColor(red: 23/255, green: 25/255, blue: 44/255, alpha: 1)
+    public var tabBarColor: UIColor = {
+        return UIColor(named: "tabBarColor") ?? UIColor.black
+    }()
 
-    public var backgroundColor: UIColor = UIColor(red: 41/255, green: 44/255, blue: 78/255, alpha: 1)
+    public var backgroundColor: UIColor = {
+        return UIColor(named: "backgroundColor") ?? UIColor.gray
+    }()
 
-    public var homeViewMainCardColor: UIColor = UIColor(red: 33/255, green: 33/255, blue: 34/255, alpha: 1)
+    public var homeViewMainCardColor: UIColor = {
+        return UIColor(named: "homeViewMainCardColor") ?? UIColor.black
+    }()
 
-    public var homeViewBookmarkCardColor: UIColor = UIColor(red: 28/255, green: 31/255, blue: 56/255, alpha: 1)
+    public var homeViewBookmarkCardColor: UIColor = {
+        return UIColor(named: "homeViewBookmarkCardColor") ?? UIColor.black
+    }()
 
-    public var subColorOne: UIColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)
+    public var subColorOne: UIColor = {
+        return UIColor(named: "subColorOne") ?? UIColor.black
+    }()
 
-    public var subColorTwo: UIColor = UIColor.white
+    public var subColorTwo: UIColor = {
+        return UIColor(named: "subColorTwo") ?? UIColor.black
+    }()
 
-    public var subColorThree: UIColor = UIColor.white
+    public var subColorThree: UIColor = {
+        return UIColor(named: "subColorThree") ?? UIColor.black
+    }()
 
-    public var subColorFour: UIColor = UIColor.white
+    public var subColorFour: UIColor = {
+        return UIColor(named: "subColorFour") ?? UIColor.black
+    }()
 
-    public var subColorFive: UIColor = UIColor.white
+    public var subColorFive: UIColor = {
+        return UIColor(named: "subColorFive") ?? UIColor.black
+    }()
 
     // Text Fields
 
-    var textFieldBorderColorLight: UIColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.00)
+    var textFieldBorderColorLight: UIColor = {
+        return UIColor(named: "textFieldBorderColorLight") ?? UIColor.black
+    }()
 
-    var textFieldBackgroundColorLight: UIColor = UIColor.white
+    var textFieldBackgroundColorLight: UIColor = {
+        return UIColor(named: "textFieldBackgroundColorLight") ?? UIColor.white
+    }()
 
-    var textFieldPlaceholder: UIColor = UIColor(red: 0.71, green: 0.72, blue: 0.72, alpha: 1.00)
+    var textFieldPlaceholder: UIColor = {
+        return UIColor(named: "textFieldPlaceholder") ?? UIColor.gray
+    }()
 
-    var textFieldError: UIColor = UIColor(red: 1.00, green: 0.20, blue: 0.20, alpha: 1.00)
+    var textFieldError: UIColor = {
+        return UIColor(named: "textFieldError") ?? UIColor.black
+    }()
 
     // Alerts
 
-    public var successColor: UIColor = UIColor(red: 59/255, green: 195/255, blue: 116/255, alpha: 1)
+    public var successColor: UIColor = {
+        return UIColor(named: "successColor") ?? UIColor.gray
+    }()
 
-    public var falierColor: UIColor = UIColor(red: 195/255, green: 59/255, blue: 59/255, alpha: 1)
+    public var falierColor: UIColor = {
+        return UIColor(named: "falierColor") ?? UIColor.gray
+    }()
 
-    public var infoColor: UIColor = UIColor(red: 1.00, green: 0.79, blue: 0.00, alpha: 1.00)
+    public var infoColor: UIColor = {
+        return UIColor(named: "infoColor") ?? UIColor.gray
+    }()
 
-    public var primaryActionColor: UIColor = UIColor(red: 104/255, green: 118/255, blue: 251/255, alpha: 1)
+    public var primaryActionColor: UIColor = {
+        return UIColor(named: "primaryActionColor") ?? UIColor.black
+    }()
 
-    public var secondaryActionColor: UIColor = UIColor(red: 0.28, green: 0.28, blue: 0.28, alpha: 1.00)
+    public var secondaryActionColor: UIColor = {
+        return UIColor(named: "secondaryActionColor") ?? UIColor.black
+    }()
 
-    public var foregroundColor: UIColor = UIColor.white
+    public var foregroundColor: UIColor = {
+        return UIColor(named: "foregroundColor") ?? UIColor.black
+    }()
 
-    public var foregroundContrastColor: UIColor = UIColor(red: 0.10, green: 0.10, blue: 0.10, alpha: 1.00)
+    public var foregroundContrastColor: UIColor = {
+        return UIColor(named: "foregroundContrastColor") ?? UIColor.black
+    }()
 
     // Loadder
 
-    public var loaderBackgroundViewColor: CGColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.7).cgColor
+    public var loaderBackgroundViewColor: CGColor = {
+        return UIColor(named: "loaderBackgroundViewColor")?.cgColor ?? UIColor.black.cgColor
+    }()
 
-    public var loaderCheckmarkColor: CGColor = UIColor.white.cgColor
+    public var loaderCheckmarkColor: CGColor = {
+        return UIColor(named: "loaderCheckmarkColor")?.cgColor ?? UIColor.white.cgColor
+    }()
 
-    public var loaderSuccessCircleColor: CGColor = UIColor(red: 138/255, green: 1, blue: 129/255, alpha: 1).cgColor
+    public var loaderSuccessCircleColor: CGColor = {
+        return UIColor(named: "loaderSuccessCircleColor")?.cgColor ?? UIColor.white.cgColor
+    }()
 
-    public var loaderFailCircleColor: CGColor = UIColor(red: 1, green: 70/255, blue: 70/255, alpha: 1).cgColor
+    public var loaderFailCircleColor: CGColor = {
+        return UIColor(named: "loaderFailCircleColor")?.cgColor ?? UIColor.white.cgColor
+    }()
+    public var loaderFailCrossColor: CGColor = {
+        return UIColor(named: "loaderFailCrossColor")?.cgColor ?? UIColor.white.cgColor
+    }()
 
-    public var loaderFailCrossColor: CGColor = UIColor(red: 1, green: 70/255, blue: 70/255, alpha: 1).cgColor
+    public var loaderCircleColorInner: CGColor = {
+        return UIColor(named: "loaderCircleColorInner")?.cgColor ?? UIColor.white.cgColor
+    }()
 
-    public var loaderCircleColorInner: CGColor = UIColor(red: 7/255, green: 207/255, blue: 1, alpha: 1).cgColor
+    public var loaderCircleColorMiddle: CGColor = {
+        return UIColor(named: "loaderCircleColorMiddle")?.cgColor ?? UIColor.gray.cgColor
+    }()
 
-    public var loaderCircleColorMiddle: CGColor = UIColor.white.cgColor
-
-    public var loaderCircleColorOuter: CGColor = UIColor(red: 7/255, green: 207/255, blue: 1, alpha: 1).cgColor
+    public var loaderCircleColorOuter: CGColor = {
+        return UIColor(named: "loaderCircleColorOuter")?.cgColor ?? UIColor.white.cgColor
+    }()
 
 }

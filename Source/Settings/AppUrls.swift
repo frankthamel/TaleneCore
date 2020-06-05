@@ -7,12 +7,26 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-public protocol AppUrls {
-    //let baseUrl: URL
-}
+public class ApplicationUrls: AppConfigure {
+    var urls: [String: AnyObject]?
 
-struct ApplicationUrls: AppUrls {
+    public func configure<T>(inType type: T, application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?) {
+        urls = App.managers.file.readPlist(name: "Urls")
+    }
 
+    public var appUrl: String? {
+        return valueForKey(key: "appUrl")
+    }
+
+    public func valueForKey(key: String) -> String? {
+        guard let data = urls else {
+            return nil
+        }
+
+        let json = JSON(data)
+        return json[key].string
+    }
 }
 

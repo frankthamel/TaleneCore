@@ -32,7 +32,7 @@ class VideoAdServiceProvider:NSObject, VideoAdService {
     var rewardedAd: GADRewardedAd?
 
     func configure<T>(inType type: T, application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?) {
-        rewardedAd = GADRewardedAd(adUnitID: App.context.videoAdsID ?? "")
+        rewardedAd = GADRewardedAd(adUnitID: App.settings.keys.videoAdsID ?? "")
     }
 
     func loadVideoAd() {
@@ -66,7 +66,7 @@ extension VideoAdServiceProvider: GADRewardedAdDelegate {
         delegate?.rewardedAdDidDismiss()
         TCRun.onBackgroundThread { [weak self] in
             self?.rewardedAd = nil
-            self?.rewardedAd = GADRewardedAd(adUnitID: App.context.videoAdsID ?? "")
+            self?.rewardedAd = GADRewardedAd(adUnitID: App.settings.keys.videoAdsID ?? "")
             self?.loadVideoAd()
         }
     }

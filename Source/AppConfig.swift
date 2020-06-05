@@ -58,9 +58,8 @@ public struct Store {
 public struct Settings {
     //TODO: Local configs should load from json files
     public let theme: Theme = AppTheme()
-    public let urls: AppUrls = ApplicationUrls()
-    public let keys: Keys = AppKeys()
-    public let appSetings: AppSettings = AppSettingsBase()
+    public let urls = ApplicationUrls()
+    public let keys = AppKeys()
     public let configs: Configs = ConfigStore()
     //configs // remote // app // core
     

@@ -17,6 +17,10 @@ public func configureTaleneCoreApp<T>(inType type: T, application: UIApplication
     // Reset badge
     UIApplication.shared.applicationIconBadgeNumber = 0
 
+    // configure settings
+    App.settings.keys.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
+    App.settings.urls.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
+
     // configure managers
     App.managers.loader.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
     App.managers.notification.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)

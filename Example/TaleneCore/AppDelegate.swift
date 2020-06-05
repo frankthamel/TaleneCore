@@ -44,11 +44,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 extension AppDelegate {
-    func configureTaleneCore(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
-        App.context.bannerAdsID = "ca-app-pub-3940256099942544/2934735716"
-        App.context.videoAdsID = "ca-app-pub-3940256099942544/1712485313"
-        
+
+    private func configureTaleneCore(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         configureTaleneCoreApp(inType: self, application: application, didFinishLaunchingWithOptions: launchOptions)
+        print(App.settings.keys.paymentGatewayKey)
     }
 
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {

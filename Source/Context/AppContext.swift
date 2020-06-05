@@ -9,7 +9,4 @@ import Foundation
 
 public class AppContext {
     public var activeViewController: TCViewController?
-    public var adsAppId: String?
-    public var bannerAdsID: String?
-    public var videoAdsID: String?
 }

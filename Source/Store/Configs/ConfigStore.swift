@@ -9,6 +9,8 @@ import Foundation
 
 public protocol Configs: AppConfigure {
     var rc: RemoteAppConfigs { get set }
+    // core config
+    // app config
 }
 
 class ConfigStore: Configs {
