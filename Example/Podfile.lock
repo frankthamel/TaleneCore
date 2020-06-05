@@ -90,6 +90,8 @@ PODS:
     - GoogleUtilities/Environment (~> 6.2)
     - "GoogleUtilities/NSData+zlib (~> 6.2)"
     - Protobuf (>= 3.9.2, ~> 3.9)
+  - Google-Mobile-Ads-SDK (7.59.0):
+    - GoogleAppMeasurement (~> 6.0)
   - GoogleAppMeasurement (6.1.7):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
     - GoogleUtilities/MethodSwizzler (~> 6.0)
@@ -169,6 +171,7 @@ PODS:
     - Firebase/Core (= 6.14.0)
     - Firebase/Messaging (= 6.14.0)
     - Firebase/RemoteConfig (= 6.14.0)
+    - Google-Mobile-Ads-SDK (= 7.59.0)
     - Kingfisher (= 5.12.0)
     - LoadableViews (= 3.4.0)
     - Locksmith (= 4.0.0)
@@ -206,6 +209,7 @@ SPEC REPOS:
     - FirebaseInstanceID
     - FirebaseMessaging
     - FirebaseRemoteConfig
+    - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
@@ -253,6 +257,7 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: ce993a3c3670a8f5d47ce371ac5d143c560608c5
   FirebaseMessaging: 089b7a4991425783384acc8bcefcd78c0af913bd
   FirebaseRemoteConfig: 47abf7a04a9082091955ea555aa79cfdd249b19c
+  Google-Mobile-Ads-SDK: 118217ac8b80e28aabe0c00aedab1cd885857776
   GoogleAppMeasurement: db118eb61a97dd8c4f7014e368d3c335cbbcf80a
   GoogleDataTransport: f6f8eba931df03ebd2232ff4645aa85f8f47b5ab
   GoogleDataTransportCCTSupport: 0f39025e8cf51f168711bd3fb773938d7e62ddb5
@@ -276,7 +281,7 @@ SPEC CHECKSUMS:
   SwiftMessages: b577dc7043be8b299857ab35bb663dbff6483bd0
   SwiftyBeaver: f9a9aba96a6a6166e21682377804d728b0d20b95
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
-  TaleneCore: 85bb517f6c98e45f91468192960406c9b5aec8fa
+  TaleneCore: 435ef1675a97e68bf2d7f94375ad7e2f505b1de8
 
 PODFILE CHECKSUM: 577262dfb1408474324f004994df57a5cb4e6d9b
 

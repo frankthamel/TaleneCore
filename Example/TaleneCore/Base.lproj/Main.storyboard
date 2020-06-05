@@ -55,7 +55,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZIQ-Ti-NWp">
-                                <rect key="frame" x="36" y="258.5" width="303" height="150"/>
+                                <rect key="frame" x="36" y="238.5" width="303" height="190"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAY-CW-2Wx">
                                         <rect key="frame" x="0.0" y="0.0" width="303" height="30"/>
@@ -85,14 +85,31 @@
                                             <action selector="shareText:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YTT-On-1gJ"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9C-Mt-f0s">
+                                        <rect key="frame" x="0.0" y="160" width="303" height="30"/>
+                                        <state key="normal" title="Ads: Load Video Ad"/>
+                                        <connections>
+                                            <action selector="loadVideoAds:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gx1-z5-9CM"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQE-8G-FBK" customClass="FirebaseBannerAdsView" customModule="TaleneCore">
+                                <rect key="frame" x="27.5" y="609" width="320" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mlY-2P-QkJ"/>
+                                    <constraint firstAttribute="width" constant="320" id="nO8-iL-uvt"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.16078431372549018" green="0.17254901960784313" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="LCf-AA-HCT" secondAttribute="trailing" id="FmN-kJ-eb0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZIQ-Ti-NWp" secondAttribute="trailing" constant="20" id="N7f-yT-b8G"/>
                             <constraint firstItem="y9N-bm-bne" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="SNm-YQ-iJ3"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="MQE-8G-FBK" secondAttribute="bottom" constant="8" id="VJj-s3-hb3"/>
+                            <constraint firstItem="MQE-8G-FBK" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="hQN-uf-r2P"/>
                             <constraint firstItem="ZIQ-Ti-NWp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="lYi-3p-FL9"/>
                             <constraint firstItem="LCf-AA-HCT" firstAttribute="top" secondItem="y9N-bm-bne" secondAttribute="bottom" constant="12" id="rCM-vy-QAj"/>
                             <constraint firstItem="LCf-AA-HCT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="thr-Qv-MFH"/>
@@ -100,10 +117,13 @@
                             <constraint firstItem="y9N-bm-bne" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="yn0-lp-Mf7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bannerAdsView" destination="MQE-8G-FBK" id="nWo-Hf-MNU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="142" y="134"/>
+            <point key="canvasLocation" x="141.59999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

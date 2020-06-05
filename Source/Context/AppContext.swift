@@ -8,5 +8,8 @@
 import Foundation
 
 public class AppContext {
-    var activeViewController: TCViewController?
+    public var activeViewController: TCViewController?
+    public var adsAppId: String?
+    public var bannerAdsID: String?
+    public var videoAdsID: String?
 }

@@ -64,5 +64,7 @@
 		<string>twitterauth</string>
 		<string>fb-messenger-share-api</string>
 	</array>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-9361069218260134~4624437533</string>
 </dict>
 </plist>

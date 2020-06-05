@@ -15,6 +15,7 @@ public protocol FirebaseService: AppConfigure {
     var firebaseAnalyticsService: FirebaseAnalyticsService { get set }
     var firebasePushNotificationService: FirebasePushNotificationService { get set }
     var firebaseRemoteConfigService: FirebaseRemoteConfigService { get set }
+    var firebaseAdsService: FirebaseAdsService { get set }
 }
 
 struct FirebaseServiceProvider: FirebaseService {
@@ -22,12 +23,14 @@ struct FirebaseServiceProvider: FirebaseService {
     var firebaseAnalyticsService: FirebaseAnalyticsService = FirebaseAnalyticsServiceProvider()
     var firebasePushNotificationService: FirebasePushNotificationService = FirebasePushNotificationServiceProvider()
     var firebaseRemoteConfigService: FirebaseRemoteConfigService = FirebaseRemoteConfigServiceProvider()
+    var firebaseAdsService: FirebaseAdsService = FirebaseAdsServiceProvider()
 
     func configure<T>(inType type: T, application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         FirebaseApp.configure()
         FirebaseConfiguration.shared.setLoggerLevel(.min)
         firebasePushNotificationService.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
         firebaseRemoteConfigService.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
+        firebaseAdsService.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
     }
 
 }

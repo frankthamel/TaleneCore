@@ -29,8 +29,10 @@ class ViewController: TCViewController {
             App.managers.connection.showReachableMesage()
         }
 
+        setAndLoadBannerAds()
 
-
+        /// load video ad
+        App.services.firebaseService.firebaseAdsService.videoAdsService.loadVideoAd()
     }
 
     deinit {
@@ -117,6 +119,22 @@ class ViewController: TCViewController {
     @IBAction func shareText(_ sender: Any) {
         App.services.socialShareService.facebookService.share(comment: "Stop the spread!", hashTag: "#TaleneSchool", inViewController: self, delegate: self)
     }
+
+
+    /// Banner Ads
+    @IBOutlet weak var bannerAdsView: FirebaseBannerAdsView!
+
+    private func setAndLoadBannerAds() {
+        App.services.firebaseService.firebaseAdsService.bannerAdsService.setUp(bannerAd: bannerAdsView, rootViewController: self, delegate: self)
+        App.services.firebaseService.firebaseAdsService.bannerAdsService.loadBannerAd(bannerAd: bannerAdsView)
+    }
+
+    /// Video Ads
+    @IBAction func loadVideoAds(_ sender: Any) {
+        App.services.firebaseService.firebaseAdsService.videoAdsService.presentVideoAd(fromRootViewController: self, delegate: self)
+    }
+
+
 }
 
 extension ViewController: FacebookServiceDelegate {
@@ -130,6 +148,26 @@ extension ViewController: FacebookServiceDelegate {
 
     func didCancel() {
         print("Facebook share cancelled.")
+    }
+}
+
+extension ViewController: FirebaseBannerAdsDelegate {
+    func adViewDidReceiveAd() {
+        print("adViewDidReceiveAd")
+    }
+
+    func didFailToReceiveAdWithError(error: Error) {
+        print("didFailToReceiveAdWithError")
+    }
+
+    func adViewWillPresentScreen() {
+        print("adViewWillPresentScreen")
+    }
+}
+
+extension ViewController: FirebaseVideoAdsDelegate {
+    func userDidEarnReward(reward: Int) {
+        print("Rewarded: \(reward)")
     }
 }
 

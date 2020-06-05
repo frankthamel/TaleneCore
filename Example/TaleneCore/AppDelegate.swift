@@ -45,6 +45,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
     func configureTaleneCore(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+        App.context.bannerAdsID = "ca-app-pub-3940256099942544/2934735716"
+        App.context.videoAdsID = "ca-app-pub-3940256099942544/1712485313"
+        
         configureTaleneCoreApp(inType: self, application: application, didFinishLaunchingWithOptions: launchOptions)
     }
 
