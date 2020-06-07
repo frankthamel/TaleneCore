@@ -108,8 +108,10 @@ class ViewController: TCViewController {
     }
 
     @IBAction func showSuccessAlert(_ sender: Any) {
-        let alertModel = SuccessAlertModel(descriptions: ["description" :"This is a Test message."] , containerController: self)
-        App.managers.alert.showAlert(model: alertModel)
+        let successAlertModel = SuccessAlertModel(descriptions: ["description" :"අතරමැදි වෙළෙන්දන්ගේ ඇතැම් ක්‍රියාකලාපයන් නිසාත්, හඳුනානොගත් රෝගයක් නිසාත් කිතුල් ආශ්‍රිත කර්මාන්තය දිනෙන් දින අභාවයට යමින් පවතින... "] , containerController: self)
+        let falierAlertModel = FalierAlertModel(descriptions: ["description" :"අතරමැදි වෙළෙන්දන්ගේ ඇතැම් ක්‍රියාකලාපයන් නිසාත්, හඳුනානොගත් රෝගයක් නිසාත් කිතුල් ආශ්‍රිත කර්මාන්තය දිනෙන් දින අභාවයට යමින් පවතින... "] , containerController: self)
+        let infoAlertModel = InfoAlertModel(descriptions: ["description" :"අතරමැදි වෙළෙන්දන්ගේ ඇතැම් ක්‍රියාකලාපයන් නිසාත්, හඳුනානොගත් රෝගයක් නිසාත් කිතුල් ආශ්‍රිත කර්මාන්තය දිනෙන් දින අභාවයට යමින් පවතින... "] , containerController: self)
+        App.managers.alert.showAlert(model: infoAlertModel)
 
 
         // schedule local notifications
