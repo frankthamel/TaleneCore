@@ -8,6 +8,7 @@
 import Foundation
 
 public protocol FileHandling {
+    func documentDirectroy() -> URL?
     func directoryURL(directory: FileManager.SearchPathDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask) -> URL?
     func getFileURL(fileName name: String, inDirectory directory: FileManager.SearchPathDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask) -> URL?
     func isFileExist(fileName name: String, inDirectory directory: FileManager.SearchPathDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask) -> Bool
@@ -28,6 +29,10 @@ public protocol FileHandling {
 }
 
 struct TCFileManager: FileHandling {
+    func documentDirectroy() -> URL? {
+        return directoryURL()
+    }
+
     func directoryURL(directory: FileManager.SearchPathDirectory = .documentDirectory, inDomainMask domainMask: FileManager.SearchPathDomainMask = .userDomainMask) -> URL? {
         if let dir = FileManager.default.urls(for: directory, in: domainMask).first {
             return dir

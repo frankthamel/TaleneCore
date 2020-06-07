@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		010AD82C2486544D0081F2F7 /* FirebaseRemoteConfigs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 010AD82B2486544D0081F2F7 /* FirebaseRemoteConfigs.plist */; };
+		015C0282248BD2D50025A666 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015C0281248BD2D50025A666 /* User.swift */; };
 		0164E5AE247FD9AD006F222C /* BuyAppCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0164E5AD247FD9AD006F222C /* BuyAppCard.xib */; };
 		0164E5B0247FDB24006F222C /* BuyAppCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0164E5AF247FDB24006F222C /* BuyAppCard.swift */; };
 		0165A58024762E6700AFF60A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0165A57F24762E6600AFF60A /* GoogleService-Info.plist */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		010AD82B2486544D0081F2F7 /* FirebaseRemoteConfigs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FirebaseRemoteConfigs.plist; sourceTree = "<group>"; };
+		015C0281248BD2D50025A666 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0164E5AD247FD9AD006F222C /* BuyAppCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyAppCard.xib; sourceTree = "<group>"; };
 		0164E5AF247FDB24006F222C /* BuyAppCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyAppCard.swift; sourceTree = "<group>"; };
 		0165A57F24762E6600AFF60A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -93,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		015C0280248BD2B70025A666 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				015C0281248BD2D50025A666 /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		0164E5AC247FD950006F222C /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +150,7 @@
 		607FACD21AFB9204008FA782 /* Example for TaleneCore */ = {
 			isa = PBXGroup;
 			children = (
+				015C0280248BD2B70025A666 /* Models */,
 				0164E5AC247FD950006F222C /* Views */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
@@ -468,6 +479,7 @@
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				0186F0D9248A992300E586BD /* Urls.swift in Sources */,
 				0186F0E1248AB93300E586BD /* LocalConfigs.swift in Sources */,
+				015C0282248BD2D50025A666 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

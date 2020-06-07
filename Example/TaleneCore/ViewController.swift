@@ -69,6 +69,28 @@ class ViewController: TCViewController {
             App.managers.message.showMessage(model: messegeModel)
         }
 
+        // save data to realm db
+        //let obj = User()
+//        let obj: User? = App.store.db.object(forId: "B4C6792D-BA69-4FB1-B5AD-2103C71E9D56")
+//
+//        let isSaved = App.store.db.update {
+//            obj?.username = "frankthameltest"
+//            obj?.email = "frank.thamel@gmail.com"
+//        }
+//        print(isSaved ? "Saved" : "Not saved")
+//
+//        let isDeleted = App.store.db.delete(object: obj)
+//        print(isDeleted ? "Deleted" : "Not deleted")
+
+
+//        let isSaved = App.store.db.create(object: obj)
+
+
+        // let results: DbResults<User>? = User.filterBy(username: "frankthame")
+        //let allUsers: DbResults<User>? = User.all()
+        let user = User.object(forId: "8FCBDEC2-07B1-490D-A012-077FBE944DF7")
+        print(user?.email)
+
 
     }
 

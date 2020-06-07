@@ -7,13 +7,13 @@
 
 import Foundation
 
-public class RemoteAppConfigs {
+public class RemoteAppConfigs: AppConfigure {
 
     public lazy var remoteConfig: AppRemoteConfig = {
         return App.services.firebaseService.firebaseRemoteConfigService.remoteConfig
     }()
 
-    public func configure<T>(inType type: T, application: UIApplication) {}
+    public func configure<T>(inType type: T, application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?) {}
 
     public func setDefaults(fromDictionary dictionary: [String: NSObject]) {
         App.services.firebaseService.firebaseRemoteConfigService.setDefaults(fromDictionary: dictionary)

@@ -52,15 +52,12 @@ public struct Managers {
 public struct Store {
     public let mainBundle: TCAppMainBundle = TCAppMainBundleProvider()
     public let userDefaults: UserDefaultsStore = UserDefaultsStoreProvider()
-    //let database
+    public let db: Database = RealmDatabase()
 }
 
 public struct Settings {
-    //TODO: Local configs should load from json files
     public let theme: Theme = AppTheme()
     public let urls = ApplicationUrls()
     public let keys = AppKeys()
     public let configs: Configs = ConfigStore()
-    //configs // remote // app // core
-    
 }

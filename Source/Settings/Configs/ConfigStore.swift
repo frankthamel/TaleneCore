@@ -17,6 +17,7 @@ class ConfigStore: Configs {
     var lc = LocalConfigStore()
 
     func configure<T>(inType type: T, application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
-        rc.configure(inType: type, application: application)
+        rc.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
+        lc.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
     }
 }

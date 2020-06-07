@@ -20,7 +20,10 @@ public func configureTaleneCoreApp<T>(inType type: T, application: UIApplication
     // configure settings
     App.settings.keys.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
     App.settings.urls.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
-    App.settings.configs.lc.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
+    App.settings.configs.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
+
+    // configure store
+    App.store.db.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
 
     // configure managers
     App.managers.loader.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
@@ -29,9 +32,6 @@ public func configureTaleneCoreApp<T>(inType type: T, application: UIApplication
     // configure services
     App.services.firebaseService.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
     App.services.socialShareService.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
-
-    // configure store
-    App.settings.configs.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
 
 }
 
