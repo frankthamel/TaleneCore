@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct TCSay {
+public class TCSay {
     public struct Alerts {
         public static let success = "Success!"
         public static let error = "Error"
@@ -20,12 +20,12 @@ public struct TCSay {
         public static let signIn = "SignIn"
         public static let signUp = "SignUp"
 
-        public static let sign_in_blank_number = "Mobile number cannot be blank."
+        public static let sign_in_blank_number = App.settings.configs.lc.useProvidedTranslationsForCoreStrings ? "" : "Mobile number cannot be blank."
         public static let sign_in_verification_failed = "Mobile number verification failed."
     }
 
     public struct Messages {
-        public static let hide = "Hide"
+        public static let hide = translation(forKey: "TCSay.Messages.hide", elseString: "Hide")
     }
 
     public struct Authenticator {
@@ -55,5 +55,18 @@ public struct TCSay {
     public struct Notification {
         public static let notificationCreateErrorTitle = "Can not Schedule this task."
         public static let notificationCreateErrorSubtitle = "Error occoured while scheduling this task. please try again."
+    }
+}
+
+extension TCSay {
+
+}
+
+public func translation(forKey key: String, elseString string: String) -> String {
+    //return localized/ formatted //// Future implementation
+    if App.settings.configs.lc.useProvidedTranslationsForCoreStrings {
+        return App.settings.translations.valueForKey(key: key) ?? ""
+    } else {
+        return string
     }
 }

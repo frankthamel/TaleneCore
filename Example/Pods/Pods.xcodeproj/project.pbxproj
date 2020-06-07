@@ -112,6 +112,7 @@
 		0176F0E6CCA537A9FEA3CD9AB557F19E /* GULKeychainUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 64665B142B4AD73A9C03BF63ABBB8D40 /* GULKeychainUtils.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		01913A686F3A2F257BE55D30D2846205 /* RCNUserDefaultsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E49F102BD1B66BE700900B3015017A6 /* RCNUserDefaultsManager.m */; };
 		01943FBA248B453500B72A85 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01943FB9248B453500B72A85 /* Database.swift */; };
+		01957DB8248D56D200B4B9B3 /* Translations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01957DB7248D56D200B4B9B3 /* Translations.swift */; };
 		019C29EFF4C844332C98526618263674 /* FIRMessagingDelayedMessageQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 217569E61F73128DB6ECACBBE60CB1DC /* FIRMessagingDelayedMessageQueue.m */; };
 		01A8AEC377BD43C48C003CB9C73CD041 /* FIREmailLinkSignInRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C306DA89863FF646A48A5F91599FE79 /* FIREmailLinkSignInRequest.m */; };
 		01BB6320A25E7E8068D8B58127F6B832 /* errorIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A57A8A32E85FA5838F556098E26CC883 /* errorIcon@3x.png */; };
@@ -2770,6 +2771,7 @@
 		0172BBB9DE95A93DDC94A29519760509 /* FIRAuthWebView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAuthWebView.h; path = Firebase/Auth/Source/Utilities/FIRAuthWebView.h; sourceTree = "<group>"; };
 		017535CAB69B057708D7C4807FAEE9C3 /* AlertPresenterBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AlertPresenterBase.swift; sourceTree = "<group>"; };
 		01943FB9248B453500B72A85 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		01957DB7248D56D200B4B9B3 /* Translations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translations.swift; sourceTree = "<group>"; };
 		01BFC0851C590631BC5531FCD0B0E89B /* mz_compat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_compat.h; path = SSZipArchive/minizip/mz_compat.h; sourceTree = "<group>"; };
 		01C04382AEE7EAF5593A170615E57E96 /* GDTCCTNanopbHelpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDTCCTNanopbHelpers.m; path = GoogleDataTransportCCTSupport/GDTCCTLibrary/GDTCCTNanopbHelpers.m; sourceTree = "<group>"; };
 		01CAA9FE54A1DF668B42419AFFE15337 /* FIRGetOOBConfirmationCodeRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRGetOOBConfirmationCodeRequest.m; path = Firebase/Auth/Source/Backend/RPC/FIRGetOOBConfirmationCodeRequest.m; sourceTree = "<group>"; };
@@ -5570,6 +5572,7 @@
 				29503A10317F8CFBFB40C690D06FBADA /* AppUrls.swift */,
 				8B5A4C51E7E4CD2729A0371BABC89E94 /* Keys.swift */,
 				95917E5259217F68C9C5BAECF86909C6 /* Theme.swift */,
+				01957DB7248D56D200B4B9B3 /* Translations.swift */,
 			);
 			name = Settings;
 			path = Source/Settings;
@@ -11164,6 +11167,7 @@
 				E70B5F946BC8CED6B04A3F64AA04AB43 /* UserDefaultsStore.swift in Sources */,
 				F40F0B3B203D85A35AF2BB91518CDDD1 /* UUIDGenerator.swift in Sources */,
 				F426D5C47E2BC4D66896A81BBB9C7CE9 /* VideoAdService.swift in Sources */,
+				01957DB8248D56D200B4B9B3 /* Translations.swift in Sources */,
 				3E2C48CAA44B6760A3DF3CD3CFA37C00 /* warningMessegeIcon.png in Sources */,
 				E27B8835FC9EFA6D9C5B12B25B905614 /* warningMessegeIcon@2x.png in Sources */,
 				84453181E673E57E6754FB74E2287E0B /* warningMessegeIcon@3x.png in Sources */,

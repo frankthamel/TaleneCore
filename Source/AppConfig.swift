@@ -60,4 +60,5 @@ public struct Settings {
     public let urls = ApplicationUrls()
     public let keys = AppKeys()
     public let configs: Configs = ConfigStore()
+    public let translations = Translations()
 }

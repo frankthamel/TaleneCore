@@ -33,4 +33,10 @@ public extension LocalConfigStore {
     var messageDisplayTime: Int? {
         return valueForKey(key: "messageDisplayTime")
     }
+
+    var useProvidedTranslationsForCoreStrings: Bool {
+        let valueString: String? = valueForKey(key: "useProvidedTranslationsForCoreStrings")
+        guard let value = valueString else { return false }
+        return value == "true" ? true : false
+    }
 }

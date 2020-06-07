@@ -21,6 +21,7 @@ public func configureTaleneCoreApp<T>(inType type: T, application: UIApplication
     App.settings.keys.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
     App.settings.urls.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
     App.settings.configs.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
+    App.settings.translations.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
 
     // configure store
     App.store.db.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)

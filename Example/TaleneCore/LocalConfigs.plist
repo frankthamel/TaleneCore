@@ -6,5 +6,7 @@
 	<string>{&quot;name&quot;: &quot;Frank Thamel&quot;,&quot;email&quot;: &quot;w.frankthamel@gmail.com&quot;}</string>
 	<key>messageDisplayTime</key>
 	<string>5</string>
+	<key>useProvidedTranslationsForCoreStrings</key>
+	<string>true</string>
 </dict>
 </plist>
