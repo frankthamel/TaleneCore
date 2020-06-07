@@ -28,9 +28,33 @@
 				<string>com.googleusercontent.apps.543724642290-m1m2c2n0ftafi4ntqibglqkverbbjhrs</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb294337927566449</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>294337927566449</string>
+	<key>FacebookDisplayName</key>
+	<string>TaleneCore</string>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-9361069218260134~4624437533</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+		<string>twitter</string>
+		<string>twitterauth</string>
+		<string>fb-messenger-share-api</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIBackgroundModes</key>
@@ -50,21 +74,5 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>FacebookAppID</key>
-	<string>294337927566449</string>
-	<key>FacebookDisplayName</key>
-	<string>TaleneCore</string>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>fbapi</string>
-		<string>fb-messenger-api</string>
-		<string>fbauth2</string>
-		<string>fbshareextension</string>
-		<string>twitter</string>
-		<string>twitterauth</string>
-		<string>fb-messenger-share-api</string>
-	</array>
-	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-9361069218260134~4624437533</string>
 </dict>
 </plist>

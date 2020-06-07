@@ -73,6 +73,7 @@ class FacebookServiceProvider: NSObject, FacebookService {
         urlContent.quote = comment
 
         let urlshareDialog = ShareDialog(fromViewController: controller, content: urlContent, delegate: self)
+
         if urlshareDialog.canShow {
             urlshareDialog.show()
         }
