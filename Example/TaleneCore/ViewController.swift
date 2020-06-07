@@ -13,7 +13,6 @@ class ViewController: TCViewController {
 
     let configs: [String: NSObject] = ["isSaleActive": "false" as NSObject]
 
-    let realmDb = App.store.db.getRealm()
     var dbRefreshToken: DbRefreshToken?
 
     override func viewDidLoad() {
@@ -39,7 +38,7 @@ class ViewController: TCViewController {
 
         view.backgroundColor = App.settings.theme.navigationBarColor
 
-        dbRefreshToken = realmDb?.observe({ (notif, r) in
+        dbRefreshToken = App.store.db.getRealm()?.observe({ (notif, r) in
             print("reload data!")
         })
 
@@ -102,7 +101,7 @@ class ViewController: TCViewController {
         // let results: DbResults<User>? = User.filterBy(username: "frankthame")
         //let allUsers: DbResults<User>? = User.all()
 
-        let user = User.object(forId: "8FCBDEC2-07B1-490D-A012-077FBE944DF7", realm: realmDb)
+        let user = User.object(forId: "8FCBDEC2-07B1-490D-A012-077FBE944DF7")
         print(user?.email)
 
 
