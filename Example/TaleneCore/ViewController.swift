@@ -13,6 +13,9 @@ class ViewController: TCViewController {
 
     let configs: [String: NSObject] = ["isSaleActive": "false" as NSObject]
 
+    let realmDb = App.store.db.getRealm()
+    var dbRefreshToken: DbRefreshToken?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,6 +38,16 @@ class ViewController: TCViewController {
         App.services.firebaseService.firebaseAdsService.videoAdsService.loadVideoAd()
 
         view.backgroundColor = App.settings.theme.navigationBarColor
+
+        dbRefreshToken = realmDb?.observe({ (notif, r) in
+            print("reload data!")
+        })
+
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        dbRefreshToken?.invalidate()
     }
 
     deinit {
@@ -88,7 +101,8 @@ class ViewController: TCViewController {
 
         // let results: DbResults<User>? = User.filterBy(username: "frankthame")
         //let allUsers: DbResults<User>? = User.all()
-        let user = User.object(forId: "8FCBDEC2-07B1-490D-A012-077FBE944DF7")
+
+        let user = User.object(forId: "8FCBDEC2-07B1-490D-A012-077FBE944DF7", realm: realmDb)
         print(user?.email)
 
 

@@ -27,15 +27,15 @@ class User: Db {
 
 extension User {
 
-    static func object(forId id: String) -> User? {
-        return App.store.db.object(forId: id)
+    static func object(forId id: String, realm: TCRealm?) -> User? {
+        return App.store.db.object(forId: id, realm: realm)
     }
 
-    static func filterBy(username: String) -> DbResults<User>? {
-        return App.store.db.filter(query: "username == '\(username)'")
+    static func filterBy(username: String, realm: TCRealm?) -> DbResults<User>? {
+        return App.store.db.filter(query: "username == '\(username)'", realm: realm)
     }
 
-    static func all() -> DbResults<User>? {
-        return App.store.db.all()
+    static func all(realm: TCRealm?) -> DbResults<User>? {
+        return App.store.db.all(realm: realm)
     }
 }
