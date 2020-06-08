@@ -104,6 +104,11 @@ class ViewController: TCViewController {
         let user = User.object(forId: "8FCBDEC2-07B1-490D-A012-077FBE944DF7")
         print(user?.email)
 
+        let licensesController = TCLicenseViewController()
+        licensesController.modalPresentationStyle = .fullScreen
+        licensesController.title = "Licenses"
+        licensesController.loadPlist(Bundle.main, resourceName: "Credits")
+        present(licensesController, animated: true, completion: nil)
 
     }
 

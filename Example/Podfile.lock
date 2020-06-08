@@ -125,6 +125,7 @@ PODS:
   - Kingfisher (5.12.0):
     - Kingfisher/Core (= 5.12.0)
   - Kingfisher/Core (5.12.0)
+  - LicensesViewController (0.9.0)
   - LoadableViews (3.4.0)
   - Locksmith (4.0.0)
   - Malert (4.0)
@@ -173,6 +174,7 @@ PODS:
     - Firebase/RemoteConfig (= 6.14.0)
     - Google-Mobile-Ads-SDK (= 7.59.0)
     - Kingfisher (= 5.12.0)
+    - LicensesViewController (~> 0.9.0)
     - LoadableViews (= 3.4.0)
     - Locksmith (= 4.0.0)
     - Malert (= 4.0)
@@ -216,6 +218,7 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMSessionFetcher
     - Kingfisher
+    - LicensesViewController
     - LoadableViews
     - Locksmith
     - Malert
@@ -264,6 +267,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: 39530bc0ad980530298e9c4af8549e991fd033b1
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
   Kingfisher: dc6e0f53bb5b12c3e75bedb0e01bbd7a640eea69
+  LicensesViewController: 6487b7721aa19d81d90f2ede98b44177f74bcf1f
   LoadableViews: 0be9782c2fcb699cf3d281ddc4fb0a3d2d369296
   Locksmith: e9bebbaaa4cee3c511bc358a44f843c3fe00e21f
   Malert: 78badcb143f4df7bff1fa62f4bec05497c7865f3
@@ -281,7 +285,7 @@ SPEC CHECKSUMS:
   SwiftMessages: b577dc7043be8b299857ab35bb663dbff6483bd0
   SwiftyBeaver: f9a9aba96a6a6166e21682377804d728b0d20b95
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
-  TaleneCore: 435ef1675a97e68bf2d7f94375ad7e2f505b1de8
+  TaleneCore: b09a473d2e7bf033b4073e97c1d638394e07b296
 
 PODFILE CHECKSUM: 577262dfb1408474324f004994df57a5cb4e6d9b
 

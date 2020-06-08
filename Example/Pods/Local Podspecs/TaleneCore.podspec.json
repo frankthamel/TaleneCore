@@ -99,6 +99,9 @@
     ],
     "FBSDKShareKit/Swift": [
       "6.5.2"
+    ],
+    "LicensesViewController": [
+      "~> 0.9.0"
     ]
   },
   "swift_version": "5.0"

@@ -88,5 +88,8 @@ TaleneCore is the core library for all Talene apps. This comes with a structured
   s.dependency 'FBSDKCoreKit/Swift', '6.5.2'
   s.dependency 'FBSDKLoginKit/Swift', '6.5.2'
   s.dependency 'FBSDKShareKit/Swift', '6.5.2'
+
+  # LICENSE
+  s.dependency 'LicensesViewController', '~> 0.9.0'
   
 end
