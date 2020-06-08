@@ -3,11 +3,34 @@
   "TCSay.Alerts.error": "Error",
   "TCSay.Alerts.info": "Info!",
   "TCSay.Alerts.cancel": "Cancel",
-  "TCSay.Alerts.close": "Close",
+  "TCSay.Alerts.close": "Dismiss",
   "TCSay.Alerts.ok": "Ok",
   "TCSay.Alerts.signIn": "SignIn",
   "TCSay.Alerts.signUp": "SignUp",
   "TCSay.Alerts.signInBlankNumber": "Mobile number cannot be blank.",
   "TCSay.Alerts.signInVerificationFailed": "Mobile number verification failed.",
-  "TCSay.Messages.hide": "Close"
+
+  "TCSay.Messages.hide": "Dismiss",
+
+  "TCSay.Authenticator.emailPlaceholder": "youremail@text.com",
+  "TCSay.Authenticator.passwordPlaceHolder": "Password",
+  "TCSay.Authenticator.confirmPasswordPlaceHolder": "Type the same password",
+  "TCSay.Authenticator.emailVerification": "Email verification",
+  "TCSay.Authenticator.emailVerificationMessage": "Email verification sent successfully. Check your email.",
+  "TCSay.Authenticator.passwordReset": "Password Reset",
+  "TCSay.Authenticator.passwordResetMessege": "Password Reset sent successfully. Check your email",
+  "TCSay.Authenticator.usernameAlreadyTaken": "Username already registered. Try again with a new email.",
+  "TCSay.Authenticator.signUpfailed": "SignUp failed. Try again.",
+
+  "TCSay.Days.all": "All",
+  "TCSay.Days.sunday": "Sunday",
+  "TCSay.Days.monday": "Monday",
+  "TCSay.Days.tuesday": "Tuesday",
+  "TCSay.Days.wednesday": "Wednesday",
+  "TCSay.Days.thursday": "Thursday",
+  "TCSay.Days.friday": "Friday",
+  "TCSay.Days.saturday": "Saturday",
+
+  "TCSay.Notification.notificationCreateErrorTitle": "Can not Schedule this task.",
+  "TCSay.Notification.notificationCreateErrorSubtitle": "Error occoured while scheduling this task. please try again."
 }

@@ -29,32 +29,32 @@ public class TCSay {
     }
 
     public struct Authenticator {
-        public static let emailPlaceholder = "youremail@text.com"
-        public static let passwordPlaceHolder = "Password"
-        public static let confirmPasswordPlaceHolder = "Type the same password"
-        public static let emailVerification = "Email verification"
-        public static let emailVerificationMessage = "Email verification sent successfully. Check your email."
-        public static let passwordReset = "Password Reset"
-        public static let passwordResetMessege = "Password Reset sent successfully. Check your email"
-        public static let usernameAlreadyTaken = "Username already registered. Try again with a new email."
-        public static let signUpfailed = "SignUp failed. Try again."
+        public static let emailPlaceholder = translation(forKey: "TCSay.Authenticator.emailPlaceholder", elseString: "youremail@text.com")
+        public static let passwordPlaceHolder = translation(forKey: "TCSay.Authenticator.passwordPlaceHolder", elseString: "Password")
+        public static let confirmPasswordPlaceHolder = translation(forKey: "TCSay.Authenticator.confirmPasswordPlaceHolder", elseString: "Type the same password")
+        public static let emailVerification = translation(forKey: "TCSay.Authenticator.emailVerification", elseString: "Email verification")
+        public static let emailVerificationMessage = translation(forKey:  "TCSay.Authenticator.emailVerificationMessage", elseString: "Email verification sent successfully. Check your email.")
+        public static let passwordReset = translation(forKey: "TCSay.Authenticator.passwordReset", elseString: "Password Reset")
+        public static let passwordResetMessege = translation(forKey: "TCSay.Authenticator.passwordResetMessege", elseString: "Password Reset sent successfully. Check your email")
+        public static let usernameAlreadyTaken = translation(forKey: "TCSay.Authenticator.usernameAlreadyTaken", elseString: "Username already registered. Try again with a new email.")
+        public static let signUpfailed = translation(forKey: "TCSay.Authenticator.signUpfailed", elseString: "SignUp failed. Try again.")
 
     }
 
     public struct Days {
-        public static let all = "All"
-        public static let sunday = "Sunday"
-        public static let monday = "Monday"
-        public static let tuesday = "Tuesday"
-        public static let wednesday = "Wednesday"
-        public static let thursday = "Thursday"
-        public static let friday = "Friday"
-        public static let saturday = "Saturday"
+        public static let all = translation(forKey: "TCSay.Days.all", elseString: "All")
+        public static let sunday = translation(forKey: "TCSay.Days.sunday", elseString: "Sunday")
+        public static let monday = translation(forKey: "TCSay.Days.monday", elseString: "Monday")
+        public static let tuesday = translation(forKey: "TCSay.Days.tuesday", elseString: "Tuesday")
+        public static let wednesday = translation(forKey: "TCSay.Days.wednesday", elseString: "Wednesday")
+        public static let thursday = translation(forKey: "TCSay.Days.thursday", elseString: "Thursday")
+        public static let friday = translation(forKey: "TCSay.Days.friday", elseString: "Friday")
+        public static let saturday = translation(forKey: "TCSay.Days.saturday", elseString: "Saturday")
     }
 
     public struct Notification {
-        public static let notificationCreateErrorTitle = "Can not Schedule this task."
-        public static let notificationCreateErrorSubtitle = "Error occoured while scheduling this task. please try again."
+        public static let notificationCreateErrorTitle = translation(forKey: "TCSay.Notification.notificationCreateErrorTitle", elseString: "Can not Schedule this task.")
+        public static let notificationCreateErrorSubtitle = translation(forKey: "TCSay.Notification.notificationCreateErrorSubtitle", elseString: "Error occoured while scheduling this task. please try again.")
     }
 }
 
