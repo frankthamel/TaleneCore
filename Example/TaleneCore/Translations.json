@@ -1,0 +1,13 @@
+{
+  "TCSay.Alerts.success": "Success!",
+  "TCSay.Alerts.error": "Error",
+  "TCSay.Alerts.info": "Info!",
+  "TCSay.Alerts.cancel": "Cancel",
+  "TCSay.Alerts.close": "Close",
+  "TCSay.Alerts.ok": "Ok",
+  "TCSay.Alerts.signIn": "SignIn",
+  "TCSay.Alerts.signUp": "SignUp",
+  "TCSay.Alerts.signInBlankNumber": "Mobile number cannot be blank.",
+  "TCSay.Alerts.signInVerificationFailed": "Mobile number verification failed.",
+  "TCSay.Messages.hide": "Close"
+}

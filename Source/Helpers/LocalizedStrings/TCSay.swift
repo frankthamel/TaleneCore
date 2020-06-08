@@ -10,18 +10,18 @@ import Foundation
 
 public class TCSay {
     public struct Alerts {
-        public static let success = "Success!"
-        public static let error = "Error"
-        public static let info = "Info!"
-        public static let cancel = "Cancel"
-        public static let close = "Close"
-        public static let ok = "Ok"
+        public static let success = translation(forKey: "TCSay.Alerts.success", elseString: "Success!")
+        public static let error = translation(forKey: "TCSay.Alerts.error", elseString: "Error")
+        public static let info = translation(forKey: "TCSay.Alerts.info", elseString: "Info!")
+        public static let cancel = translation(forKey: "TCSay.Alerts.cancel", elseString: "Cancel")
+        public static let close = translation(forKey: "TCSay.Alerts.close", elseString: "Close")
+        public static let ok = translation(forKey: "TCSay.Alerts.ok", elseString: "Ok")
 
-        public static let signIn = "SignIn"
-        public static let signUp = "SignUp"
+        public static let signIn = translation(forKey: "TCSay.Alerts.signIn", elseString: "SignIn")
+        public static let signUp = translation(forKey: "TCSay.Alerts.signUp", elseString: "SignUp")
 
-        public static let sign_in_blank_number = App.settings.configs.lc.useProvidedTranslationsForCoreStrings ? "" : "Mobile number cannot be blank."
-        public static let sign_in_verification_failed = "Mobile number verification failed."
+        public static let signInBlankNumber = translation(forKey: "TCSay.Alerts.signInBlankNumber", elseString: "Mobile number cannot be blank.")
+        public static let signInVerificationFailed = translation(forKey: "TCSay.Alerts.signInVerificationFailed", elseString: "Mobile number verification failed.")
     }
 
     public struct Messages {
@@ -56,10 +56,6 @@ public class TCSay {
         public static let notificationCreateErrorTitle = "Can not Schedule this task."
         public static let notificationCreateErrorSubtitle = "Error occoured while scheduling this task. please try again."
     }
-}
-
-extension TCSay {
-
 }
 
 public func translation(forKey key: String, elseString string: String) -> String {

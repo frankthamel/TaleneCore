@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import SwiftyJSON
+
+public typealias TCJSON = JSON
 
 public protocol FileHandling {
     func documentDirectroy() -> URL?
@@ -26,6 +29,7 @@ public protocol FileHandling {
     func unzipFile(atPath path: String, toDestination destinationPath: String, password: String, withCompletion completion:((String, Bool, Error?) -> Void)?)
     func isFilePasswordProtected(_ filePath: String) -> Bool
     func readPlist(name: String) -> [String: AnyObject]?
+    func readJSON(fileName: String) -> TCJSON?
 }
 
 struct TCFileManager: FileHandling {
@@ -200,4 +204,19 @@ struct TCFileManager: FileHandling {
             return nil
         }
     }
+
+    func readJSON(fileName: String) -> TCJSON? {
+        var json: TCJSON?
+        if let path = Bundle.main.path(forResource: fileName, ofType: "json") {
+            do {
+                let fileUrl = URL(fileURLWithPath: path)
+                let data = try Data(contentsOf: fileUrl, options: .mappedIfSafe)
+                json = try? JSON(data: data)
+            } catch {
+                App.managers.logger.error(message: "Error reading json file: \(error.localizedDescription), format: json")
+            }
+        }
+        return json
+    }
+
 }
