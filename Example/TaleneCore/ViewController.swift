@@ -74,7 +74,7 @@ class ViewController: TCViewController {
 
 
         if App.managers.connection.isReachable() {
-            let messegeModel = MessageModel(title: "😀", subTitle: "Have internet connection.", type: .success)
+            let messegeModel = MessageModel(title: "😀", subTitle: "Have internet connection.", type: .success, presentationContext: .statusBar)
             App.managers.message.showMessage(model: messegeModel)
         } else {
             let messegeModel = MessageModel(title: "Error", subTitle: "No internet connection.", type: .error, duration: .seconds(seconds: TimeInterval(App.settings.configs.lc.messageDisplayTime ?? 2)))
@@ -108,7 +108,10 @@ class ViewController: TCViewController {
         licensesController.modalPresentationStyle = .fullScreen
         licensesController.title = "Licenses"
         licensesController.loadPlist(Bundle.main, resourceName: "Credits")
-        present(licensesController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(licensesController, animated: true)
+//        present(licensesController, animated: true, completion: {
+//            licensesController.title = "Licenses"
+//        })
 
     }
 

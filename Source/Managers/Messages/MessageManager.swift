@@ -18,8 +18,9 @@ public class MessageModel {
     var viewType: MessageView.Layout = .cardView
     var iconStyle: IconStyle = .default
     var duration: SwiftMessages.Duration = .automatic
+    var presentationContext: MessagePresentationContext
 
-    public init(title: String, subTitle: String, type: MessageType, icon: UIImage? = nil, viewType: MessageView.Layout = .cardView, iconStyle: IconStyle = .default, iconText: String? = nil, duration: SwiftMessages.Duration = .automatic) {
+    public init(title: String, subTitle: String, type: MessageType, icon: UIImage? = nil, viewType: MessageView.Layout = .cardView, iconStyle: IconStyle = .default, iconText: String? = nil, duration: SwiftMessages.Duration = .automatic, presentationContext: MessagePresentationContext = .automatic) {
         self.title = title
         self.subTitle = subTitle
         self.type = type
@@ -28,15 +29,30 @@ public class MessageModel {
         self.iconStyle = iconStyle
         self.iconText = iconText
         self.duration = duration
+        self.presentationContext = presentationContext
         setupTaleneDefault()
     }
 
     private func setupTaleneDefault() {
         configs.presentationStyle = .top
-        configs.presentationContext = .automatic
         configs.duration = duration
         configs.dimMode = .gray(interactive: false)
+
+        switch self.presentationContext {
+        case .automatic:
+            configs.presentationContext = .automatic
+        case .normal:
+            configs.presentationContext = .window(windowLevel: UIWindow.Level.normal)
+        case .statusBar:
+             configs.presentationContext = .window(windowLevel: UIWindow.Level.statusBar)
+        }
     }
+}
+
+public enum MessagePresentationContext {
+    case automatic
+    case normal
+    case statusBar
 }
 
 extension MessageModel {
@@ -70,7 +86,8 @@ struct MessageManager: Message {
 
     func showMessage(model: MessageModel) {
         App.managers.hapticFeedback.select()
-        SwiftMessages.show(config: model.configs, view: messageFactory.createMessage(model: model))
+        let view = messageFactory.createMessage(model: model)
+        SwiftMessages.show(config: model.configs, view: view)
     }
 
     func showMessageView<T: MessageView>(_ viewType: T.Type) {
