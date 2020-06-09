@@ -13,7 +13,9 @@ public class RemoteAppConfigs: AppConfigure {
         return App.services.firebaseService.firebaseRemoteConfigService.remoteConfig
     }()
 
-    public func configure<T>(inType type: T, application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?) {}
+    public func configure<T>(inType type: T, application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?) {
+        setDefaults(fromPlist: TCConstants.firebaseRemoteConfigs)
+    }
 
     public func setDefaults(fromDictionary dictionary: [String: NSObject]) {
         App.services.firebaseService.firebaseRemoteConfigService.setDefaults(fromDictionary: dictionary)

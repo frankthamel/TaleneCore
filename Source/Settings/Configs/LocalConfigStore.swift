@@ -39,4 +39,12 @@ public extension LocalConfigStore {
         guard let value = valueString else { return false }
         return value == "true" ? true : false
     }
+
+    var firebaseRemoteConfigsFetchInterval: Int? {
+        return valueForKey(key: "firebaseRemoteConfigsFetchInterval")
+    }
+
+    var firebaseRemoteConfigsExpirationPeriod: Int? {
+        return valueForKey(key: "firebaseRemoteConfigsExpirationPeriod")
+    }
 }

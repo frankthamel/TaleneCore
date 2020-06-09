@@ -1,6 +1,6 @@
 {
   "name": "TaleneCore",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "summary": "TaleneCore is the core library for all Talene Apps.",
   "description": "TaleneCore is the core library for all Talene apps. This comes with a structured framework which contains logging, analytics tracking, data handling, network handling, notification handling and so on.",
   "homepage": "https://bitbucket.org/frankthamel/talenecore",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://frankthamel@bitbucket.org/frankthamel/talenecore.git",
-    "tag": "0.1.0"
+    "tag": "1.0.0"
   },
   "platforms": {
     "ios": "12.0"

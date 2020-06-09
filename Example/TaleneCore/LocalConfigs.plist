@@ -8,5 +8,9 @@
 	<string>5</string>
 	<key>useProvidedTranslationsForCoreStrings</key>
 	<string>true</string>
+	<key>firebaseRemoteConfigsFetchInterval</key>
+	<string>0</string>
+	<key>firebaseRemoteConfigsExpirationPeriod</key>
+	<string>0</string>
 </dict>
 </plist>

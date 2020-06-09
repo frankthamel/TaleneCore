@@ -119,6 +119,7 @@
 		0186F0D2248A85DF00E586BD /* settings */ = {
 			isa = PBXGroup;
 			children = (
+				010AD82B2486544D0081F2F7 /* FirebaseRemoteConfigs.plist */,
 				016B8695248EA2D500A67E9A /* Credits.plist */,
 				01A11551248DD69A006B67F1 /* Translations.json */,
 				0186F0D3248A85FF00E586BD /* Keys.swift */,
@@ -175,7 +176,6 @@
 				0186F0D2248A85DF00E586BD /* settings */,
 				0165A57F24762E6600AFF60A /* GoogleService-Info.plist */,
 				607FACD41AFB9204008FA782 /* Info.plist */,
-				010AD82B2486544D0081F2F7 /* FirebaseRemoteConfigs.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

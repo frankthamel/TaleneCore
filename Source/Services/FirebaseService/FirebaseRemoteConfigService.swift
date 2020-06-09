@@ -23,7 +23,7 @@ class FirebaseRemoteConfigServiceProvider: FirebaseRemoteConfigService {
     func configure<T>(inType type: T, application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         remoteConfig = RemoteConfig.remoteConfig()
         let settings = RemoteConfigSettings()
-        settings.minimumFetchInterval = TCConstants.fetchInterval
+        settings.minimumFetchInterval =  TimeInterval(App.settings.configs.lc.firebaseRemoteConfigsFetchInterval ?? 3600)
         remoteConfig.configSettings = settings
     }
 
@@ -42,7 +42,7 @@ class FirebaseRemoteConfigServiceProvider: FirebaseRemoteConfigService {
     }
 
     func fetchAndActivate() {
-        remoteConfig.fetch(withExpirationDuration: TCConstants.expirationPeriod) { (status, error) in
+        remoteConfig.fetch(withExpirationDuration: TimeInterval(App.settings.configs.lc.firebaseRemoteConfigsExpirationPeriod ?? 3600)) { (status, error) in
             if status == .success {
                 App.managers.logger.info(message: "Successfully fetched remote configs.")
                 self.remoteConfig.activate() { (error) in
