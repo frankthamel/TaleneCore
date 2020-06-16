@@ -102,14 +102,33 @@
                                     <constraint firstAttribute="width" constant="320" id="nO8-iL-uvt"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6G-Gm-Hjn" customClass="UIViewX" customModule="TaleneCore">
+                                <rect key="frame" x="27.5" y="461" width="320" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="bfA-ND-5J2"/>
+                                    <constraint firstAttribute="width" constant="320" id="jKz-ua-9Me"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isShadowEnabled" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="MQE-8G-FBK" firstAttribute="top" secondItem="c6G-Gm-Hjn" secondAttribute="bottom" constant="48" id="B9K-t8-CQj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LCf-AA-HCT" secondAttribute="trailing" id="FmN-kJ-eb0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZIQ-Ti-NWp" secondAttribute="trailing" constant="20" id="N7f-yT-b8G"/>
                             <constraint firstItem="y9N-bm-bne" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="SNm-YQ-iJ3"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="MQE-8G-FBK" secondAttribute="bottom" constant="8" id="VJj-s3-hb3"/>
                             <constraint firstItem="MQE-8G-FBK" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="hQN-uf-r2P"/>
+                            <constraint firstItem="c6G-Gm-Hjn" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="iK4-bG-btd"/>
                             <constraint firstItem="ZIQ-Ti-NWp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="lYi-3p-FL9"/>
                             <constraint firstItem="LCf-AA-HCT" firstAttribute="top" secondItem="y9N-bm-bne" secondAttribute="bottom" constant="12" id="rCM-vy-QAj"/>
                             <constraint firstItem="LCf-AA-HCT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="thr-Qv-MFH"/>

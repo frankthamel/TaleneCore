@@ -36,7 +36,7 @@ class ViewController: TCViewController {
         /// load video ad
         App.services.firebaseService.firebaseAdsService.videoAdsService.loadVideoAd()
 
-        view.backgroundColor = App.settings.theme.navigationBarColor
+        view.backgroundColor = App.settings.theme.backgroundColor
 
         dbRefreshToken = App.store.db.getRealm()?.observe({ (notif, r) in
             print("reload data!")
