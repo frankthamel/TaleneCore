@@ -14,4 +14,8 @@ open class TCViewController: UIViewController {
         App.context.activeViewController = self
     }
 
+    override open var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
 }

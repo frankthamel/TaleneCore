@@ -12,5 +12,7 @@
 	<string>0</string>
 	<key>firebaseRemoteConfigsExpirationPeriod</key>
 	<string>0</string>
+	<key>preferredStatusBarStyle</key>
+	<string>light</string>
 </dict>
 </plist>

@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,11 +17,11 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="LCf-AA-HCT">
-                                <rect key="frame" x="16" y="126.5" width="343" height="50"/>
+                                <rect key="frame" x="16" y="82.5" width="343" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAC-gk-fVf">
                                         <rect key="frame" x="0.0" y="0.0" width="108" height="50"/>
@@ -49,13 +50,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alerts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9N-bm-bne">
-                                <rect key="frame" x="16" y="94" width="45" height="20.5"/>
+                                <rect key="frame" x="16" y="50" width="45" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZIQ-Ti-NWp">
-                                <rect key="frame" x="36" y="238.5" width="303" height="190"/>
+                                <rect key="frame" x="36" y="216.5" width="303" height="190"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAY-CW-2Wx">
                                         <rect key="frame" x="0.0" y="0.0" width="303" height="30"/>
@@ -95,7 +96,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQE-8G-FBK" customClass="FirebaseBannerAdsView" customModule="TaleneCore">
-                                <rect key="frame" x="27.5" y="609" width="320" height="50"/>
+                                <rect key="frame" x="27.5" y="565" width="320" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="mlY-2P-QkJ"/>
@@ -103,9 +104,42 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6G-Gm-Hjn" customClass="UIViewX" customModule="TaleneCore">
-                                <rect key="frame" x="27.5" y="461" width="320" height="100"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="27.5" y="417" width="320" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="DXE-qM-r87">
+                                        <rect key="frame" x="45.5" y="21.5" width="229" height="57"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m7b-xp-m6Q">
+                                                <rect key="frame" x="0.0" y="0.0" width="65" height="57"/>
+                                                <color key="backgroundColor" name="unknownUser"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="57" id="Ac7-Ir-Uyf"/>
+                                                    <constraint firstAttribute="width" constant="65" id="yX6-qv-5ay"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0OW-R4-6gQ">
+                                                <rect key="frame" x="82" y="0.0" width="65" height="57"/>
+                                                <color key="backgroundColor" name="activeUser"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="57" id="XSh-Dl-nBl"/>
+                                                    <constraint firstAttribute="width" constant="65" id="tJZ-xH-a3y"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gu6-Ad-daF">
+                                                <rect key="frame" x="164" y="0.0" width="65" height="57"/>
+                                                <color key="backgroundColor" name="proUser"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="65" id="qSF-eu-eOg"/>
+                                                    <constraint firstAttribute="height" constant="57" id="uee-XW-qq5"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="navigationBarColor"/>
                                 <constraints>
+                                    <constraint firstItem="DXE-qM-r87" firstAttribute="centerX" secondItem="c6G-Gm-Hjn" secondAttribute="centerX" id="5Z7-7r-XAW"/>
+                                    <constraint firstItem="DXE-qM-r87" firstAttribute="centerY" secondItem="c6G-Gm-Hjn" secondAttribute="centerY" id="Pdh-hI-5a1"/>
                                     <constraint firstAttribute="height" constant="100" id="bfA-ND-5J2"/>
                                     <constraint firstAttribute="width" constant="320" id="jKz-ua-9Me"/>
                                 </constraints>
@@ -150,9 +184,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="niT-N9-V8D" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hw7-ec-s1G">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="Hw7-ec-s1G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="navigationBarColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -164,4 +199,18 @@
             <point key="canvasLocation" x="112.8" y="3.1484257871064472"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="activeUser">
+            <color red="0.058823529411764705" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="navigationBarColor">
+            <color red="0.090000003576278687" green="0.097999997437000275" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="proUser">
+            <color red="0.94901960784313721" green="0.79607843137254897" blue="0.050980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="unknownUser">
+            <color red="0.72549019607843135" green="0.72941176470588232" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

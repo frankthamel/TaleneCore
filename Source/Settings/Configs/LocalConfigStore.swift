@@ -47,4 +47,17 @@ public extension LocalConfigStore {
     var firebaseRemoteConfigsExpirationPeriod: Int? {
         return valueForKey(key: "firebaseRemoteConfigsExpirationPeriod")
     }
+
+    var preferredStatusBarStyle: UIStatusBarStyle {
+        let value: String? = valueForKey(key: "preferredStatusBarStyle")
+        guard let stringValue = value else {
+            return .default
+        }
+
+        if stringValue == "light" {
+            return .lightContent
+        } else {
+            return .default
+        }
+    }
 }

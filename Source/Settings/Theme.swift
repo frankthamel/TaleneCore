@@ -47,6 +47,10 @@ public protocol Theme {
     var loaderCircleColorMiddle: CGColor { get set }
     var loaderCircleColorOuter: CGColor { get set }
 
+    // User
+    var unknownUser: UIColor { get set }
+    var activeUser: UIColor { get set }
+    var proUser: UIColor { get set }
 }
 
 struct AppTheme: Theme {
@@ -95,19 +99,19 @@ struct AppTheme: Theme {
 
     // Text Fields
 
-    var textFieldBorderColorLight: UIColor = {
+    public var textFieldBorderColorLight: UIColor = {
         return UIColor(named: "textFieldBorderColorLight") ?? UIColor.black
     }()
 
-    var textFieldBackgroundColorLight: UIColor = {
+    public var textFieldBackgroundColorLight: UIColor = {
         return UIColor(named: "textFieldBackgroundColorLight") ?? UIColor.white
     }()
 
-    var textFieldPlaceholder: UIColor = {
+    public var textFieldPlaceholder: UIColor = {
         return UIColor(named: "textFieldPlaceholder") ?? UIColor.gray
     }()
 
-    var textFieldError: UIColor = {
+    public var textFieldError: UIColor = {
         return UIColor(named: "textFieldError") ?? UIColor.black
     }()
 
@@ -172,6 +176,19 @@ struct AppTheme: Theme {
 
     public var loaderCircleColorOuter: CGColor = {
         return UIColor(named: "loaderCircleColorOuter")?.cgColor ?? UIColor.white.cgColor
+    }()
+
+    // User
+    public var unknownUser: UIColor = {
+        return UIColor(named: "unknownUser") ?? UIColor.white
+    }()
+
+    var activeUser: UIColor = {
+        return UIColor(named: "activeUser") ?? UIColor.white
+    }()
+
+    var proUser: UIColor = {
+        return UIColor(named: "proUser") ?? UIColor.white
     }()
 
 }
