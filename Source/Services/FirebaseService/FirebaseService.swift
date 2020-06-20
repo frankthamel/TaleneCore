@@ -16,6 +16,7 @@ public protocol FirebaseService: AppConfigure {
     var firebasePushNotificationService: FirebasePushNotificationService { get set }
     var firebaseRemoteConfigService: FirebaseRemoteConfigService { get set }
     var firebaseAdsService: FirebaseAdsService { get set }
+    var firebaseCloudFireStoreService: FirebaseCloudFireStoreService { get set }
 }
 
 struct FirebaseServiceProvider: FirebaseService {
@@ -24,6 +25,7 @@ struct FirebaseServiceProvider: FirebaseService {
     var firebasePushNotificationService: FirebasePushNotificationService = FirebasePushNotificationServiceProvider()
     var firebaseRemoteConfigService: FirebaseRemoteConfigService = FirebaseRemoteConfigServiceProvider()
     var firebaseAdsService: FirebaseAdsService = FirebaseAdsServiceProvider()
+    var firebaseCloudFireStoreService: FirebaseCloudFireStoreService = FirebaseCloudFireStoreServiceProvider()
 
     func configure<T>(inType type: T, application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         FirebaseApp.configure()
@@ -31,6 +33,7 @@ struct FirebaseServiceProvider: FirebaseService {
         firebasePushNotificationService.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
         firebaseRemoteConfigService.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
         firebaseAdsService.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
+        firebaseCloudFireStoreService.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
     }
 
 }

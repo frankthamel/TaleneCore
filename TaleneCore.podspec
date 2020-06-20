@@ -71,6 +71,8 @@ TaleneCore is the core library for all Talene apps. This comes with a structured
   s.dependency 'Firebase/Messaging', '6.14.0'
   s.dependency 'Firebase/RemoteConfig', '6.14.0'
   s.dependency 'Google-Mobile-Ads-SDK', '7.59.0'
+  s.dependency 'Firebase/Firestore', '6.14.0'
+  s.dependency 'FirebaseFirestoreSwift'
 
   # Loading
   s.dependency 'ARSLineProgress', '3.1.0'
