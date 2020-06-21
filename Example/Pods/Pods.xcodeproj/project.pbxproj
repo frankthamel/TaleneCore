@@ -123,6 +123,7 @@
 		014E41A3249E748B00DED0BD /* String+TaleneCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014E41A2249E748B00DED0BD /* String+TaleneCore.swift */; };
 		014E41A5249E824000DED0BD /* TCEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014E41A4249E824000DED0BD /* TCEncoder.swift */; };
 		015A0369EB034ABD53223DCC1697046C /* RLMRealmConfiguration+Sync.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B19BB399F03950F84C801BF2FB4678 /* RLMRealmConfiguration+Sync.h */; };
+		0160B8A6249FC4B800414F73 /* UIButtonX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0160B8A5249FC4B800414F73 /* UIButtonX.swift */; };
 		016F854313058BB7D47CEEDF3C79206F /* thd_id.h in Copy support Public Headers */ = {isa = PBXBuildFile; fileRef = 9058F1F7CC9AD80315F2879B77F604AA /* thd_id.h */; };
 		017EC466269074A931A129959AFCD666 /* sync_posix.h in Headers */ = {isa = PBXBuildFile; fileRef = 063F7F877D8D3270AA4EF11EC976DA81 /* sync_posix.h */; };
 		0185D95C3168B4E3DD68569A92D7F494 /* service_type.h in Headers */ = {isa = PBXBuildFile; fileRef = AEE973A38FF95E68D6BF55B358EA1068 /* service_type.h */; };
@@ -9246,6 +9247,7 @@
 		014E41A0249E73AF00DED0BD /* TCCrypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCrypto.swift; sourceTree = "<group>"; };
 		014E41A2249E748B00DED0BD /* String+TaleneCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+TaleneCore.swift"; sourceTree = "<group>"; };
 		014E41A4249E824000DED0BD /* TCEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEncoder.swift; sourceTree = "<group>"; };
+		0160B8A5249FC4B800414F73 /* UIButtonX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonX.swift; sourceTree = "<group>"; };
 		0185EF79E32F156425306F4188704EE5 /* create_channel.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = create_channel.cc; path = src/cpp/client/create_channel.cc; sourceTree = "<group>"; };
 		018651D5B62690B32A6E939CB601456E /* MessageManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageManager.swift; sourceTree = "<group>"; };
 		019397440A74573D7459E9907A8275FE /* GULAppDelegateSwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULAppDelegateSwizzler.h; path = GoogleUtilities/AppDelegateSwizzler/Private/GULAppDelegateSwizzler.h; sourceTree = "<group>"; };
@@ -17575,6 +17577,7 @@
 				0039B29DC074CF61069D4C8E19BCB15D /* TCTextField.swift */,
 				A36A25BE38ADE48F2D112F9F68C0F44F /* TCViewController.swift */,
 				99A8256F9AB5B6D644C258AE0ACBEACA /* UIViewX.swift */,
+				0160B8A5249FC4B800414F73 /* UIButtonX.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -23752,6 +23755,7 @@
 				639EE2491A0538938BC3AE5B16D84C73 /* AppAlerts.swift in Sources */,
 				5F0CD3E1251E4B1783AF27917A6DAC60 /* AppConfig.swift in Sources */,
 				BB784E1B9076ADB7C8E66042D12805DB /* AppContext.swift in Sources */,
+				0160B8A6249FC4B800414F73 /* UIButtonX.swift in Sources */,
 				194D17C9354DDED059F899A363A8A3BA /* AppNotifications.swift in Sources */,
 				3F39096B40D041EF80675D27FAE6E5AA /* AppUrls.swift in Sources */,
 				A257C5A167E63C4460A18F4CC3CFE0D2 /* AuthenticationManager.swift in Sources */,
