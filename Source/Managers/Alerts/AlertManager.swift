@@ -13,15 +13,15 @@ import Malert
 public typealias AlertAction = () -> Void
 
 public class AlertModel {
-    var title: String?
-    var descriptions: [String : String]
-    var type : AlertType
-    var actions: [String : AlertAction]?
-    var params: [String : Any]?
-    weak var malert: Malert?
-    var closeAction: AlertAction?
-    var closeButtonName: String?
-    var containerController: UIViewController
+    public var title: String?
+    public var descriptions: [String : String]
+    public var type : AlertType
+    public var actions: [String : AlertAction]?
+    public var params: [String : Any]?
+    public weak var malert: Malert?
+    public var closeAction: AlertAction?
+    public var closeButtonName: String?
+    public var containerController: UIViewController
 
     public init(title: String? = nil, descriptions: [String : String], type : AlertType, actions: [String : AlertAction]? = nil, params: [String : Any]? = nil, malert: Malert? = nil, closeAction: AlertAction? = nil, closeButtonName: String? = nil, containerController: UIViewController) {
         self.title = title
