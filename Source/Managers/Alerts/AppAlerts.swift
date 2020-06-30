@@ -10,6 +10,8 @@ import UIKit
 import Foundation
 import Malert
 
+public typealias TCAlert = Malert
+
 // MARK: Alert Factory
 protocol AlertFactory {
     func createAlert(model: AlertModel) -> Malert

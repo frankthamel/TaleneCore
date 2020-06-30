@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol AlertPresenterBase {
+public protocol AlertPresenterBase {
     var alertModel: AlertModel? { get set }
     func setUp()
 }
