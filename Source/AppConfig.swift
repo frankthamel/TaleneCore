@@ -44,6 +44,7 @@ public struct Managers {
     public let connection: Connection = ConnectionManager()
     public let file: FileHandling = TCFileManager()
     public let keychain: Keychain = KeychainManager()
+    public let popover: PopUp = PopoverManager()
     //let parentalGate
     //let link
 

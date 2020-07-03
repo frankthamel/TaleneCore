@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TaleneCore'
-  s.version          = '1.0.5'
+  s.version          = '1.0.6'
   s.summary          = 'TaleneCore is the core library for all Talene Apps.'
 
 # This description is used to generate tags and improve search results.
@@ -93,5 +93,8 @@ TaleneCore is the core library for all Talene apps. This comes with a structured
 
   # LICENSE
   s.dependency 'LicensesViewController', '~> 0.9.0'
+
+  # UI
+  s.dependency 'Popover', '1.3.0'
   
 end

@@ -1,6 +1,6 @@
 {
   "name": "TaleneCore",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "summary": "TaleneCore is the core library for all Talene Apps.",
   "description": "TaleneCore is the core library for all Talene apps. This comes with a structured framework which contains logging, analytics tracking, data handling, network handling, notification handling and so on.",
   "homepage": "https://bitbucket.org/frankthamel/talenecore",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://frankthamel@bitbucket.org/frankthamel/talenecore.git",
-    "tag": "1.0.1"
+    "tag": "1.0.5"
   },
   "platforms": {
     "ios": "12.0"
@@ -108,6 +108,9 @@
     ],
     "LicensesViewController": [
       "~> 0.9.0"
+    ],
+    "Popover": [
+      "1.3.0"
     ]
   },
   "swift_version": "5.0"
