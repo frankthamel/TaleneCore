@@ -43,6 +43,6 @@ class PopoverManager: PopUp {
     }
 }
 
-public class TCPopoverView: UIView {
+open class TCPopoverView: UIView {
     weak var popover: Popover?
 }
