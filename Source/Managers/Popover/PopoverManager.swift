@@ -8,19 +8,22 @@
 import Foundation
 import Popover
 
+public typealias TCPopoverOption = PopoverOption
+
 public protocol PopUp {
-    func show(view: UIView, atPoint point: CGPoint)
-    func show(view: UIView, atPoint point: CGPoint, showHandler: (() -> ())?, dismissHandler: (() -> ())?)
+    func show(view: UIView, atPoint point: CGPoint, options: [TCPopoverOption]?)
+    func show(view: UIView, atPoint point: CGPoint, options: [TCPopoverOption]?, showHandler: (() -> ())?, dismissHandler: (() -> ())?)
 }
 
 class PopoverManager: PopUp {
-    func show(view: UIView, atPoint point: CGPoint) {
-        let popover = Popover(options: nil, showHandler: nil, dismissHandler: nil)
+    func show(view: UIView, atPoint point: CGPoint, options: [TCPopoverOption]?) {
+
+        let popover = Popover(options: options, showHandler: nil, dismissHandler: nil)
         popover.show(view, point: point)
     }
 
-    func show(view: UIView, atPoint point: CGPoint, showHandler: (() -> ())?, dismissHandler: (() -> ())?) {
-        let popover = Popover(options: nil, showHandler: showHandler, dismissHandler: dismissHandler)
+    func show(view: UIView, atPoint point: CGPoint, options: [TCPopoverOption]?, showHandler: (() -> ())?, dismissHandler: (() -> ())?) {
+        let popover = Popover(options: options, showHandler: showHandler, dismissHandler: dismissHandler)
         popover.show(view, point: point)
     }
 }
