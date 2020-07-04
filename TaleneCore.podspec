@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TaleneCore'
-  s.version          = '1.0.8'
+  s.version          = '1.0.9'
   s.summary          = 'TaleneCore is the core library for all Talene Apps.'
 
 # This description is used to generate tags and improve search results.
