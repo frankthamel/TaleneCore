@@ -44,5 +44,5 @@ class PopoverManager: PopUp {
 }
 
 open class TCPopoverView: UIView {
-    weak var popover: Popover?
+    public weak var popover: Popover?
 }
