@@ -8,32 +8,32 @@
 import Foundation
 
 public struct Credential: Codable {
-    let email: String
-    let password: String
-    let isFirebase: Bool
+    public let email: String
+    public let password: String
+    public let isFirebase: Bool
 }
 
 public struct FirebaseUser: Codable {
-    let id: String
-    let name: String
-    let email: String
-    let isAuthenticated: Bool
-    let refreshToken: String
-    let isVerified: Bool
+    public let id: String
+    public let name: String
+    public let email: String
+    public let isAuthenticated: Bool
+    public let refreshToken: String
+    public let isVerified: Bool
 
-    func toUser() -> User {
+    public func toUser() -> User {
         let user = User(id: id, name: name, email: email, isAuthenticated: isAuthenticated, refreshToken: refreshToken, isVerified: isVerified)
         return user
     }
 }
 
 public struct User: Codable {
-    let id: String
-    let name: String
-    let email: String
-    let isAuthenticated: Bool
-    let refreshToken: String
-    let isVerified: Bool
+    public let id: String
+    public let name: String
+    public let email: String
+    public let isAuthenticated: Bool
+    public let refreshToken: String
+    public let isVerified: Bool
 }
 
 

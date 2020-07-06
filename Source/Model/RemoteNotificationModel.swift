@@ -8,12 +8,12 @@
 import Foundation
 
 public struct RemoteNotificationModel {
-    var title: String
-    var body: String
-    var hashTags: String?
-    var openUrl: String?
-    var shareUrl: String?
-    var imageUrl: String?
+    public var title: String
+    public var body: String
+    public var hashTags: String?
+    public var openUrl: String?
+    public var shareUrl: String?
+    public var imageUrl: String?
 
     func toAdsShareModel() -> AdsShareModel {
         let hashTagList = hashTags?.split(separator: ",").map {
