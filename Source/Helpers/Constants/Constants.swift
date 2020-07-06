@@ -13,6 +13,7 @@ public struct TCConstants {
 
     //MARK: Authentication
     public static let isFirebase = "isFirebase"
+    public static let appUser = "AppUser"
 
     //MARK: Alerts Model
     public static let model = "model"
