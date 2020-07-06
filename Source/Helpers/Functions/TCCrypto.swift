@@ -13,7 +13,7 @@ import CommonCrypto
  * CC_MD5 API exposed from CommonCrypto-60118.50.1:
  * https://opensource.apple.com/source/CommonCrypto/CommonCrypto-60118.50.1/include/CommonDigest.h.auto.html
  **/
-func md5Hash (str: String) -> String? {
+public func md5Hash (str: String) -> String? {
     if let strData = str.data(using: String.Encoding.utf8) {
         /// #define CC_MD5_DIGEST_LENGTH    16          /* digest length in bytes */
         /// Creates an array of unsigned 8 bit integers that contains 16 zeros
@@ -42,7 +42,7 @@ func md5Hash (str: String) -> String? {
 }
 
 
-func sha_256(str: String) -> String? {
+public func sha_256(str: String) -> String? {
 
     if let strData = str.data(using: String.Encoding.utf8) {
         /// #define CC_SHA256_DIGEST_LENGTH     32
