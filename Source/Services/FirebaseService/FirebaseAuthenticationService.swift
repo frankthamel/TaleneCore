@@ -93,7 +93,7 @@ struct FirebaseAuthenticationServiceProvider: FirebaseAuthenticationService {
 
             if let user = authResult?.user {
                 let firebaseUser = FirebaseUser(id: user.uid, name: user.displayName ?? "Unknown User" , email: user.email ?? "Not a valid email", isAuthenticated: true, refreshToken: user.refreshToken ?? "", isVerified: user.isEmailVerified)
-
+                App.managers.keychain.save(data: credential, forKey: TCConstants.firebaseCredentials, forUserAccount: TCConstants.firebaseCredentials)
                 completion(.success(firebaseUser))
             } else {
                 completion(.failure(UserAuthenticationError.loginFailed(message: error?.localizedDescription ?? "Login failed.")))

@@ -14,6 +14,7 @@ public struct TCConstants {
     //MARK: Authentication
     public static let isFirebase = "isFirebase"
     public static let appUser = "AppUser"
+    public static let firebaseCredentials = "TaleneCore.Firebase.Credentials"
 
     //MARK: Alerts Model
     public static let model = "model"
