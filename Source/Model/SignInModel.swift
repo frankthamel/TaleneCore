@@ -13,6 +13,12 @@ public struct Credential: Codable {
     public let isFirebase: Bool
 }
 
+public extension Credential {
+    static func fake() -> Credential {
+        return Credential(email: "", password: "", isFirebase: true)
+    }
+}
+
 public struct FirebaseUser: Codable {
     public let id: String
     public let name: String
