@@ -42,6 +42,16 @@ class ViewController: TCViewController {
             print("reload data!")
         })
 
+
+        let date = Date()
+        var date2: Date?
+
+        TCRun.afterDelay(seconds: 55) {
+            date2 = Date()
+            print(date2! - date)
+        }
+
+
     }
 
     override func viewDidDisappear(_ animated: Bool) {

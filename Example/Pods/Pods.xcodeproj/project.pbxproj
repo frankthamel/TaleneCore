@@ -120,6 +120,7 @@
 		01407A423C55A8A36808D093B6B7EC99 /* hpack_table.h in Copy src/core/ext/transport/chttp2/transport Private Headers */ = {isa = PBXBuildFile; fileRef = 31347E6252588F3BCE7AF968B2739A48 /* hpack_table.h */; };
 		0143EBE9ACC47FDA6AFDE630446F9729 /* GULSecureCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 4695804481FB70D71B01D15F3D8E4789 /* GULSecureCoding.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		015A0369EB034ABD53223DCC1697046C /* RLMRealmConfiguration+Sync.h in Headers */ = {isa = PBXBuildFile; fileRef = FFE523532E81D58AB2F81F090F6B50E9 /* RLMRealmConfiguration+Sync.h */; };
+		015C41CF24B4E44600EB2B84 /* Date+TaleneCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015C41CE24B4E44600EB2B84 /* Date+TaleneCore.swift */; };
 		016F854313058BB7D47CEEDF3C79206F /* thd_id.h in Copy support Public Headers */ = {isa = PBXBuildFile; fileRef = 092CA1AA517C02C6A59D9147FDBA398D /* thd_id.h */; };
 		017EC466269074A931A129959AFCD666 /* sync_posix.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F15ECB60673283DADED9D9383263AC /* sync_posix.h */; };
 		0185D95C3168B4E3DD68569A92D7F494 /* service_type.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E50FC2ED1853049D508B875CB29E6E8 /* service_type.h */; };
@@ -9267,6 +9268,7 @@
 		01438FE26FD4C52B6B566AD6923B10D2 /* tcp_client_windows.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = tcp_client_windows.cc; path = src/core/lib/iomgr/tcp_client_windows.cc; sourceTree = "<group>"; };
 		014C2B51AEDA747EFC2510CA641D14F7 /* Locksmith-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Locksmith-umbrella.h"; sourceTree = "<group>"; };
 		0155B855AA9996056701F4E7A5E52228 /* ImageDrawing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDrawing.swift; path = Sources/Image/ImageDrawing.swift; sourceTree = "<group>"; };
+		015C41CE24B4E44600EB2B84 /* Date+TaleneCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TaleneCore.swift"; sourceTree = "<group>"; };
 		0165A2CD53A6D1C30BA33CFE89F0C37B /* FBSDKSendButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKSendButton.h; path = FBSDKShareKit/FBSDKShareKit/FBSDKSendButton.h; sourceTree = "<group>"; };
 		016728375C0304DBF8C6AC0159A2E192 /* FirebaseAuth.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FirebaseAuth.xcconfig; sourceTree = "<group>"; };
 		016E044655625585781DAC42F955DBE6 /* frame_data.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = frame_data.cc; path = src/core/ext/transport/chttp2/transport/frame_data.cc; sourceTree = "<group>"; };
@@ -18414,6 +18416,7 @@
 				EF7B86E0058222340C0D9865AAC17FF4 /* String+TaleneCore.swift */,
 				0B524F6723DC7D23F673E0A124CF0D2C /* UIColor+TaleneCore.swift */,
 				913F148BBAA2BD0E1A0645C8184945D1 /* UIImage+TaleneCore.swift */,
+				015C41CE24B4E44600EB2B84 /* Date+TaleneCore.swift */,
 			);
 			name = Extensions;
 			path = Source/Extensions;
@@ -24378,6 +24381,7 @@
 				3250198FB9FAA9882496A6B4817C7B95 /* FirebaseAnalyticsService.swift in Sources */,
 				84128172C454684F74E07145914433D8 /* FirebaseAuthenticationService.swift in Sources */,
 				D3D7A6700A0B86CFD98DB6A8A51C008F /* FirebaseCloudFireStoreService.swift in Sources */,
+				015C41CF24B4E44600EB2B84 /* Date+TaleneCore.swift in Sources */,
 				55952DE08FE5B66B11C13E91035C09BA /* FirebasePushNotificationService.swift in Sources */,
 				0424E82AC1EE69CF8DA92858C77C8889 /* FirebaseRemoteConfigService.swift in Sources */,
 				AFA950A95574BA88FA50DE0FF6AEABB6 /* FirebaseService.swift in Sources */,
