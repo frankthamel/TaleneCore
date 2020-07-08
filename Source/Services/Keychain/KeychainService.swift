@@ -18,9 +18,9 @@ struct KeychainServiceProvider: KeychainService {
 
     func save<T>(data: T, forKey key: String, forUserAccount account: String) where T : Decodable, T : Encodable {
         guard let encodedData = try? TCEncodeDecode.encode(object: data) else { return }
-        let existingData: T? = getData(forKey: key, forUserAccount: account)
+        let dictionary = Locksmith.loadDataForUserAccount(userAccount: account)
 
-        if let _ = existingData {
+        if let dict = dictionary, dict.keys.contains(key) {
             do {
                 try Locksmith.updateData(data: [key: encodedData], forUserAccount: account)
             } catch let error {
