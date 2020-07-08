@@ -54,6 +54,11 @@ class ViewController: TCViewController {
 
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UserDevice.deviceID()
+    }
+
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         dbRefreshToken?.invalidate()
@@ -75,6 +80,8 @@ class ViewController: TCViewController {
         App.managers.alert.showAlert(model: alertModel)
 
         //App.managers.message.showMessageView(BuyAppCard.self)
+
+        print(UserDevice.deviceID())
     }
 
     @IBAction func showErrorAlert(_ sender: Any) {

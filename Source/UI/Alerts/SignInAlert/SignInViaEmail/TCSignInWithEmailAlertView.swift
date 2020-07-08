@@ -48,7 +48,9 @@ class TCSignInWithEmailAlertView: UIView {
         setUpEmailTextField()
         setUpPasswordTextField()
         setUpConfirmPasswordTextField()
-        currentState = .signUp
+
+        let showSignin: Bool = App.store.userDefaults.getValue(forKey: TCConstants.userRegisterCompletedKey) ?? false
+        currentState =  showSignin ? .signIn : .signUp
     }
 
     class func instantiateFromNib() -> TCSignInWithEmailAlertView {

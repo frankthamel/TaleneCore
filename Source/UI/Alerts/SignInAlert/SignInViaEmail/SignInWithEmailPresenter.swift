@@ -43,6 +43,7 @@ class SignInWithEmailPresenter: AlertPresenterBase {
                     App.managers.loader.showSuccess()
                     App.managers.logger.info(message: user)
                     App.managers.notification.localNotificationManager.send(notification: TCConstants.appUser, info: ["user": user])
+                    App.store.userDefaults.save(value: true, forKey: TCConstants.userRegisterCompletedKey)
                     self.alertModel?.malert?.dismiss(animated: true, completion: nil)
                 } else {
                     //TODO: Verify Email info message
@@ -81,6 +82,7 @@ class SignInWithEmailPresenter: AlertPresenterBase {
                 self.sendEmailVerification()
                 App.managers.loader.showSuccess()
                 App.managers.notification.localNotificationManager.send(notification: TCConstants.appUser, info: ["user": user])
+                App.store.userDefaults.save(value: true, forKey: TCConstants.userRegisterCompletedKey)
                 self.alertModel?.malert?.dismiss(animated: true, completion: nil)
             case .failure(let errorMessage):
                 switch errorMessage {

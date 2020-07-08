@@ -123,6 +123,7 @@
 		015C41CF24B4E44600EB2B84 /* Date+TaleneCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015C41CE24B4E44600EB2B84 /* Date+TaleneCore.swift */; };
 		016F854313058BB7D47CEEDF3C79206F /* thd_id.h in Copy support Public Headers */ = {isa = PBXBuildFile; fileRef = 092CA1AA517C02C6A59D9147FDBA398D /* thd_id.h */; };
 		017EC466269074A931A129959AFCD666 /* sync_posix.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F15ECB60673283DADED9D9383263AC /* sync_posix.h */; };
+		018436EA24B62AD6000088FF /* UserDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018436E924B62AD6000088FF /* UserDevice.swift */; };
 		0185D95C3168B4E3DD68569A92D7F494 /* service_type.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E50FC2ED1853049D508B875CB29E6E8 /* service_type.h */; };
 		0192F0C93C72B4CDCAD05D1345748AC9 /* http_connect_handshaker.cc in Sources */ = {isa = PBXBuildFile; fileRef = F6B3CE02FC950A1A349F06BCD2D6DD1F /* http_connect_handshaker.cc */; settings = {COMPILER_FLAGS = "-DGRPC_ARES=0 -DPB_FIELD_32BIT -DGRPC_SHADOW_BORINGSSL_SYMBOLS -fno-objc-arc"; }; };
 		0193DA0C65628DDA2F43CEA7D721528C /* FIRMessagingLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = B18F9EF6197B14A16851182C7B2FAAE0 /* FIRMessagingLogger.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -9274,6 +9275,7 @@
 		016E044655625585781DAC42F955DBE6 /* frame_data.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = frame_data.cc; path = src/core/ext/transport/chttp2/transport/frame_data.cc; sourceTree = "<group>"; };
 		0179AA47FD817DF39BD326A3A437AA60 /* FBSDKMonotonicTime.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKMonotonicTime.m; path = FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKMonotonicTime.m; sourceTree = "<group>"; };
 		01834E4E06880D315005235772F192EC /* SortDescriptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SortDescriptor.swift; path = RealmSwift/SortDescriptor.swift; sourceTree = "<group>"; };
+		018436E924B62AD6000088FF /* UserDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDevice.swift; sourceTree = "<group>"; };
 		019015DE063239DE2B854DEB4E6AED5E /* s3_pkt.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = s3_pkt.cc; path = ssl/s3_pkt.cc; sourceTree = "<group>"; };
 		01925FF2D3078AA941694068EB14A191 /* FIREmailLinkSignInResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIREmailLinkSignInResponse.m; path = Firebase/Auth/Source/Backend/RPC/FIREmailLinkSignInResponse.m; sourceTree = "<group>"; };
 		019BF9296AAAB0DE208CF983B06A78BF /* grpc_posix.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = grpc_posix.h; path = include/grpc/grpc_posix.h; sourceTree = "<group>"; };
@@ -17457,6 +17459,7 @@
 				5D37A5ECA7AA93FCFB7AF070DFB3DEB5 /* TCEncoder.swift */,
 				9ACD51EC5168267EEE69B8640B31138D /* TCRun.swift */,
 				29E2924441769173F24E06975C276598 /* UUIDGenerator.swift */,
+				018436E924B62AD6000088FF /* UserDevice.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -24452,6 +24455,7 @@
 				EBE69CF8253DC5FD1CE71C0786681D26 /* UIViewX.swift in Sources */,
 				C95CB1D36BFBBF9ADADFB52DCB6BA37A /* UserDefaultKeys.swift in Sources */,
 				B3E40C6FB3DFB7D309F94893F2D7D80D /* UserDefaultsStore.swift in Sources */,
+				018436EA24B62AD6000088FF /* UserDevice.swift in Sources */,
 				E845EC9DF2B7C934469A665289D69A9F /* UUIDGenerator.swift in Sources */,
 				EC6243306CE12E5472BC52691A264E3F /* VideoAdService.swift in Sources */,
 				DACB61A28044FC87C4976243AF7526D1 /* warningMessegeIcon.png in Sources */,
