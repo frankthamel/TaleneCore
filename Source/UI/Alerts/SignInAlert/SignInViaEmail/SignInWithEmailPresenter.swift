@@ -39,25 +39,11 @@ class SignInWithEmailPresenter: AlertPresenterBase {
             guard let `self` = self else { return }
             switch result {
             case .success(let user):
-                if user.isVerified {
-                    App.managers.loader.showSuccess()
-                    App.managers.logger.info(message: user)
-                    App.managers.notification.localNotificationManager.send(notification: TCConstants.appUser, info: ["user": user])
-                    App.store.userDefaults.save(value: true, forKey: TCConstants.userRegisterCompletedKey)
-                    self.alertModel?.malert?.dismiss(animated: true, completion: nil)
-                } else {
-                    //TODO: Verify Email info message
-                    App.managers.loader.showFail()
-                    App.managers.logger.error(message: "Email not verified.")
-                    App.managers.authenticator.signOut { signOutResult in
-                        switch signOutResult {
-                        case .success(let message):
-                            App.managers.logger.info(message: message)
-                        case .failure(let errorMessage):
-                            App.managers.logger.error(message: errorMessage)
-                        }
-                    }
-                }
+                App.managers.loader.showSuccess()
+                App.managers.logger.info(message: user)
+                App.managers.notification.localNotificationManager.send(notification: TCConstants.appUser, info: ["user": user])
+                App.store.userDefaults.save(value: true, forKey: TCConstants.userRegisterCompletedKey)
+                self.alertModel?.malert?.dismiss(animated: true, completion: nil)
             case .failure(let errorMessage):
                 App.managers.logger.error(message: errorMessage)
                 App.managers.loader.showFail()
