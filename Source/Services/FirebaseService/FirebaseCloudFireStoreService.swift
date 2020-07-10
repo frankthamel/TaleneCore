@@ -14,6 +14,7 @@ public protocol FirebaseCloudFireStoreService: AppConfigure {
     func all<T: Codable>(forCollection collection: String, withCompletion completion: @escaping (Result<[T], TCFirestoreError>) -> Void)
     func read<T: Codable>(documentId id: String, inCollection collection: String, withCompletion completion: @escaping (Result<T, TCFirestoreError>) -> Void)
     func delete(documentId id: String, inCollection collection: String, withCompletion completion: @escaping (Result<Bool, TCFirestoreError>) -> Void)
+    func addListener<T: Codable>(toCollection collection: String, documentId: String, withCompletion completion: @escaping (Result<T, TCFirestoreError>) -> Void)
 }
 
 public enum TCFirestoreError: Error {
@@ -124,6 +125,32 @@ class FirebaseCloudFireStoreServiceProvider: FirebaseCloudFireStoreService {
         guard let dataDictionary = try? JSONSerialization.jsonObject(with: jsonData, options: .allowFragments) as? [String: Any] else { return nil}
         print(String(data: jsonData, encoding: .utf8)!)
         return dataDictionary
+    }
+
+    func addListener<T: Codable>(toCollection collection: String, documentId: String, withCompletion completion: @escaping (Result<T, TCFirestoreError>) -> Void) {
+        db?.collection(collection).document(documentId)
+            .addSnapshotListener { documentSnapshot, error in
+                guard let document = documentSnapshot else {
+                    App.managers.logger.error(message: "Fetched document id: \(documentId)")
+                    completion(.failure(.errorFetchingDocument(documentId)))
+                    return
+                }
+
+                guard let data = document.data() else {
+                    App.managers.logger.error(message: "Fetched document id: \(documentId)")
+                    completion(.failure(.errorFetchingDocument(documentId)))
+                    return
+                }
+
+                App.managers.logger.info(message: "Fetched document id: \(documentId)")
+                if let item = try? JSONDecoder().decode(T.self, withJSONObject: data as Any) {
+                    App.managers.logger.info(message: "Fetched document id: \(documentId)")
+                    completion(.success(item))
+                } else {
+                    App.managers.logger.error(message: "Document \(documentId) decoding error.")
+                    completion(.failure(.documentDecodingError(documentId)))
+                }
+        }
     }
 
 }
