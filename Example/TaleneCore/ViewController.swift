@@ -15,6 +15,8 @@ class ViewController: TCViewController {
 
     var dbRefreshToken: DbRefreshToken?
 
+    var membershipListener: TCListenerRegistration?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -52,16 +54,40 @@ class ViewController: TCViewController {
         }
 
 
+        TCRun.afterDelay(seconds: 120) {
+            let membership = Membership(id: "TCTest", type: .pro)
+            App.services.firebaseService.firebaseCloudFireStoreService.create(item: membership, withDocumentId: "abc", in: "Membership") { (result) in
+                switch result {
+                case .success:
+                    print("Membership saved")
+                case .failure:
+                    print("Membership saving error")
+                }
+            }
+        }
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         UserDevice.deviceID()
+
+        membershipListener = App.services.firebaseService.firebaseCloudFireStoreService.addListener(toCollection: "Membership", documentId: "abc", withCompletion: { (result: Result<Membership, TCFirestoreError>) in
+            switch result {
+            case .success(let membership):
+                print("Membership id: ", membership.id)
+                print("Membership type: ", membership.type)
+            case .failure:
+                print("error")
+            }
+        })
+
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         dbRefreshToken?.invalidate()
+        membershipListener?.remove()
     }
 
     deinit {

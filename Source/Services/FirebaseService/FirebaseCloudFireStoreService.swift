@@ -8,13 +8,15 @@
 import Foundation
 import FirebaseFirestore
 
+public typealias TCListenerRegistration = ListenerRegistration
+
 public protocol FirebaseCloudFireStoreService: AppConfigure {
     func create<T: Codable>(item: T, in collection: String, withCompletion completion: @escaping (Result<String, TCFirestoreError>) -> Void)
     func create<T: Codable>(item: T, withDocumentId documentId: String, in collection: String, withCompletion completion: @escaping (Result<String, TCFirestoreError>) -> Void)
     func all<T: Codable>(forCollection collection: String, withCompletion completion: @escaping (Result<[T], TCFirestoreError>) -> Void)
     func read<T: Codable>(documentId id: String, inCollection collection: String, withCompletion completion: @escaping (Result<T, TCFirestoreError>) -> Void)
     func delete(documentId id: String, inCollection collection: String, withCompletion completion: @escaping (Result<Bool, TCFirestoreError>) -> Void)
-    func addListener<T: Codable>(toCollection collection: String, documentId: String, withCompletion completion: @escaping (Result<T, TCFirestoreError>) -> Void)
+    func addListener<T: Codable>(toCollection collection: String, documentId: String, withCompletion completion: @escaping (Result<T, TCFirestoreError>) -> Void) -> ListenerRegistration?
 }
 
 public enum TCFirestoreError: Error {
@@ -127,8 +129,8 @@ class FirebaseCloudFireStoreServiceProvider: FirebaseCloudFireStoreService {
         return dataDictionary
     }
 
-    func addListener<T: Codable>(toCollection collection: String, documentId: String, withCompletion completion: @escaping (Result<T, TCFirestoreError>) -> Void) {
-        db?.collection(collection).document(documentId)
+    func addListener<T: Codable>(toCollection collection: String, documentId: String, withCompletion completion: @escaping (Result<T, TCFirestoreError>) -> Void) -> TCListenerRegistration? {
+        let listener = db?.collection(collection).document(documentId)
             .addSnapshotListener { documentSnapshot, error in
                 guard let document = documentSnapshot else {
                     App.managers.logger.error(message: "Fetched document id: \(documentId)")
@@ -151,6 +153,7 @@ class FirebaseCloudFireStoreServiceProvider: FirebaseCloudFireStoreService {
                     completion(.failure(.documentDecodingError(documentId)))
                 }
         }
+        return listener
     }
 
 }

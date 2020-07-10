@@ -24,6 +24,7 @@
 		0186F0E4248AB94500E586BD /* LocalConfigs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0186F0E2248AB94500E586BD /* LocalConfigs.plist */; };
 		01A11552248DD69A006B67F1 /* Translations.json in Resources */ = {isa = PBXBuildFile; fileRef = 01A11551248DD69A006B67F1 /* Translations.json */; };
 		3BF8C3663AE0FCF96D765805 /* Pods_TaleneCore_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEFAC1CBFCFD4EA7C738ACF /* Pods_TaleneCore_Example.framework */; };
+		576A02AA24B8E2BD002A45C2 /* Membership.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A02A924B8E2BD002A45C2 /* Membership.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		01BA950024824FF900C9FE7C /* TaleneCore_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TaleneCore_Example.entitlements; sourceTree = "<group>"; };
 		07617777A4B34EEF80711EF8 /* TaleneCore.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TaleneCore.podspec; path = ../TaleneCore.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1A56A4157E287E8CEFAE39E5 /* Pods-TaleneCore_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaleneCore_Example.debug.xcconfig"; path = "Target Support Files/Pods-TaleneCore_Example/Pods-TaleneCore_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		576A02A924B8E2BD002A45C2 /* Membership.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Membership.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* TaleneCore_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaleneCore_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				015C0281248BD2D50025A666 /* User.swift */,
+				576A02A924B8E2BD002A45C2 /* Membership.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				0186F0D9248A992300E586BD /* Urls.swift in Sources */,
 				0186F0E1248AB93300E586BD /* LocalConfigs.swift in Sources */,
 				015C0282248BD2D50025A666 /* User.swift in Sources */,
+				576A02AA24B8E2BD002A45C2 /* Membership.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
