@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UIButtonX: UIButton {
+open class UIButtonX: UIButton {
     @IBInspectable var cornerRadius: CGFloat = 5 {
         didSet {
             layer.cornerRadius = cornerRadius

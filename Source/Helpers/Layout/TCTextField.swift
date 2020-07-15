@@ -8,7 +8,7 @@
 import UIKit
 import Foundation
 
-class TCTextField: UITextField {
+open class TCTextField: UITextField {
 
     let insets: UIEdgeInsets = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
     var modifiedPlaceholder: String? {
@@ -45,7 +45,7 @@ class TCTextField: UITextField {
         setUp()
     }
 
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         super.init(coder: coder)
         setUp()
     }
@@ -67,11 +67,11 @@ class TCTextField: UITextField {
         }
     }
 
-    override func textRect(forBounds bounds: CGRect) -> CGRect {
+    open override func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: insets)
     }
 
-    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+    open override func editingRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: insets)
     }
 

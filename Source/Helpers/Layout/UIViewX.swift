@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class UIViewX: UIView {
+open class UIViewX: UIView {
 
     @IBInspectable public var borderColor: UIColor = UIColor.clear {
         didSet {
