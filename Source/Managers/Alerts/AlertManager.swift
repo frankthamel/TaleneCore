@@ -53,21 +53,21 @@ public class SuccessAlertModel: AlertModel {
 
 public class FalierAlertModel: AlertModel {
 
-     public init(title: String? = nil, descriptions: [String : String], actions: [String : AlertAction]? = nil, closeAction: AlertAction? = nil, closeButtonName: String? = nil, containerController: UIViewController) {
-           super.init(title: title, descriptions: descriptions, type: .error, actions: actions, closeAction: closeAction, closeButtonName: closeButtonName, containerController: containerController)
-       }
+    public init(title: String? = nil, descriptions: [String : String], actions: [String : AlertAction]? = nil, closeAction: AlertAction? = nil, closeButtonName: String? = nil, containerController: UIViewController) {
+        super.init(title: title, descriptions: descriptions, type: .error, actions: actions, closeAction: closeAction, closeButtonName: closeButtonName, containerController: containerController)
+    }
 }
 
 public class InfoAlertModel: AlertModel {
 
     public init(title: String? = nil, descriptions: [String : String], actions: [String : AlertAction]? = nil, closeAction: AlertAction? = nil, closeButtonName: String? = nil, containerController: UIViewController) {
-           super.init(title: title, descriptions: descriptions, type: .info, actions: actions, closeAction: closeAction, closeButtonName: closeButtonName, containerController: containerController)
-       }
+        super.init(title: title, descriptions: descriptions, type: .info, actions: actions, closeAction: closeAction, closeButtonName: closeButtonName, containerController: containerController)
+    }
 }
 
 public class CustomAlertModel: AlertModel {
 
-     public init(title: String? = nil, type: AlertType, actions: [String : AlertAction]? = nil, params: [String : Any]? = nil, malert: Malert? = nil, closeAction: AlertAction? = nil, closeButtonName: String? = nil, containerController: UIViewController) {
+    public init(title: String? = nil, type: AlertType, actions: [String : AlertAction]? = nil, params: [String : Any]? = nil, malert: Malert? = nil, closeAction: AlertAction? = nil, closeButtonName: String? = nil, containerController: UIViewController) {
         super.init(title: title, descriptions: [:], type: type, actions: actions, params: params, malert: malert, closeAction: closeAction, closeButtonName: closeButtonName, containerController: containerController)
     }
 }

@@ -161,7 +161,7 @@ class ViewController: TCViewController {
     @IBAction func showSuccessAlert(_ sender: Any) {
         let successAlertModel = SuccessAlertModel(descriptions: ["description" :"අතරමැදි වෙළෙන්දන්ගේ ඇතැම් ක්‍රියාකලාපයන් නිසාත්, හඳුනානොගත් රෝගයක් නිසාත් කිතුල් ආශ්‍රිත කර්මාන්තය දිනෙන් දින අභාවයට යමින් පවතින... "] , containerController: self)
         let falierAlertModel = FalierAlertModel(descriptions: ["description" :"අතරමැදි වෙළෙන්දන්ගේ ඇතැම් ක්‍රියාකලාපයන් නිසාත්, හඳුනානොගත් රෝගයක් නිසාත් කිතුල් ආශ්‍රිත කර්මාන්තය දිනෙන් දින අභාවයට යමින් පවතින... "] , containerController: self)
-        let infoAlertModel = InfoAlertModel(descriptions: ["description" :"අතරමැදි වෙළෙන්දන්ගේ ඇතැම් ක්‍රියාකලාපයන් නිසාත්, හඳුනානොගත් රෝගයක් නිසාත් කිතුල් ආශ්‍රිත කර්මාන්තය දිනෙන් දින අභාවයට යමින් පවතින... "] , containerController: self)
+        let infoAlertModel = InfoAlertModel(descriptions: ["description" :"අතරමැදි වෙළෙන්දන්ගේ ඇතැම් ක්‍රියාකලාපයන් නිසාත්, හඳුනානොගත් රෝගයක් නිසාත් කිතුල් ආශ්‍රිත කර්මාන්තය දිනෙන් දින අභාවයට යමින් පවතින... "], actions: ["Yes": { print("Clear Data")}, "No": { print("Don't Clear Data")}], containerController: self)
         App.managers.alert.showAlert(model: infoAlertModel)
 
 

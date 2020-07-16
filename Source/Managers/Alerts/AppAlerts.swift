@@ -69,10 +69,28 @@ extension AppAlerts {
             alert.buttonsFont = font
         }
 
-        let action = MalertAction(title: TCSay.Alerts.ok)
-        action.tintColor = UIColor.white
-        action.backgroundColor = buttonsColor
-        alert.addAction(action)
+        if let modelActions = model.actions, modelActions.count > 0 {
+            let closeAction = MalertAction(title: TCSay.Alerts.cancel)
+            closeAction.tintColor = UIColor.white
+            closeAction.backgroundColor = App.settings.theme.subColorTwo
+            alert.addAction(closeAction)
+
+            for (key, value) in modelActions {
+                let action = MalertAction(title: key, actionBlock: value)
+                action.tintColor = UIColor.white
+                action.backgroundColor = buttonsColor
+                alert.addAction(action)
+            }
+
+            alert.buttonsSpace = 2
+            alert.buttonsAxis = .horizontal
+
+        } else {
+            let action = MalertAction(title: TCSay.Alerts.ok)
+            action.tintColor = UIColor.white
+            action.backgroundColor = buttonsColor
+            alert.addAction(action)
+        }
 
         return alert
     }
