@@ -66,6 +66,16 @@ class ViewController: TCViewController {
             }
         }
 
+        print("Tets timmer text")
+        let saleEndDate = DateComponents(calendar: .current, year: 2020, month: 7, day: 28, hour: 5, minute: 9).date!
+        print("saleEndDate: \(saleEndDate.toTimmerText(from: Date()))")
+
+        TCRun.afterDelay(seconds: 125) {
+            print("Tets timmer text")
+            let saleEndDate = DateComponents(calendar: .current, year: 2020, month: 7, day: 28, hour: 5, minute: 9).date!
+            print("saleEndDate: \(saleEndDate.toTimmerText(from: Date()))")
+        }
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
