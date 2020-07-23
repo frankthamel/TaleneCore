@@ -14,6 +14,7 @@ public protocol FirebaseRemoteConfigService: AppConfigure {
     var remoteConfig: RemoteConfig { get }
     func setDefaults(fromDictionary dictionary: [String: NSObject])
     func setDefaults(fromPlist plist: String)
+    func getData<T: Codable>(forKey key: String) -> T?
 }
 
 class FirebaseRemoteConfigServiceProvider: FirebaseRemoteConfigService {
@@ -54,5 +55,11 @@ class FirebaseRemoteConfigServiceProvider: FirebaseRemoteConfigService {
                 App.managers.logger.error(message: "Error: \(error?.localizedDescription ?? "Config not fetched")")
             }
         }
+    }
+
+    func getData<T: Codable>(forKey key: String) -> T? {
+        let result = remoteConfig.configValue(forKey: key).stringValue ?? ""
+        let value: T? = try? TCEncodeDecode.decode(string: result)
+        return value
     }
 }
