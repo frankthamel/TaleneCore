@@ -24,4 +24,8 @@ public class RemoteAppConfigs: AppConfigure {
     public func setDefaults(fromPlist plist: String) {
         App.services.firebaseService.firebaseRemoteConfigService.setDefaults(fromPlist: plist)
     }
+
+    public func getData<T: Codable>(forKey key: String) -> T? {
+        return App.services.firebaseService.firebaseRemoteConfigService.getData(forKey: key)
+    }
 }
