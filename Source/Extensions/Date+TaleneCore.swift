@@ -83,4 +83,45 @@ public extension Date {
         return (d, h, m, rs)
     }
 
+    func today() -> Day {
+        let t = Calendar.current.component(.weekday, from: self)
+        return Day(rawValue: t) ?? Day.monday
+    }
+
+    func isDay(_ day: Day) -> Bool {
+        if today() == day {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    func isWeekend() -> Bool {
+        let day = today()
+        if day == Day.saturday || day == Day.sunday {
+            return true
+        } else {
+            return false
+        }
+    }
+
+}
+
+public enum Day: Int {
+    case sunday = 1
+    case monday = 2
+    case tuesday = 3
+    case wednesday = 4
+    case thursday = 5
+    case friday = 6
+    case saturday = 7
+
+    public var all: [String] {
+        return  [TCSay.Days.sunday, TCSay.Days.monday, TCSay.Days.tuesday, TCSay.Days.wednesday, TCSay.Days.thursday, TCSay.Days.friday, TCSay.Days.saturday]
+    }
+
+    public var name: String {
+        return all[rawValue - 1]
+    }
+
 }

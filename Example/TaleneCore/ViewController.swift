@@ -76,6 +76,15 @@ class ViewController: TCViewController {
             print("saleEndDate: \(saleEndDate.toTimmerText(from: Date()))")
         }
 
+
+        // Test
+        let today =  DateComponents(calendar: .current, year: 2020, month: 7, day: 24, hour: 5, minute: 9).date!
+        print("Today is \(today.today()) \(today.isWeekend()) \(today.isDay(.friday)) \(today.isDay(.monday))")
+        let tomorrow =  DateComponents(calendar: .current, year: 2020, month: 7, day: 25, hour: 5, minute: 9).date!
+        print("Tomorrow is \(tomorrow.today()) \(tomorrow.isWeekend()) \(tomorrow.isDay(.friday)) \(tomorrow.isDay(.monday))")
+        let dayAfterTomorrow =  DateComponents(calendar: .current, year: 2020, month: 7, day: 26, hour: 5, minute: 9).date!
+        print("Day after tomorrow is \(dayAfterTomorrow.today()) \(dayAfterTomorrow.isWeekend()) \(dayAfterTomorrow.isDay(.friday)) \(dayAfterTomorrow.isDay(.monday))")
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
