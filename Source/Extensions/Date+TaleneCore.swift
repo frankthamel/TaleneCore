@@ -105,6 +105,16 @@ public extension Date {
         }
     }
 
+    func toNumbers(_ calendar: Calendar = Calendar.current ) -> (year: Int, month: Int, day: Int, hour: Int, minute: Int, second: Int) {
+        let year = calendar.component(.year, from: self)
+        let month = calendar.component(.month, from: self)
+        let day = calendar.component(.day, from: self)
+        let hour = calendar.component(.hour, from: self)
+        let minute = calendar.component(.minute, from: self)
+        let second = calendar.component(.second, from: self)
+        return (year, month, day, hour, minute, second)
+    }
+
 }
 
 public enum Day: Int {

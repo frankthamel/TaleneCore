@@ -85,6 +85,13 @@ class ViewController: TCViewController {
         let dayAfterTomorrow =  DateComponents(calendar: .current, year: 2020, month: 7, day: 26, hour: 5, minute: 9).date!
         print("Day after tomorrow is \(dayAfterTomorrow.today()) \(dayAfterTomorrow.isWeekend()) \(dayAfterTomorrow.isDay(.friday)) \(dayAfterTomorrow.isDay(.monday))")
 
+        print(today.toNumbers().year)
+        print(today.toNumbers().month)
+        print(today.toNumbers().day)
+        print(today.toNumbers().hour)
+        print(today.toNumbers().minute)
+        print(today.toNumbers().second)
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
