@@ -123,11 +123,11 @@ class ViewController: TCViewController {
 
     @IBAction func showInfoAlert(_ sender: Any) {
          //let alertModel = InfoAlertModel(descriptions: [TCConstants.description : TCSay.Alerts.sign_in_verification_failed] , containerController: self)
-        let alertModel = CustomAlertModel(type: .custom(AppAlerts.createSignInWithEmailAlert), params: [TCConstants.isFirebase: true], containerController: self)
+        //let alertModel = CustomAlertModel(type: .custom(AppAlerts.createSignInWithEmailAlert), params: [TCConstants.isFirebase: true], containerController: self)
 
 
-        let model = AdsShareModel(title: "Title of the push message.", message: "This is a test message. This is a test message. This is a test message. This is a test message.", hashTags: ["#Talene"], openUrl: "https://www.google.com/", image: nil)
-        //let alertModel = CustomAlertModel(type: .custom(AppAlerts.createTCAdsAlert), params: [TCConstants.model: model], containerController: self)
+        let model = AdsShareModel(title: "Title of the push message.", message: "This is a test message. This is a test message. This is a test message. This is a test message.", hashTags: ["#Talene"], openUrl: "https://www.google.com/", shareUrl: "https://www.google.com/", image: nil)
+        let alertModel = CustomAlertModel(type: .custom(AppAlerts.createTCAdsAlert), params: [TCConstants.model: model], containerController: self)
         
         App.managers.alert.showAlert(model: alertModel)
 

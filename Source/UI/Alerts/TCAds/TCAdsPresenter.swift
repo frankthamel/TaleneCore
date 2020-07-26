@@ -35,11 +35,17 @@ class TCAdsPresenter: AlertPresenterBase {
 
     func share() {
         guard let model = adsShareModel else {
-            // error
+            App.managers.loader.showFail()
             return
         }
-        
-        App.managers.logger.error(message: "Share message on Facebook. \(model.message)")
+
+        alertModel?.malert?.dismiss(animated: true, completion: {
+            let viewController = App.context.activeViewController
+            if let vc = viewController {
+                App.services.socialShareService.facebookService.share(urlString: model.shareUrl ?? "", withComment: model.message, hashTag: model.hashTags.first ?? "", inViewController: vc, delegate: nil)
+            }
+        })
+
     }
 
     private func getLoadUrlrequest() -> URLRequest? {
