@@ -9,8 +9,8 @@ import UIKit
 
 open class TCViewController: UIViewController {
 
-    open override func viewDidLoad() {
-        super.viewDidLoad()
+    open override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         App.context.activeViewController = self
     }
 
