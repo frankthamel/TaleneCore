@@ -14,5 +14,9 @@
 	<string>0</string>
 	<key>preferredStatusBarStyle</key>
 	<string>light</string>
+	<key>websiteUrl</key>
+	<string>https://taleneschool.com</string>
+	<key>hashTag</key>
+	<string>#TaleneSchool</string>
 </dict>
 </plist>

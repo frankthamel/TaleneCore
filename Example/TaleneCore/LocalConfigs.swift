@@ -12,6 +12,7 @@ extension LocalConfigStore {
     var developerDetails: Developer? {
         return valueForKey(key: "developerDetails")
     }
+
 }
 
 struct Developer: Codable {

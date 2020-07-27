@@ -60,4 +60,21 @@ public extension LocalConfigStore {
             return .default
         }
     }
+
+    var websiteUrl: URL {
+        let value: String? = valueForKey(key: "websiteUrl")
+        guard let stringValue = value else {
+            return URL(string: "https://taleneschool.com")!
+        }
+
+        return URL(string: stringValue) ?? URL(string: "https://taleneschool.com")!
+    }
+
+    var hashTag: String {
+        let value: String? = valueForKey(key: "hashTag")
+        guard let stringValue = value else {
+            return "#TaleneSchool"
+        }
+        return stringValue
+    }
 }

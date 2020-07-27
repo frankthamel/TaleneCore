@@ -34,14 +34,15 @@ class TCAdsPresenter: AlertPresenterBase {
     }
 
     func share() {
-        guard let model = adsShareModel else {
+        guard let model = adsShareModel, let vc = App.context.activeViewController else {
             App.managers.loader.showFail()
             return
         }
 
         alertModel?.malert?.dismiss(animated: true, completion: {
-            let viewController = App.context.activeViewController
-            if let vc = viewController {
+            if model.useActivityViewController {
+                App.services.socialShareService.activityViewController.share(model, inController: vc, withCompletion: nil)
+            } else {
                 App.services.socialShareService.facebookService.share(urlString: model.shareUrl ?? "", withComment: model.message, hashTag: model.hashTags.first ?? "", inViewController: vc, delegate: nil)
             }
         })

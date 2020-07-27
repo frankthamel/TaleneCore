@@ -126,7 +126,7 @@ class ViewController: TCViewController {
         //let alertModel = CustomAlertModel(type: .custom(AppAlerts.createSignInWithEmailAlert), params: [TCConstants.isFirebase: true], containerController: self)
 
 
-        let model = AdsShareModel(title: "Title of the push message.", message: "This is a test message. This is a test message. This is a test message. This is a test message.", hashTags: ["#Talene"], openUrl: "https://www.google.com/", shareUrl: "https://www.google.com/", image: nil)
+        let model = AdsShareModel(title: "Title of the push message.", message: "Our website is well-organized and navigable so that it’s easy to find what you need. We create an environment for your children that is safe, secure and supportive. Our parent’s area enables the parents to find out their children’s progress. They can help children in their learning and development by purchasing the new items of Talene. We design activities that provide children with opportunities to develop physically, socially, emotionally, morally, cognitively and creatively.", hashTags: [], openUrl: "https://www.google.com/", shareUrl: "https://taleneschool.com", image: nil)
         let alertModel = CustomAlertModel(type: .custom(AppAlerts.createTCAdsAlert), params: [TCConstants.model: model], containerController: self)
         
         App.managers.alert.showAlert(model: alertModel)
