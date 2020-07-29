@@ -45,6 +45,7 @@ public struct Managers {
     public let file: FileHandling = TCFileManager()
     public let keychain: Keychain = KeychainManager()
     public let popover: PopUp = PopoverManager()
+    public let onboarding: Onboarding = OnboardingManager()
     //let parentalGate
     //let link
 

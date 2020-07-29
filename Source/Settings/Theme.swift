@@ -51,6 +51,13 @@ public protocol Theme {
     var unknownUser: UIColor { get set }
     var activeUser: UIColor { get set }
     var proUser: UIColor { get set }
+
+    // Onboarding
+    var onboardingTitle: UIColor { get set }
+    var onboardingDescription: UIColor { get set }
+    var onboardingBackground: UIColor { get set }
+    var onboardingPageControlSelected: UIColor { get set }
+    var onboardingPageControlDefault: UIColor { get set }
 }
 
 struct AppTheme: Theme {
@@ -189,6 +196,27 @@ struct AppTheme: Theme {
 
     var proUser: UIColor = {
         return UIColor(named: "proUser") ?? UIColor.white
+    }()
+
+    // onboarding
+    var onboardingTitle: UIColor = {
+        return UIColor(named: "onboardingTitle") ?? UIColor.darkGray
+    }()
+
+    var onboardingDescription: UIColor = {
+        return UIColor(named: "onboardingDescription") ?? UIColor.lightGray
+    }()
+
+    var onboardingBackground: UIColor = {
+        return UIColor(named: "onboardingBackground") ?? UIColor.white
+    }()
+
+    var onboardingPageControlSelected: UIColor = {
+        return UIColor(named: "onboardingPageControlSelected") ?? UIColor.darkGray
+    }()
+
+    var onboardingPageControlDefault: UIColor = {
+        return UIColor(named: "onboardingPageControlDefault") ?? UIColor.lightGray
     }()
 
 }

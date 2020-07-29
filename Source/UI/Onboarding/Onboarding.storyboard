@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding Page View Controller-->
+        <scene sceneID="LrU-ek-MSb">
+            <objects>
+                <pageViewController storyboardIdentifier="OnboardingPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="zPD-TB-Osl" customClass="OnboardingPageViewController" customModule="TaleneCore" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LTs-av-uKt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-486" y="47"/>
+        </scene>
+        <!--Onboarding View Controller-->
+        <scene sceneID="nAi-bs-xwG">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingViewController" id="u0q-HM-WIC" customClass="OnboardingViewController" customModule="TaleneCore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dfr-Pv-taT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="e44-A3-diV">
+                                <rect key="frame" x="30" y="172.5" width="354" height="491"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H5c-V8-367">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="250"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Zdl-Pl-cJ0">
+                                        <rect key="frame" x="0.0" y="280" width="354" height="211"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The standard Lorem Ipsum passage, used since the 1500s" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhi-Ma-nHE">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="39.5"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                                <color key="textColor" name="onboardingTitle"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRJ-5p-IQE">
+                                                <rect key="frame" x="0.0" y="55.5" width="354" height="155.5"/>
+                                                <string key="text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</string>
+                                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
+                                                <color key="textColor" name="onboardingDescription"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgV-ln-gZa" customClass="UIButtonX" customModule="TaleneCore" customModuleProvider="target">
+                                <rect key="frame" x="30" y="787" width="354" height="50"/>
+                                <color key="backgroundColor" name="primaryActionColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4Uk-Lf-COp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="19"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" name="foregroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapOnNextButton:" destination="u0q-HM-WIC" eventType="touchUpInside" id="4ol-m1-ODg"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="yLg-9x-a13">
+                                <rect key="frame" x="171.5" y="683.5" width="71" height="37"/>
+                                <color key="pageIndicatorTintColor" name="onboardingPageControlDefault"/>
+                                <color key="currentPageIndicatorTintColor" name="onboardingPageControlSelected"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" name="onboardingBackground"/>
+                        <constraints>
+                            <constraint firstItem="sgV-ln-gZa" firstAttribute="leading" secondItem="wEn-Ul-Btv" secondAttribute="leading" constant="30" id="1zL-qL-Etn"/>
+                            <constraint firstItem="e44-A3-diV" firstAttribute="centerY" secondItem="Dfr-Pv-taT" secondAttribute="centerY" constant="-30" id="Fg3-vV-G39"/>
+                            <constraint firstItem="wEn-Ul-Btv" firstAttribute="bottom" secondItem="sgV-ln-gZa" secondAttribute="bottom" constant="25" id="aFZ-ec-VVg"/>
+                            <constraint firstItem="yLg-9x-a13" firstAttribute="centerX" secondItem="Dfr-Pv-taT" secondAttribute="centerX" id="ag2-JE-AUh"/>
+                            <constraint firstItem="wEn-Ul-Btv" firstAttribute="trailing" secondItem="sgV-ln-gZa" secondAttribute="trailing" constant="30" id="icS-v2-ZAh"/>
+                            <constraint firstItem="e44-A3-diV" firstAttribute="leading" secondItem="Dfr-Pv-taT" secondAttribute="leading" constant="30" id="qUH-Qb-pQo"/>
+                            <constraint firstItem="yLg-9x-a13" firstAttribute="top" secondItem="e44-A3-diV" secondAttribute="bottom" constant="20" id="seU-Sy-thV"/>
+                            <constraint firstItem="wEn-Ul-Btv" firstAttribute="trailing" secondItem="e44-A3-diV" secondAttribute="trailing" constant="30" id="txp-46-0AF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wEn-Ul-Btv"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="kRJ-5p-IQE" id="qUH-98-kqH"/>
+                        <outlet property="imageView" destination="H5c-V8-367" id="D2G-vt-Hgq"/>
+                        <outlet property="nextButton" destination="sgV-ln-gZa" id="6q6-BN-ARH"/>
+                        <outlet property="pageControl" destination="yLg-9x-a13" id="Y9X-Jr-qYg"/>
+                        <outlet property="titleLabel" destination="Rhi-Ma-nHE" id="xGQ-ee-iLt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fGI-gm-647" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="531.8840579710145" y="46.875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="foregroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="onboardingBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="onboardingDescription">
+            <color red="0.27058823529411763" green="0.27058823529411763" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="onboardingPageControlDefault">
+            <color red="0.77647058823529413" green="0.80000000000000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="onboardingPageControlSelected">
+            <color red="0.40784313725490196" green="0.46274509803921571" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="onboardingTitle">
+            <color red="0.24705882352941178" green="0.24705882352941178" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryActionColor">
+            <color red="0.40784313725490196" green="0.46274509803921571" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TaleneCore'
-  s.version          = '1.0.31'
+  s.version          = '1.0.32'
   s.summary          = 'TaleneCore is the core library for all Talene Apps.'
 
 # This description is used to generate tags and improve search results.
@@ -30,12 +30,12 @@ TaleneCore is the core library for all Talene apps. This comes with a structured
 
   s.ios.deployment_target = '12.0'
 
-  s.source_files = 'Source/**/*.{swift,png,xib,xcassets}'
+  s.source_files = 'Source/**/*.{swift,png,xib,xcassets,storyboard}'
   s.swift_version = '5.0'
   s.static_framework = true
   
    s.resource_bundles = {
-       'TaleneCore' => ['Source/**/**/*.{png,xib,xcassets}']
+       'TaleneCore' => ['Source/**/**/*.{png,xib,xcassets,storyboard}']
    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
