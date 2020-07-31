@@ -10,20 +10,20 @@ import Foundation
 
 open class TCTextField: UITextField {
 
-    let insets: UIEdgeInsets = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
-    var modifiedPlaceholder: String? {
+    public let insets: UIEdgeInsets = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+    public var modifiedPlaceholder: String? {
         didSet {
             setPlaceholder()
         }
     }
 
-    var isValid: Bool = false
+    public var isValid: Bool = false
     private var isEmptyValidator: ((String) -> Bool)?
     private var isEmailValidator: ((String) -> Bool)?
     private var rangeValidator: ((((String, Int, Int) -> Bool)), Int, Int)?
     private var matchValidator: (((String, String) -> Bool), String)?
 
-    var validators: [FormValidator] = [] {
+    public var validators: [FormValidator] = [] {
         didSet {
             for validator in validators {
                 switch validator {
@@ -40,7 +40,7 @@ open class TCTextField: UITextField {
         }
     }
 
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         setUp()
     }

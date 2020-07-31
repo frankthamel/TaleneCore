@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum FormValidator {
+public enum FormValidator {
     case isEmptyValidator
     case emailValidator
     case rangeValidator(above: Int, below: Int)
