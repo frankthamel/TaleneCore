@@ -46,6 +46,7 @@ public struct Managers {
     public let keychain: Keychain = KeychainManager()
     public let popover: PopUp = PopoverManager()
     public let onboarding: Onboarding = OnboardingManager()
+    public let keyboard: Keyboard = KeyboardManager()
     //let parentalGate
     //let link
 

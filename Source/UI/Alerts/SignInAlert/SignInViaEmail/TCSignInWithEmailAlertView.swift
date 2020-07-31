@@ -169,12 +169,14 @@ extension TCSignInWithEmailAlertView: UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == emailTextField {
-            textField.resignFirstResponder()
+            passwordTextField.becomeFirstResponder()
             return true
         } else if textField == passwordTextField {
-            textField.resignFirstResponder()
             if currentState == .signIn {
+                textField.resignFirstResponder()
                 submit()
+            } else {
+                confirmPasswordTextField.becomeFirstResponder()
             }
             return true
         } else if textField == confirmPasswordTextField {

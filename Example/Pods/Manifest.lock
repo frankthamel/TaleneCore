@@ -321,6 +321,7 @@ PODS:
     - nanopb (~> 0.3)
   - gRPC-Core/Interface (1.21.0)
   - GTMSessionFetcher/Core (1.4.0)
+  - IQKeyboardManagerSwift (6.5.5)
   - Kingfisher (5.12.0):
     - Kingfisher/Core (= 5.12.0)
   - Kingfisher/Core (5.12.0)
@@ -362,7 +363,7 @@ PODS:
   - SwiftMessages/App (7.0.1)
   - SwiftyBeaver (1.8.4)
   - SwiftyJSON (4.3.0)
-  - TaleneCore (1.0.31):
+  - TaleneCore (1.0.32):
     - ARSLineProgress (= 3.1.0)
     - FBSDKCoreKit/Swift (= 6.5.2)
     - FBSDKLoginKit/Swift (= 6.5.2)
@@ -376,6 +377,7 @@ PODS:
     - Firebase/RemoteConfig (= 6.14.0)
     - FirebaseFirestoreSwift
     - Google-Mobile-Ads-SDK (= 7.59.0)
+    - IQKeyboardManagerSwift (= 6.5.5)
     - Kingfisher (= 5.12.0)
     - LicensesViewController (~> 0.9.0)
     - LoadableViews (= 3.4.0)
@@ -427,6 +429,7 @@ SPEC REPOS:
     - "gRPC-C++"
     - gRPC-Core
     - GTMSessionFetcher
+    - IQKeyboardManagerSwift
     - Kingfisher
     - leveldb-library
     - LicensesViewController
@@ -484,6 +487,7 @@ SPEC CHECKSUMS:
   "gRPC-C++": 9dfe7b44821e7b3e44aacad2af29d2c21f7cde83
   gRPC-Core: c9aef9a261a1247e881b18059b84d597293c9947
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
+  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
   Kingfisher: dc6e0f53bb5b12c3e75bedb0e01bbd7a640eea69
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   LicensesViewController: 6487b7721aa19d81d90f2ede98b44177f74bcf1f
@@ -505,7 +509,7 @@ SPEC CHECKSUMS:
   SwiftMessages: b577dc7043be8b299857ab35bb663dbff6483bd0
   SwiftyBeaver: f9a9aba96a6a6166e21682377804d728b0d20b95
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
-  TaleneCore: 71290a506338623b664d11ba29af97ddbf63385a
+  TaleneCore: 7fe7132431671d2fcc01eeae4672c25cd46e2ee7
 
 PODFILE CHECKSUM: 577262dfb1408474324f004994df57a5cb4e6d9b
 
