@@ -69,3 +69,9 @@ public func sha_256(str: String) -> String? {
     }
     return nil
 }
+
+public func base64Encoded(str: String) -> String? {
+    let utf8str = str.data(using: .utf8)
+    let base64Encoded = utf8str?.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: 0))
+    return base64Encoded
+}
