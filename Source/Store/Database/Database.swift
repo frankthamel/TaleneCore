@@ -18,6 +18,7 @@ public typealias DbRefreshToken = NotificationToken
 public protocol Database: AppConfigure {
     func getRealm() -> TCRealm?
     func create<T: Db>(object: T?) -> Bool
+    func createList<T: Db>(objects: [T]?) -> Bool
     func object<T: Db>(forId id: String) -> T?
     func update(handler: () -> Void) -> Bool
     func delete<T: Db>(object: T?) -> Bool
@@ -43,6 +44,22 @@ class RealmDatabase: Database {
         do {
             try realm?.write {
                 realm?.add(obj)
+            }
+            return true
+        } catch let error {
+            print(error)
+            return false
+        }
+    }
+
+    func createList<T: Db>(objects: [T]?) -> Bool {
+        guard let objs = objects else { return false }
+
+        do {
+            try realm?.write {
+                for obj in objs {
+                    realm?.add(obj)
+                }
             }
             return true
         } catch let error {
