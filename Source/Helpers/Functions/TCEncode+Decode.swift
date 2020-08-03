@@ -12,6 +12,7 @@ public struct TCEncodeDecode {
     static let decoder = JSONDecoder()
 
     public static func encode<T: Codable>(object: T) throws -> String? {
+        if object is String { return object as? String }
         let data = try encoder.encode(object)
         let string = String(data: data, encoding: .utf8)
         return string
