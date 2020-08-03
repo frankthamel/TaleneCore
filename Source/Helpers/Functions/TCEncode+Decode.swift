@@ -19,8 +19,12 @@ public struct TCEncodeDecode {
     }
 
     public static func decode<T: Codable>(string: String) throws -> T? {
-        guard let data = string.data(using: .utf8) else { return nil }
-        let object = try decoder.decode(T.self, from: data)
-        return object
+        if string is T {
+            return string as? T
+        } else {
+            guard let data = string.data(using: .utf8) else { return nil }
+            let object = try decoder.decode(T.self, from: data)
+            return object
+        }
     }
 }
