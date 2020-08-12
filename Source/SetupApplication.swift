@@ -30,6 +30,7 @@ public func configureTaleneCoreApp<T>(inType type: T, application: UIApplication
     App.managers.loader.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
     App.managers.notification.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
     App.managers.keyboard.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
+    App.managers.inAppPurchase.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)
 
     // configure services
     App.services.firebaseService.configure(inType: type, application: application, didFinishLaunchingWithOptions: launchOptions)

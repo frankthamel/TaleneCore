@@ -47,6 +47,7 @@ public struct Managers {
     public let popover: PopUp = PopoverManager()
     public let onboarding: Onboarding = OnboardingManager()
     public let keyboard: Keyboard = KeyboardManager()
+    public let inAppPurchase: InAppPurchase = InAppPurchaseManager()
     //let parentalGate
     //let link
 

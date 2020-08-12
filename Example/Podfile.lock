@@ -363,7 +363,8 @@ PODS:
   - SwiftMessages/App (7.0.1)
   - SwiftyBeaver (1.8.4)
   - SwiftyJSON (4.3.0)
-  - TaleneCore (1.0.32):
+  - SwiftyStoreKit (0.15.0)
+  - TaleneCore (1.0.38):
     - ARSLineProgress (= 3.1.0)
     - FBSDKCoreKit/Swift (= 6.5.2)
     - FBSDKLoginKit/Swift (= 6.5.2)
@@ -393,6 +394,7 @@ PODS:
     - SwiftMessages (= 7.0.1)
     - SwiftyBeaver (= 1.8.4)
     - SwiftyJSON (~> 4.0)
+    - SwiftyStoreKit (= 0.15.0)
 
 DEPENDENCIES:
   - TaleneCore (from `../`)
@@ -451,6 +453,7 @@ SPEC REPOS:
     - SwiftMessages
     - SwiftyBeaver
     - SwiftyJSON
+    - SwiftyStoreKit
 
 EXTERNAL SOURCES:
   TaleneCore:
@@ -509,7 +512,8 @@ SPEC CHECKSUMS:
   SwiftMessages: b577dc7043be8b299857ab35bb663dbff6483bd0
   SwiftyBeaver: f9a9aba96a6a6166e21682377804d728b0d20b95
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
-  TaleneCore: 7fe7132431671d2fcc01eeae4672c25cd46e2ee7
+  SwiftyStoreKit: 033d06b6f87955405d3f844a18a7687c2438592a
+  TaleneCore: fb4050e688339b26b3fa4bbcf00ad50186b7a1b0
 
 PODFILE CHECKSUM: 577262dfb1408474324f004994df57a5cb4e6d9b
 
