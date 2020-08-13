@@ -120,6 +120,7 @@
 		01407A423C55A8A36808D093B6B7EC99 /* hpack_table.h in Copy src/core/ext/transport/chttp2/transport Private Headers */ = {isa = PBXBuildFile; fileRef = 6AB031E4971BBAB7FF8CD7CFBDD40500 /* hpack_table.h */; };
 		0143EBE9ACC47FDA6AFDE630446F9729 /* GULSecureCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = E967C214A9C0A40FDFC0F874C2E73079 /* GULSecureCoding.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		015A0369EB034ABD53223DCC1697046C /* RLMRealmConfiguration+Sync.h in Headers */ = {isa = PBXBuildFile; fileRef = FF84251C8C68BEC5D7D0C37CC0BAD511 /* RLMRealmConfiguration+Sync.h */; };
+		01653B0324E5835C003379A2 /* SKProduct+TaleneCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01653B0224E5835C003379A2 /* SKProduct+TaleneCore.swift */; };
 		016F854313058BB7D47CEEDF3C79206F /* thd_id.h in Copy support Public Headers */ = {isa = PBXBuildFile; fileRef = ADCFF07C8D83E5A91A7F3AB68A5FE39D /* thd_id.h */; };
 		017EC466269074A931A129959AFCD666 /* sync_posix.h in Headers */ = {isa = PBXBuildFile; fileRef = 34C7B1A30FE29E3DAEFE2CA84351402A /* sync_posix.h */; };
 		0185D95C3168B4E3DD68569A92D7F494 /* service_type.h in Headers */ = {isa = PBXBuildFile; fileRef = 143882B140CFDAE67A5967EF749B495F /* service_type.h */; };
@@ -9344,6 +9345,7 @@
 		010B0A3009C55D6D86D382C877323534 /* Timestamp.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Timestamp.pbobjc.m; path = objectivec/google/protobuf/Timestamp.pbobjc.m; sourceTree = "<group>"; };
 		011E39814CF3E40C67A3DB69A1FDA60A /* FBSDKLoginKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKLoginKit.xcconfig; sourceTree = "<group>"; };
 		01600C0C5C8C0D2F60CFE48A148E47EA /* time.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = time.h; path = include/grpcpp/impl/codegen/time.h; sourceTree = "<group>"; };
+		01653B0224E5835C003379A2 /* SKProduct+TaleneCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKProduct+TaleneCore.swift"; sourceTree = "<group>"; };
 		017E89B889FA428E055EE14C42EC1F76 /* compression_args.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = compression_args.cc; path = src/core/lib/compression/compression_args.cc; sourceTree = "<group>"; };
 		01B445FAD468740B6D26689A1D035F7E /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
 		01BDF907CE5AA2E837B780C4C20B041A /* uri_parser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = uri_parser.h; path = src/core/lib/uri/uri_parser.h; sourceTree = "<group>"; };
@@ -17622,6 +17624,7 @@
 				22EA3F5410D115DB475FD9D001BACD86 /* String+TaleneCore.swift */,
 				F93181ED9921520B1D92E8EE85CDEF49 /* UIColor+TaleneCore.swift */,
 				56CF1EAF1FF4B3C41C22A0F134803D71 /* UIImage+TaleneCore.swift */,
+				01653B0224E5835C003379A2 /* SKProduct+TaleneCore.swift */,
 			);
 			name = Extensions;
 			path = Source/Extensions;
@@ -25490,6 +25493,7 @@
 				A2C2D8A6BE4EC3AAE9DFA2EA4EADCB52 /* AppAlerts.swift in Sources */,
 				897FFC7A693E8B9ADC022735C4B67F0D /* AppConfig.swift in Sources */,
 				259D4D286840CD152589AFFC6681DAF1 /* AppContext.swift in Sources */,
+				01653B0324E5835C003379A2 /* SKProduct+TaleneCore.swift in Sources */,
 				A75098EF5C21FEA87B32D6EAC4C9EB92 /* AppNotifications.swift in Sources */,
 				96759101ED12D1725181E78055776F12 /* AppUrls.swift in Sources */,
 				4954EE1B714381618F081974F11C3C49 /* AuthenticationManager.swift in Sources */,
