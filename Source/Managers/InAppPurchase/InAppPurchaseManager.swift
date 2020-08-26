@@ -11,7 +11,7 @@ import StoreKit
 
 public protocol InAppPurchase: AppConfigure {
     func retrieveProductsInfo(forIds ids: [String], withCompletion completion: @escaping (Set<SKProduct>?) -> Void)
-    func purchaseProduct(id: String, withCompletion completion: @escaping (Bool, String) -> Void)
+    func purchaseProduct(id: String, withCompletion completion: @escaping (Bool, String, String) -> Void)
     func purchaseProduct(product: SKProduct, withCompletion completion: @escaping (Bool, String) -> Void)
     func purchaseProduct(id: String, forUser applicationUsername: String, isSandbox: Bool, withCompletion completion: @escaping (Bool, String) -> Void)
     func restorePurchases(withCompletion completion: @escaping ([Purchase]?) -> Void)
@@ -58,24 +58,23 @@ class InAppPurchaseManager: InAppPurchase {
         }
     }
 
-    func purchaseProduct(id: String, withCompletion completion: @escaping (Bool, String) -> Void) {
+    func purchaseProduct(id: String, withCompletion completion: @escaping (Bool, String, String) -> Void) {
         SwiftyStoreKit.purchaseProduct(id, quantity: 1, atomically: true) { result in
             switch result {
             case .success(let purchase):
-                //purchase.transaction.transactionIdentifier
-                completion(true, "Purchase Success: \(purchase.productId)")
+                completion(true, "Purchase Success: \(purchase.productId)", purchase.originalTransaction?.transactionIdentifier ?? "")
             case .error(let error):
                 switch error.code {
-                case .unknown: completion(false, "Unknown error. Please contact support.")
-                case .clientInvalid: completion(false, "Not allowed to make the payment.")
-                case .paymentCancelled: completion(false, "Payment cancelled.")
-                case .paymentInvalid: completion(false, "The purchase identifier was invalid")
-                case .paymentNotAllowed: completion(false, "The device is not allowed to make the payment")
-                case .storeProductNotAvailable: completion(false, "The product is not available in the current storefront")
-                case .cloudServicePermissionDenied: completion(false, "Access to cloud service information is not allowed")
-                case .cloudServiceNetworkConnectionFailed: completion(false, "Could not connect to the network")
-                case .cloudServiceRevoked: completion(false, "User has revoked permission to use this cloud service")
-                default: completion(false, error.localizedDescription)
+                case .unknown: completion(false, "Unknown error. Please contact support.", "")
+                case .clientInvalid: completion(false, "Not allowed to make the payment.", "")
+                case .paymentCancelled: completion(false, "Payment cancelled.", "")
+                case .paymentInvalid: completion(false, "The purchase identifier was invalid", "")
+                case .paymentNotAllowed: completion(false, "The device is not allowed to make the payment", "")
+                case .storeProductNotAvailable: completion(false, "The product is not available in the current storefront", "")
+                case .cloudServicePermissionDenied: completion(false, "Access to cloud service information is not allowed", "")
+                case .cloudServiceNetworkConnectionFailed: completion(false, "Could not connect to the network", "")
+                case .cloudServiceRevoked: completion(false, "User has revoked permission to use this cloud service", "")
+                default: completion(false, error.localizedDescription, "")
                 }
             }
         }
