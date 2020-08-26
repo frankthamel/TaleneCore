@@ -13,7 +13,9 @@ public protocol InAppPurchase: AppConfigure {
     func retrieveProductsInfo(forIds ids: [String], withCompletion completion: @escaping (Set<SKProduct>?) -> Void)
     func purchaseProduct(id: String, withCompletion completion: @escaping (Bool, String) -> Void)
     func purchaseProduct(product: SKProduct, withCompletion completion: @escaping (Bool, String) -> Void)
+    func purchaseProduct(id: String, forUser applicationUsername: String, isSandbox: Bool, withCompletion completion: @escaping (Bool, String) -> Void)
     func restorePurchases(withCompletion completion: @escaping ([Purchase]?) -> Void)
+    func restorePurchases(forUser applicationUsername: String, withCompletion completion: @escaping ([Purchase]?) -> Void)
     func fetchReceipt(withCompletion completion: @escaping (Bool) -> Void)
     func verifyReceipt(forProductId productId: String, withKey key: String, service: StoreKitService, withCompletion completion: @escaping (Bool) -> Void)
 }
@@ -60,6 +62,7 @@ class InAppPurchaseManager: InAppPurchase {
         SwiftyStoreKit.purchaseProduct(id, quantity: 1, atomically: true) { result in
             switch result {
             case .success(let purchase):
+                //purchase.transaction.transactionIdentifier
                 completion(true, "Purchase Success: \(purchase.productId)")
             case .error(let error):
                 switch error.code {
@@ -100,8 +103,55 @@ class InAppPurchaseManager: InAppPurchase {
         }
     }
 
+    func purchaseProduct(id: String, forUser applicationUsername: String, isSandbox: Bool, withCompletion completion: @escaping (Bool, String) -> Void) {
+
+        self.retrieveProductsInfo(forIds: [id]) { (skProducts) in
+            guard let products = skProducts, let product = products.first else {
+                completion(false, "The purchase identifier was invalid")
+                return
+            }
+
+            SwiftyStoreKit.purchaseProduct(product, quantity: 1, atomically: true, applicationUsername: applicationUsername, simulatesAskToBuyInSandbox: isSandbox) { (result) in
+                switch result {
+                case .success(let purchase):
+                    completion(true, "Purchase Success: \(purchase.productId)")
+                case .error(let error):
+                    switch error.code {
+                    case .unknown: completion(false, "Unknown error. Please contact support.")
+                    case .clientInvalid: completion(false, "Not allowed to make the payment.")
+                    case .paymentCancelled: completion(false, "Payment cancelled.")
+                    case .paymentInvalid: completion(false, "The purchase identifier was invalid")
+                    case .paymentNotAllowed: completion(false, "The device is not allowed to make the payment")
+                    case .storeProductNotAvailable: completion(false, "The product is not available in the current storefront")
+                    case .cloudServicePermissionDenied: completion(false, "Access to cloud service information is not allowed")
+                    case .cloudServiceNetworkConnectionFailed: completion(false, "Could not connect to the network")
+                    case .cloudServiceRevoked: completion(false, "User has revoked permission to use this cloud service")
+                    default: completion(false, error.localizedDescription)
+                    }
+                }
+            }
+        }
+    }
+
     func restorePurchases(withCompletion completion: @escaping ([Purchase]?) -> Void) {
         SwiftyStoreKit.restorePurchases(atomically: true) { results in
+            if results.restoreFailedPurchases.count > 0 {
+                App.managers.logger.error(message: "Restore Failed: \(results.restoreFailedPurchases)")
+                completion(nil)
+            }
+            else if results.restoredPurchases.count > 0 {
+                App.managers.logger.info(message: "Restore Success: \(results.restoredPurchases)")
+                completion(results.restoredPurchases)
+            }
+            else {
+                App.managers.logger.error(message: "Nothing to Restore")
+                completion(nil)
+            }
+        }
+    }
+
+    func restorePurchases(forUser applicationUsername: String, withCompletion completion: @escaping ([Purchase]?) -> Void) {
+        SwiftyStoreKit.restorePurchases(atomically: true, applicationUsername: applicationUsername) { (results) in
             if results.restoreFailedPurchases.count > 0 {
                 App.managers.logger.error(message: "Restore Failed: \(results.restoreFailedPurchases)")
                 completion(nil)
