@@ -105,7 +105,7 @@ pod 'TaleneCore'
 
 ## TaleneCore  Architecture Diagram 
 
-[TaleneCore Architecture Diagram.pdf](https://bitbucket.org/frankthamel/talenecore/src/master/Talene%20Core%20UML%20Class%20Diagram%20by%20Frank%20Thamel.pdf)
+[TaleneCore Architecture Diagram.pdf](https://github.com/frankthamel/TaleneCore/blob/master/Talene%20Core%20UML%20Class%20Diagram%20by%20Frank%20Thamel.pdf)
 
 
 ## Author
